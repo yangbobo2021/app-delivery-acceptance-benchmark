@@ -1,0 +1,8 @@
+{
+  "schema": "acceptance-manifest-v1",
+  "acceptance_id": "AT-20261019-benchmark-go",
+  "project_id": "go-api",
+  "title": "Benchmark round 1 go-api",
+  "owner": "local",
+  "created_at": "2026-10-19T06:10:05.057340+00:00"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "acceptance-scope-v1",
+  "acceptance_id": "AT-20261019-benchmark-web",
+  "version": 1,
+  "previous_sha256": null,
+  "created_at": "2026-10-19T06:10:05.061485+00:00",
+  "basis": "2026-10-19 user-directed four-project benchmark round",
+  "scope": {
+    "project": "ts-web",
+    "source": "projects/ts-web/docs/requirements.md",
+    "targets": [
+      {
+        "type": "requirements",
+        "path": "projects/ts-web/docs/requirements.md",
+        "scope": "all original requirements"
+      }
+    ],
+    "execution_limit": "one formal smoke scene per project before scenario-list review; after review, two formal scenes total per project, one seeded-defect case and one non-seeded case",
+    "exclusions": [
+      "unrelated projects",
+      "all other generated scenes from formal execution"
+    ],
+    "decision_basis": "User request in current conversation, 2026-10-19: four projects each complete one v4 flow, then audit generated scenario lists, then select two scenes per project."
+  }
+}
