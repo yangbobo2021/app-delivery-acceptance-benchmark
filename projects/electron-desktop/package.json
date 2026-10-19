@@ -1,0 +1,14 @@
+{
+  "name": "local-notes-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "44.9.0",
+    "esbuild": "0.28.2"
+  }
+}

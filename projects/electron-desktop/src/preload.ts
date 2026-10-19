@@ -1,0 +1,1 @@
+import {contextBridge,ipcRenderer} from 'electron'; contextBridge.exposeInMainWorld('notes',{list:()=>ipcRenderer.invoke('notes:list'),save:(value:unknown)=>ipcRenderer.invoke('notes:save',value),remove:(id:string)=>ipcRenderer.invoke('notes:delete',id)});

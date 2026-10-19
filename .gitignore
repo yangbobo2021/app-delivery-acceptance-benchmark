@@ -1,0 +1,12 @@
+**/.acceptance-local/
+**/__pycache__/
+**/.pytest_cache/
+**/.coverage*
+**/coverage/
+**/node_modules/
+**/dist/
+**/build/
+**/state/
+**/test-results/
+**/playwright-report/
+.DS_Store
