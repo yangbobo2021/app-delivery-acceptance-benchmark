@@ -1,0 +1,120 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/prepared",
+  "prepared_sha256": "b636ab23c02412dbc0e9fe936f1ab0391f39e9f47692d2792901a7c503f39f61",
+  "scene_id": "STOCK-06-S02",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_hashes": {
+    "projects/go-api/main.go": "7178bfc3e470cb27e0c1b0b816030411049cf0fa85b4cf90e5f106df892566ec"
+  },
+  "tools": [
+    {
+      "name": "Go native coverage",
+      "version": "go version go1.25.7 darwin/arm64",
+      "role": "collector and statement statistics"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/execution.json",
+  "execution_sha256": "f31f81c04c16318745934dd94547433e8aae2044431fae0d0796d0e2cf8b509f",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/parent/covcounters.92693296bbc058414674b6688e10b66b.38075.1792393311291602000",
+      "sha256": "1c472c80c4b83a32a98bae2f385c04b8dcc3d32a6ce9f444196c49a570fc2d89",
+      "role": "go_covdata",
+      "group": "parent"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/parent/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0",
+      "role": "go_covdata",
+      "group": "parent"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/before-covdata/covcounters.92693296bbc058414674b6688e10b66b.38078.1792393311216583000",
+      "sha256": "7666b74f78adca96fcce4b0321e1850e29b8bdb0685c146b80b05ca4d238580b",
+      "role": "go_covdata",
+      "group": "before-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/before-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0",
+      "role": "go_covdata",
+      "group": "before-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/after-covdata/covcounters.92693296bbc058414674b6688e10b66b.38079.1792393311242268000",
+      "sha256": "128a2693c4cea8be84a5a536dd7bcd413f43fd7d3ecbebd0acf0b2e494850b8b",
+      "role": "go_covdata",
+      "group": "after-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/after-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0",
+      "role": "go_covdata",
+      "group": "after-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/binding-before-covdata/covcounters.92693296bbc058414674b6688e10b66b.38080.1792393311266552000",
+      "sha256": "0584c6ad8bec5510304fe72e4830df836aafb7acd50a860c135bde983d6422e7",
+      "role": "go_covdata",
+      "group": "binding-before-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/binding-before-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0",
+      "role": "go_covdata",
+      "group": "binding-before-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/binding-after-covdata/covcounters.92693296bbc058414674b6688e10b66b.38081.1792393311290683000",
+      "sha256": "6ebaf8e5bddc6bc3e0662ae493e16491fe57c073c9956270bbe8aadc23898328",
+      "role": "go_covdata",
+      "group": "binding-after-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/binding-after-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0",
+      "role": "go_covdata",
+      "group": "binding-after-covdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/merged.coverprofile",
+      "sha256": "54b7003463bef289d818fae01e7c9b964fae87e0178d96ed2015dc06e30890d9",
+      "role": "merged_text"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/native-statements.txt",
+      "sha256": "a8ebe027c084d221fa238fa5da5babfaf778e5232a7541c4796834591c79ba0e",
+      "role": "native_stats"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/run-response.json",
+      "sha256": "6ce6fc8fb3ee20d52e39d733c31ce979a6601c8298f62dc9bdd46b083fb516d4",
+      "role": "run_response"
+    }
+  ],
+  "components": [
+    {
+      "id": "stock-go",
+      "label": "Go native statement coverage (not line/branch coverage)",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "line": {
+        "status": "unavailable",
+        "reason": "Go native coverage exposes statement/block units; no verified line conversion tool is installed."
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Go native cover does not report branch coverage."
+      },
+      "statement": {
+        "status": "measured",
+        "tool_output": "stock.local/app/main.go:30:\tload\t\t70.0%\nstock.local/app/main.go:45:\tpersist\t\t71.4%\nstock.local/app/main.go:56:\tsend\t\t100.0%\nstock.local/app/main.go:61:\tserve\t\t67.5%\nstock.local/app/main.go:114:\tmain\t\t0.0%\ntotal:\t\t\t\t(statements)\t60.0%\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/coverage-adapter.mjs",
+    "summarize",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/request-summarize.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-summary.json"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

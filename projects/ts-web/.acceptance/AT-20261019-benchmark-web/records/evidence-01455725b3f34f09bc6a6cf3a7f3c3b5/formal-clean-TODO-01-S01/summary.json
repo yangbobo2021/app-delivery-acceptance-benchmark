@@ -1,0 +1,213 @@
+{
+  "scene_id": "TODO-01-S01",
+  "review_status": "passed",
+  "review_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-1/answer.json",
+  "review_completion_reason": "bounded independent review loop completed",
+  "stages": {
+    "prepare": {
+      "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace",
+      "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/catalog.json",
+      "setup_seconds": 0,
+      "check_seconds": 0.467
+    },
+    "case": {
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/case/metrics.json",
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/case/answer.json",
+      "seconds": 116.587092334,
+      "usage": {
+        "toolUses": 11,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 363464,
+              "uncached": 33608,
+              "cacheRead": 329856,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 4834,
+              "visible": 4164,
+              "reasoning": 670
+            }
+          }
+        }
+      },
+      "tool_calls": 11,
+      "restarted_after_unavailable_session": false
+    },
+    "execution": {
+      "receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution/execution.json",
+      "log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution/execution.log",
+      "exit_code": 0,
+      "seconds": 3.393574084038846,
+      "test_files": [
+        "projects/ts-web/tests/browser-fixture.mjs",
+        "projects/ts-web/tests/coverage-adapter.mjs",
+        "projects/ts-web/tests/coverage-config.json",
+        "projects/ts-web/tests/node-flush.cjs",
+        "projects/ts-web/tests/package-lock.json",
+        "projects/ts-web/tests/package.json",
+        "projects/ts-web/tests/prepare-coverage.mjs",
+        "projects/ts-web/tests/probe.mjs",
+        "projects/ts-web/tests/todo-01-s01.mjs",
+        "projects/ts-web/tests/todo-04-s02.mjs"
+      ]
+    },
+    "evidence": {
+      "manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence.json",
+      "paths": [
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/0/execution.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/0/execution.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/1/browser.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/2/coverage-61089-1792394419067-0.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/3/coverage-61089-1792394419070-0.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/4/app.js",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/5/app.js.map",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/01-initial-dom.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/02-added-to-empty.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/03-added-to-existing-unfinished.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/04-mixed-existing-baseline.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/05-added-to-existing-mixed.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/browser-native.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/checks.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/observations.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/server-stderr.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence/6/trace.zip"
+      ],
+      "file_count": 17,
+      "bytes": 934452
+    },
+    "gate": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/handoff-gate.json",
+      "seconds": 0.646
+    },
+    "review": {
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review/answer.json",
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review/metrics.json",
+      "status": "repair_required",
+      "seconds": 81.125016166,
+      "usage": {
+        "toolUses": 8,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 206307,
+              "uncached": 25955,
+              "cacheRead": 180352,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 3236,
+              "visible": 2399,
+              "reasoning": 837
+            }
+          }
+        }
+      },
+      "tool_calls": 8,
+      "restarted_after_unavailable_session": false
+    },
+    "review-repair-1": {
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-repair-1/answer.json",
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-repair-1/metrics.json",
+      "seconds": 114.405740209,
+      "usage": {
+        "toolUses": 15,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 350790,
+              "uncached": 36038,
+              "cacheRead": 314752,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 4266,
+              "visible": 3690,
+              "reasoning": 576
+            }
+          }
+        }
+      },
+      "tool_calls": 15
+    },
+    "execution-review-1": {
+      "receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution-review-1/execution.json",
+      "log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution-review-1/execution.log",
+      "exit_code": 0,
+      "seconds": 2.51728116592858,
+      "test_files": [
+        "projects/ts-web/tests/browser-fixture.mjs",
+        "projects/ts-web/tests/coverage-adapter.mjs",
+        "projects/ts-web/tests/coverage-config.json",
+        "projects/ts-web/tests/node-flush.cjs",
+        "projects/ts-web/tests/package-lock.json",
+        "projects/ts-web/tests/package.json",
+        "projects/ts-web/tests/prepare-coverage.mjs",
+        "projects/ts-web/tests/probe.mjs",
+        "projects/ts-web/tests/todo-01-s01.mjs",
+        "projects/ts-web/tests/todo-04-s02.mjs"
+      ]
+    },
+    "evidence-review-1": {
+      "manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1.json",
+      "paths": [
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/0/execution.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/0/execution.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/1/browser.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/2/coverage-66216-1792394624683-0.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/3/coverage-66216-1792394624692-0.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/4/app.js",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/5/app.js.map",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/01-initial-dom.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/02-added-to-empty.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/03-unfinished-existing-baseline.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/04-added-to-existing-unfinished.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/05-mixed-existing-baseline.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/06-added-to-existing-mixed.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/browser-native.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/checks.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/observations.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/server-stderr.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/frozen-evidence-review-1/6/trace.zip"
+      ],
+      "file_count": 18,
+      "bytes": 951695
+    },
+    "gate-review-1": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/handoff-gate-1.json",
+      "seconds": 0.586
+    },
+    "review-1": {
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-1/answer.json",
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-1/metrics.json",
+      "status": "passed",
+      "seconds": 48.288005833,
+      "usage": {
+        "toolUses": 5,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 123166,
+              "uncached": 33182,
+              "cacheRead": 89984,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 1766,
+              "visible": 1550,
+              "reasoning": 216
+            }
+          }
+        }
+      },
+      "tool_calls": 5,
+      "restarted_after_unavailable_session": false
+    }
+  },
+  "total_seconds": 367.54870979196744
+}

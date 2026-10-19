@@ -1,0 +1,47 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-19T06:55:06.441321+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/coverage_adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/run-response.json"
+  ],
+  "env_changes": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/fresh-execution"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/fresh-execution"
+  ],
+  "head_before": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/go-api/tests/coverage_adapter.py\n?? projects/go-api/tests/coverage_probe_test.go\n?? projects/go-api/tests/http_fixture_test.go\n?? projects/go-api/tests/prepare_coverage.py\n?? projects/go-api/tests/run_case.py\n?? projects/go-api/tests/stock06_restart_test.go",
+  "test_file_sha256_before": {
+    "projects/go-api/tests/coverage_adapter.py": "4f232c8ca21bc8b36358172b838bee946f2c4de9608488223d7e4bcc83533ee5",
+    "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+    "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+    "projects/go-api/tests/prepare_coverage.py": "55ac60ac50498c8bdff52ecf86b8eb53f4f05dddf4a19612887ef6cf05edd53d",
+    "projects/go-api/tests/run_case.py": "92b8791c88219fc1dcb9acae0551af4d4adf21a3937efeb7cdd6f3a4671c39a3",
+    "projects/go-api/tests/stock06_restart_test.go": "cbb8d09c7e0a9055e359606aae477fc7ae262a11786c1967b587603a352961f1"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/coverage-request.json",
+  "coverage_session_sha256": "80416178e1adf05b9b46fc6557c83d6f5f43171d053441599efd5049be94d789",
+  "child_pid": 31645,
+  "end_utc": "2026-10-19T06:55:08.013756+00:00",
+  "duration_seconds": 1.528825500048697,
+  "exit_code": 1,
+  "head_after": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/go-api/tests/coverage_adapter.py\n?? projects/go-api/tests/coverage_probe_test.go\n?? projects/go-api/tests/http_fixture_test.go\n?? projects/go-api/tests/prepare_coverage.py\n?? projects/go-api/tests/run_case.py\n?? projects/go-api/tests/stock06_restart_test.go",
+  "test_file_sha256_after": {
+    "projects/go-api/tests/coverage_adapter.py": "4f232c8ca21bc8b36358172b838bee946f2c4de9608488223d7e4bcc83533ee5",
+    "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+    "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+    "projects/go-api/tests/prepare_coverage.py": "55ac60ac50498c8bdff52ecf86b8eb53f4f05dddf4a19612887ef6cf05edd53d",
+    "projects/go-api/tests/run_case.py": "92b8791c88219fc1dcb9acae0551af4d4adf21a3937efeb7cdd6f3a4671c39a3",
+    "projects/go-api/tests/stock06_restart_test.go": "cbb8d09c7e0a9055e359606aae477fc7ae262a11786c1967b587603a352961f1"
+  },
+  "log_sha256": "ea6562d34de630d69dc26b84ef774ef0a406773ab2e02c42f7c1d32ea61fa2ea"
+}

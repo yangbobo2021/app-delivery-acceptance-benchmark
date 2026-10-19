@@ -1,0 +1,13 @@
+import {_electron as electron} from 'playwright';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const appRoot=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const out=path.resolve(process.argv[2]);fs.mkdirSync(out,{recursive:true});
+const app=await electron.launch({args:['.', '--user-data-dir',path.join(out,'user-data')], executablePath:path.join(appRoot,'node_modules/electron/dist/Electron.app/Contents/MacOS/Electron'),cwd:appRoot,chromiumSandbox:true,env:{...process.env,NODE_V8_COVERAGE:process.env.NATIVE_COVERAGE_DIR||path.join(out,'native')}});
+const p=await app.firstWindow();await p.waitForSelector('#new',{state:'visible',timeout:5000});
+await p.coverage.startJSCoverage({resetOnNavigation:false});await p.reload();await p.locator('#new').click();
+await p.screenshot({path:path.join(out,'visible-renderer.png')});
+fs.writeFileSync(path.join(out,'renderer.json'),JSON.stringify(await p.coverage.stopJSCoverage()));
+fs.writeFileSync(path.join(out,'runtime.json'),JSON.stringify({pid:app.process().pid,versions:await app.evaluate(()=>process.versions),url:p.url(),visible:await p.locator('h1').innerText(),spawnargs:app.process().spawnargs},null,2));
+const proc=app.process();await app.close();console.log('Electron capability probe exited', proc.exitCode);

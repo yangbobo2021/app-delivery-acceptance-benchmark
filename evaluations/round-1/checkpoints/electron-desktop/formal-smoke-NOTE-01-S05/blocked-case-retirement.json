@@ -1,0 +1,13 @@
+{
+  "schema": "blocked-case-retirement-v1",
+  "at": "2026-10-19T06:47:45.904731+00:00",
+  "scene_id": "NOTE-01-S05",
+  "state_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/state.json",
+  "state_sha256": "58bc24b4b6b686ffc85597ea8daa6c459033552ad22c358e5e5b7cf4e7677f8b",
+  "owner_sha256": "e7b242cb0ae388f20ee0f691c78010e28e215cc1ae0fd30ab3bfecf4a7630ed8",
+  "answer_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/answer.json",
+  "answer_sha256": "e7f931b57863847acf114484f6248ffec4606efe0b34283d6e631f88d567889e",
+  "basis": "Inspected both Agent local launch failures before business execution. Coverage preparation and separate host diagnostics proved Electron launch works on host; navigation race in test corrected and host diagnostic exercised business path. New attempt must use formal host execution and independent review.",
+  "business_verdict": null,
+  "next_action": "new frozen scene attempt after external blocker is corrected"
+}

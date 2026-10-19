@@ -1,0 +1,118 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli",
+    "id": "AT-20261019-benchmark-py",
+    "scope_sha256": "1b99a57ba687861f543626baf45a7ddfe543d2b40dde2898e94a5b0636b87da6",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/knowledge-reads/cd0ec4a64c9743548f94378b8c69ff54.json"
+  },
+  "requirement": {
+    "id": "INV-02",
+    "title": "INV-02",
+    "text": "INV-02：按 account 汇总所有记录的 amount_cents，使用精确整数计算。一个 account 的结果可以超过 32 位有符号整数最大值。"
+  },
+  "scene": {
+    "id": "INV-02-S01",
+    "title": "按账号完整累加交错记录",
+    "priority": "P0",
+    "priority_reason": "普通输入发生漏加、覆盖或串账，会使主要汇总结果错误。",
+    "description": "输入合法 CSV，Alpha1 的金额依次为 125、230、45，Beta2 为 70、9，Solo3 为 18，各账号记录交错排列。执行汇总后，totals 应恰好包含 Alpha1=400、Beta2=79、Solo3=18，非相邻记录和单条记录均计入各自账号。",
+    "requirement_id": "INV-02",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "提供无需网络的 CSV 金额汇总 CLI，严格校验输入，按大小写敏感的账号精确汇总金额，以稳定的 JSON 输出结果，并保证失败时无部分结果、输入文件及其目录不被写入。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "INV-01",
+      "INV-02",
+      "INV-03",
+      "INV-04",
+      "INV-05",
+      "INV-06"
+    ],
+    "exclusions": [
+      "不要求成功输出 JSON 的键顺序或空白格式。",
+      "不要求错误诊断采用特定措辞。",
+      "正式执行仅限质量评审后每个项目选定的两个场景，其余场景不执行；场景生成仍覆盖全部原始需求。"
+    ],
+    "limitations": [
+      "运行入口由 README 给出，但当前输入未提供具体命令。",
+      "正式执行的两个场景尚未选定，有限执行不能证明全部需求均已通过。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "INV-03",
+      "title": "INV-03",
+      "text": "INV-03：成功时标准输出为一个 JSON 对象，字段为 `totals`（account 到整数总额的对象）与 `row_count`（数据行数），退出码为 0。JSON 键顺序及空白不作要求，标准错误为空。"
+    },
+    {
+      "id": "INV-06",
+      "title": "INV-06",
+      "text": "INV-06：同一输入重复执行得到相同汇总。账号大小写敏感，`A` 与 `a` 分开统计；不对 account 做大小写转换。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/scenario-INV-02-02/scenarios.current.json",
+  "scenario_source_sha256": "701d8dcb57e48982757f1c11f33b4621734de330cea56b0416709667892bcff4",
+  "scenario_self_check": "internal",
+  "local_loopback_required": false,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/prepared",
+    "prepared_sha256": "b37b44a76dfc24e0ac6d09fd30280e06a05d58b872d86127c1be937aada54521",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/inventory.json",
+    "required_test_files": {
+      "projects/python-cli/tests/coverage_adapter.py": "88d7f82f0b21c5cf293c06ac25f1926ce881ae2452995f0c106143dffd50a7b5",
+      "projects/python-cli/tests/coverage.ini": "5d90049c92ffb295e212e5386729ff8be341197268481a33cd1b502166407df7",
+      "projects/python-cli/tests/prepare_coverage.py": "d1f7eab8387e5da24b0143a7ef75df772be6337c39e344808d7155ab9a6d2eb9"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli",
+      "id": "AT-20261019-benchmark-py",
+      "scope_sha256": "1b99a57ba687861f543626baf45a7ddfe543d2b40dde2898e94a5b0636b87da6",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/knowledge-reads/cd0ec4a64c9743548f94378b8c69ff54.json"
+    },
+    "scene_id": "INV-02-S01",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT",
+    "evidence_env_dir_keys": [
+      "ACCEPTANCE_CASE_ROOT"
+    ]
+  },
+  "frozen_revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "test_files": [
+    "projects/python-cli/tests/coverage.ini",
+    "projects/python-cli/tests/coverage_adapter.py",
+    "projects/python-cli/tests/coverage_subprocess/sitecustomize.py",
+    "projects/python-cli/tests/fixtures/inv_02_s01_interleaved.csv",
+    "projects/python-cli/tests/fixtures/inv_02_s02_int32.csv",
+    "projects/python-cli/tests/prepare_coverage.py",
+    "projects/python-cli/tests/test_inv_02_s01.py",
+    "projects/python-cli/tests/test_inv_02_s02.py"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/1/native-data",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/2/native-data.bobos-MacBook-Air-2.local.62650.XBWkGAvx",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/3/native-data.bobos-MacBook-Air-2.local.62651.XQBgoBcx",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/4/native-report.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/5/native-invocation.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/6/run-response.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/input/amounts.csv",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/stderr.bin",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/stdout.bin",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/execution/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/execution/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/execution/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/coverage-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/case/answer.json",
+  "scope_note": "Second selected scene for this project: ordinary core operation without the seeded defect; independent review must check false positives and any genuine unexpected bug.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/handoff-gate.json"
+}

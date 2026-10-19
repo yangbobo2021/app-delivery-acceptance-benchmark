@@ -1,0 +1,77 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "49becf8dd8e527fd9187acecc0e0bd7d7ef3c22f2664f3c52cae8f5e1a41adf6",
+  "bindings": {
+    "case_input": "0a4a280811db23a57e51c3947fc862e095dd0ef4b99d57fac76d3c2e97f260dd",
+    "guide": "d49fc69aa53da344c67e1bdeeab65d0d15ead9d981316bbd8bb50779de878533",
+    "template_catalog": "d63a28e85f3f6ec725f6c30815505cb2aeabfd31aadd3e30c20d95c61d5153a7"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:48:06.844857+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0.306
+      },
+      "finished_at": "2026-10-19T06:48:07.441279+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:48:07.531395+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/case/answer.json",
+        "seconds": 125.22943983300001,
+        "usage": {
+          "toolUses": 18,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 493552,
+                "uncached": 45680,
+                "cacheRead": 447872,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 4868,
+                "visible": 3767,
+                "reasoning": 1101
+              }
+            }
+          }
+        },
+        "tool_calls": 18,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-19T06:50:13.510134+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:50:13.614159+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/execution.log",
+        "exit_code": 1,
+        "seconds": 2.187232124968432,
+        "test_files": [
+          "projects/electron-desktop/tests/coverage-adapter.mjs",
+          "projects/electron-desktop/tests/note-01-s05.mjs",
+          "projects/electron-desktop/tests/package-lock.json",
+          "projects/electron-desktop/tests/package.json",
+          "projects/electron-desktop/tests/prepare-native.mjs",
+          "projects/electron-desktop/tests/probe-electron.mjs"
+        ]
+      },
+      "finished_at": "2026-10-19T06:50:19.083319+00:00"
+    },
+    "evidence": {
+      "status": "parked",
+      "started_at": "2026-10-19T06:50:19.183194+00:00",
+      "error": "frozen evidence path missing/outside root: /Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/fresh-execution/evidence"
+    }
+  }
+}

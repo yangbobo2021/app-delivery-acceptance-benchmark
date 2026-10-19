@@ -1,0 +1,8 @@
+test_complete_interleaved_totals (test_inv_02_s01.InterleavedAccountTotals.test_complete_interleaved_totals) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.111s
+
+OK
+/opt/miniconda3/lib/python3.12/site-packages/coverage/control.py:950: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.12.0/messages.html#warning-no-data-collected
+  self._warn("No data was collected.", slug="no-data-collected")

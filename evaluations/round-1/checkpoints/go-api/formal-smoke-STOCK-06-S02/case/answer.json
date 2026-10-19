@@ -1,0 +1,37 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/go-api/tests/stock06_restart_test.go",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/prepare_coverage.py"
+  ],
+  "test_command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock06RestartIdempotency$"
+  ],
+  "test_env": {},
+  "observations": [
+    "首次两笔预留均返回201，完整响应中的available分别为8、5。",
+    "正常关闭成功，使用同一状态目录启动不同PID的新进程后，库存为5。",
+    "两笔原量重试均错误返回201，available分别为3、0；未返回首次响应，并重复扣减。",
+    "随后改量返回409，但库存已为0，不满足保持5的判据。",
+    "补充隔离路径在重启后、任何原量重试前直接改量：错误返回201并将库存从5扣至4，确认原数量绑定丢失。",
+    "最终版本经统一覆盖率入口执行，业务断言失败；全部服务子进程均正常关闭，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/case/debug/attempt-2ffb76d9b2b74dceabedafa86a2d0f2b/state/stock06-774125226/http-observations.jsonl",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/case/debug/attempt-2ffb76d9b2b74dceabedafa86a2d0f2b/state/stock06-774125226",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/case/debug/attempt-2ffb76d9b2b74dceabedafa86a2d0f2b/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/case/debug/attempt-2ffb76d9b2b74dceabedafa86a2d0f2b/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "测试子进程运行真实load和serve，以http.Server.Shutdown正常关闭；未覆盖main命令行入口。",
+    "各子进程原生coverprofile已保存；冻结汇总器仅统计父进程，报告中的0%不代表业务覆盖率。子进程覆盖率汇总为incomplete，行和分支指标为unavailable。",
+    "ACCEPTANCE_CASE_ROOT和ACCEPTANCE_COVERPROFILE由统一入口绑定，重跑须使用新输出目录。"
+  ],
+  "reason": "正常重启保留了库存，却丢失成功请求的幂等记录，导致重复扣减并允许原请求改量。"
+}

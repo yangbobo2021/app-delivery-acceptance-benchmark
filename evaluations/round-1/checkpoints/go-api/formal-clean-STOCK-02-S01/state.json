@@ -1,0 +1,83 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "762168d46fcd148a6678e2de28f73d92566d6839073ebea0804a8f44670df755",
+  "bindings": {
+    "case_input": "f1e351dc608eee48636250588916a3e99e4ddb73a66e4cb201fddb73b9abf66b",
+    "guide": "1f8562890b23265939e463d24967aa7098c0b95f93d6679bc4da1f524338fedf",
+    "template_catalog": "1305d704eecb7c13fa25602e3ac40c35f4b622a76d5882ba2383c6fdb8076edc"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:18:15.629453+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0.236
+      },
+      "finished_at": "2026-10-19T07:18:16.975562+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:18:17.143738+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/answer.json",
+        "seconds": 116.503518333,
+        "usage": {
+          "toolUses": 20,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 402065,
+                "uncached": 33041,
+                "cacheRead": 369024,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 4540,
+                "visible": 3682,
+                "reasoning": 858
+              }
+            }
+          }
+        },
+        "tool_calls": 20,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-19T07:20:14.802771+00:00"
+    },
+    "case_repair": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:20:14.932710+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case-repair/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case-repair/metrics.json",
+        "seconds": 86.73943545799999,
+        "usage": {
+          "toolUses": 12,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 326518,
+                "uncached": 37622,
+                "cacheRead": 288896,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 4275,
+                "visible": 2447,
+                "reasoning": 1828
+              }
+            }
+          }
+        },
+        "tool_calls": 12
+      },
+      "finished_at": "2026-10-19T07:21:42.767677+00:00"
+    }
+  }
+}

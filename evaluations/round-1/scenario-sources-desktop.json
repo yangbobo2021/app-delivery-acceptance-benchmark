@@ -1,0 +1,38 @@
+[
+  {
+    "requirement_id": "NOTE-01",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/scenario-NOTE-01-02/scenarios.current.json",
+    "sha256": "c4cda74cad51653b7ce9631e9c2ff62c24ef5858a4746a97a9c12b00cc177622",
+    "count": 5
+  },
+  {
+    "requirement_id": "NOTE-02",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/scenario-NOTE-02-01/scenarios.current.json",
+    "sha256": "09309f40500a4c5251c0cb5106bd0bf03e3870b2ecb241ae2e480c4ef2dc080f",
+    "count": 5
+  },
+  {
+    "requirement_id": "NOTE-03",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/scenario-NOTE-03-01/scenarios.current.json",
+    "sha256": "7bb0ffb1265fa7873c1decfd6602f067bfc8280eeb615cd42388dc6fc0c47d09",
+    "count": 4
+  },
+  {
+    "requirement_id": "NOTE-04",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/scenario-NOTE-04-01/scenarios.current.json",
+    "sha256": "63119ac8ab5b42f55bd32e3964778f70bd3707c29915a07176556efb715fe9ee",
+    "count": 4
+  },
+  {
+    "requirement_id": "NOTE-05",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/scenario-NOTE-05-01/scenarios.current.json",
+    "sha256": "fbf49bb96d0e8233e3e7a225b7d22a745467a06db284e8f74e097c6025c7df77",
+    "count": 2
+  },
+  {
+    "requirement_id": "NOTE-06",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/scenario-NOTE-06-01/scenarios.current.json",
+    "sha256": "a50210ad1b0da0928f26757f110d13a159d1750506e25ddc208095af4b71acaa",
+    "count": 3
+  }
+]

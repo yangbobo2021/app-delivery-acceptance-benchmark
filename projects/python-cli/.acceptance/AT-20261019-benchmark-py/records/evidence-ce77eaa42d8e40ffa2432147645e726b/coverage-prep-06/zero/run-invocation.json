@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/miniconda3/bin/python",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli/tests/coverage_adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/zero/run-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/zero/run-response.json"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "/opt/miniconda3/lib/python3.12/site-packages/coverage/control.py:950: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.12.0/messages.html#warning-no-data-collected\n  self._warn(\"No data was collected.\", slug=\"no-data-collected\")\n"
+}

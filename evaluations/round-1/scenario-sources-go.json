@@ -1,0 +1,38 @@
+[
+  {
+    "requirement_id": "STOCK-01",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-01-01/scenarios.current.json",
+    "sha256": "d7ec9b1ad8041c68af2769d887c2c756b423287c18d0c44c372d06ed6b2b94b9",
+    "count": 2
+  },
+  {
+    "requirement_id": "STOCK-02",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-02-01/scenarios.current.json",
+    "sha256": "3776143f24b1883e72efc9383f0ead9b85291643f37ce97fa8fe2e88f4bccaae",
+    "count": 4
+  },
+  {
+    "requirement_id": "STOCK-03",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-03-01/scenarios.current.json",
+    "sha256": "990fbd6cea90fcee3d1cfb6cb5c7a5e194da4270e7340300567687ae72f02b1d",
+    "count": 4
+  },
+  {
+    "requirement_id": "STOCK-04",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-04-01/scenarios.current.json",
+    "sha256": "19397ad52339eb65dbc5c2c53de492ed96020e4eb1531c48be66e66445f0c4c4",
+    "count": 3
+  },
+  {
+    "requirement_id": "STOCK-05",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-05-01/scenarios.current.json",
+    "sha256": "9fa881e205dd295c86eff2f1e0aa6fdc04e6289e6e84839ad55eb91e43897f7b",
+    "count": 4
+  },
+  {
+    "requirement_id": "STOCK-06",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-06-02/scenarios.current.json",
+    "sha256": "d6101faafdeaa5680a171c86582b78b78e5abcc06214266c733d2051e85e6093",
+    "count": 3
+  }
+]

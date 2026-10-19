@@ -1,0 +1,49 @@
+{
+  "schema": "acceptance-debug-contract-v1",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop",
+    "id": "AT-20261019-benchmark-desktop",
+    "scope_sha256": "04ad17ad60fb715fabfa8ce75bacb393be5816c92d277840c6c024c054a70e76",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/knowledge-reads/88efe17bc98440d29bcd709a5f468002.json"
+  },
+  "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+  "workspace_policy": "single-acceptance-v1",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "scene_id": "NOTE-01-S05",
+  "catalog_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/catalog.json",
+  "catalog_sha256": "9f859a8f293a3122038fa40711de8d3aa4c57ec0c98395c65a2706d661050c88",
+  "input_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-bind/case-input.json",
+  "input_sha256": "0a4a280811db23a57e51c3947fc862e095dd0ef4b99d57fac76d3c2e97f260dd",
+  "debug_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case/debug",
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/prepared",
+    "prepared_sha256": "23821b7d22156a80ee8a0f83a457848940caab253577f2631d65eb7a43f4d17a",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/inventory.json",
+    "required_test_files": {
+      "projects/electron-desktop/tests/coverage-adapter.mjs": "9402af7f9079f031873897449f2d13defb692484420c80125a82406886a717ef",
+      "projects/electron-desktop/tests/package-lock.json": "5146160a03f32739340337644f3a7e357d474ff2e8c8c7d0f4e18ba354d98d82",
+      "projects/electron-desktop/tests/package.json": "cf8427fd4c635b8e53f6ae4fefbf8239452b0dd177afcf4eeec36f4abc2d4a7c",
+      "projects/electron-desktop/tests/prepare-native.mjs": "06e7186ff83374c709c6f4e2d61683461f8c4e1a7db28573c3cd5b0c3a897e44",
+      "projects/electron-desktop/tests/probe-electron.mjs": "1e7d4f598db9fbdf165c2f1f39a2934fac10b07b03f5f0aa67821a86fdb8aa83"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop",
+      "id": "AT-20261019-benchmark-desktop",
+      "scope_sha256": "04ad17ad60fb715fabfa8ce75bacb393be5816c92d277840c6c024c054a70e76",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/knowledge-reads/88efe17bc98440d29bcd709a5f468002.json"
+    },
+    "scene_id": "NOTE-01-S05",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT",
+    "fresh_env_paths": {
+      "UI_EVIDENCE_DIR": "evidence"
+    },
+    "evidence_env_dir_keys": [
+      "UI_EVIDENCE_DIR"
+    ]
+  }
+}

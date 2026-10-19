@@ -1,0 +1,144 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api",
+    "id": "AT-20261019-benchmark-go",
+    "scope_sha256": "7de49e440f3b01b49948909c342ef68b857952b63c10e6a3abd8f192bcb5514a",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/knowledge-reads/8fae4d5bb3eb44b998e54a10ca97aa2d.json"
+  },
+  "requirement": {
+    "id": "STOCK-02",
+    "title": "STOCK-02",
+    "text": "STOCK-02：`POST /reserve` 接收 JSON `request_id` 和 `quantity`。request_id 为非空字符串，quantity 为 1 至 10 的整数；合法且库存充足时以 201 返回 `request_id,quantity,available`，库存恰好减少该数量。"
+  },
+  "scene": {
+    "id": "STOCK-02-S01",
+    "title": "普通合法预留按当前库存连续扣减",
+    "priority": "P0",
+    "priority_reason": "普通合法请求无法成功预留或扣减数量错误，会直接阻断库存预留的主要业务目的。",
+    "description": "从初始库存 10 开始，使用两个不同的普通非空字符串 request_id，依次提交 quantity 为 3 和 2 的 JSON 预留请求。两次均返回 201，响应 JSON 的 request_id、quantity 分别与本次输入一致，available 依次为 7、5，实际库存也依次为 7、5。",
+    "requirement_id": "STOCK-02",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "提供初始库存为 10 的本地 HTTP 库存预留服务，支持查询、合法预留和幂等重试，在并发、无效请求及重启后保持库存和成功预留记录一致，并隔离不同状态目录。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "STOCK-01",
+      "STOCK-02",
+      "STOCK-03",
+      "STOCK-04",
+      "STOCK-05",
+      "STOCK-06"
+    ],
+    "exclusions": [
+      "无需建设身份系统，不依赖网络服务。",
+      "所有原始需求均生成场景；质量评审后，本项目仅正式执行两个选定场景，其余场景不执行。"
+    ],
+    "limitations": [
+      "启动入口由 README 给出，输入未提供具体启动命令、localhost 端口及状态目录的配置方式。",
+      "额外 JSON 字段允许接受或拒绝，未限定具体策略。",
+      "正式执行的两个场景尚未选定。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "STOCK-01",
+      "title": "STOCK-01",
+      "text": "STOCK-01：`GET /stock` 返回 JSON `available`，表示当前可用库存，成功状态为 200。"
+    },
+    {
+      "id": "STOCK-03",
+      "title": "STOCK-03",
+      "text": "STOCK-03：同 request_id、同 quantity 的成功预留重试，返回 200 及首次预留的响应内容，不再次扣减。相同 request_id 换 quantity 返回 409，不改变库存。"
+    },
+    {
+      "id": "STOCK-04",
+      "title": "STOCK-04",
+      "text": "STOCK-04：库存不足返回 409，不扣减。并发不同 request_id 的请求不能使库存为负；成功扣减总数不得超过初始库存。并发同 request_id 不得重复扣减。"
+    },
+    {
+      "id": "STOCK-05",
+      "title": "STOCK-05",
+      "text": "STOCK-05：缺失必填字段、坏 JSON、非整数/超范围 quantity 返回 400，不改变状态。额外 JSON 字段的接受或拒绝均允许。"
+    },
+    {
+      "id": "STOCK-06",
+      "title": "STOCK-06",
+      "text": "STOCK-06：在一次成功 HTTP 响应返回后正常关闭再启动，库存及成功 request_id 的幂等记录必须保留；不同状态目录互不影响。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-02-01/scenarios.current.json",
+  "scenario_source_sha256": "3776143f24b1883e72efc9383f0ead9b85291643f37ce97fa8fe2e88f4bccaae",
+  "scenario_self_check": "internal",
+  "local_loopback_required": true,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/prepared",
+    "prepared_sha256": "4e4d451606ee9f0928b15eb3b31e1c203e6c618651f0850f6fd2ad9797f8cd98",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/inventory.json",
+    "required_test_files": {
+      "projects/go-api/tests/coverage_adapter.py": "c57a55850db39f96ddc132841bec32e7c1c1e8015c70f6ec9ff25539e2a85a1a",
+      "projects/go-api/tests/run_case.py": "b0ad413a59c763c4c59eac257011d9fb364dbac6f95f9d2f7c417e4b58c04711",
+      "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+      "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+      "projects/go-api/tests/prepare_coverage.py": "20d0c63deb87e711a75717f3f10a24a828f2476af790caa8fb707d2e7bb42355"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api",
+      "id": "AT-20261019-benchmark-go",
+      "scope_sha256": "7de49e440f3b01b49948909c342ef68b857952b63c10e6a3abd8f192bcb5514a",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/knowledge-reads/8fae4d5bb3eb44b998e54a10ca97aa2d.json"
+    },
+    "scene_id": "STOCK-02-S01",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT",
+    "evidence_env_dir_keys": [
+      "ACCEPTANCE_CASE_ROOT"
+    ]
+  },
+  "frozen_revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "test_files": [
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/prepare_coverage.py",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/stock02_sequential_test.go",
+    "projects/go-api/tests/stock06_restart_test.go"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/1/covcounters.92693296bbc058414674b6688e10b66b.71673.1792394870043124000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/2/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/3/merged.coverprofile",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/4/native-statements.txt",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/5/run-response.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1/6/stock02-4245959351/http-observations.jsonl",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/frozen-evidence-review-1.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/coverage-review-1-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/review-repair-1/answer.json",
+  "previous_review": {
+    "status": "repair_required",
+    "coverage": "已覆盖两次合法预留的状态码、输入字段回显及独立 GET 库存校验；数字断言额外限制了 JSON 数字写法。覆盖率来自本次冻结单场景执行，Go 1.25.7 原生语句覆盖率为 54.3%，行和分支覆盖率不可用。",
+    "oracle": "STOCK-02 支持返回 201、回显输入及按数量扣减；STOCK-01 支持通过 GET 查询库存。初始库存 10 独立推导出 10−3=7、7−2=5。原文未限定响应数字的词法格式。",
+    "evidence": "冻结执行退出码为 0。测试通过真实回环 HTTP 调用产品 load/serve 路径，无产品 mock。五条冻结观察依次为 GET 200/10、POST 201/3/7、GET 200/7、POST 201/2/5、GET 200/5，两个 request_id 均正确回显。",
+    "findings": [
+      {
+        "kind": "case_code",
+        "reason": "stock02_sequential_test.go 使用 UseNumber 后以 got[key] != want 比较 json.Number，实际比较数字文本。例如 available 为 7e0 与 7 数值相同，却会失败；该格式限制没有需求依据。",
+        "requested_change": "对 quantity、available 保留 JSON 数字类型及整数值校验，按数值比较，允许等值数字表示；继续拒绝字符串、缺失字段和错误数值，并保留状态码、request_id、连续扣减及独立 GET 断言。修补后重新冻结执行。"
+      }
+    ],
+    "summary": "冻结观察支持本场景业务行为，但测试存在无依据的数字格式约束，需有限修补后复审。"
+  },
+  "scope_note": "Second selected scene for this project: ordinary core operation without the seeded defect; independent review must check false positives and any genuine unexpected bug.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/handoff-gate-1.json"
+}

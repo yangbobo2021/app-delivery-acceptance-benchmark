@@ -1,0 +1,77 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-02/prepared",
+  "prepared_sha256": "04899412679ee0de1925e8fef2dd87e45f2f84979d7c6680875e6f7e2270ae17",
+  "scene_id": "STOCK-06-S02",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_hashes": {
+    "projects/go-api/main.go": "7178bfc3e470cb27e0c1b0b816030411049cf0fa85b4cf90e5f106df892566ec"
+  },
+  "tools": [
+    {
+      "name": "Go native coverage",
+      "version": "go version go1.25.7 darwin/arm64",
+      "role": "collector and statement statistics"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/execution.json",
+  "execution_sha256": "077527eb0bf4ed815473c63af30cec8e39f05f15b3576ab95ee2960ff02bc698",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/native.coverprofile",
+      "sha256": "7356ce29481033b89a21f69616a7f1d6d72bc2641e527df68a7528af80c74f27"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/fresh-execution/stock06-583585368/before.coverprofile",
+      "sha256": "773671bb005a843cb5d1d3b77104942928a4331bb69c20bdaa146341fbc65fa5"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/fresh-execution/stock06-583585368/after.coverprofile",
+      "sha256": "22b799fcb2d73accef52d2316abc2f41350fcae44dfb8a055f6f803745312466"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/fresh-execution/stock06-583585368/binding-before.coverprofile",
+      "sha256": "773671bb005a843cb5d1d3b77104942928a4331bb69c20bdaa146341fbc65fa5"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/fresh-execution/stock06-583585368/binding-after.coverprofile",
+      "sha256": "5c5fed8cc08c21c74b982d565a809e938aea26456d6e3f5fe44fe29c4fdbe86c"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/merged.coverprofile",
+      "sha256": "54b7003463bef289d818fae01e7c9b964fae87e0178d96ed2015dc06e30890d9"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/native-statements.txt",
+      "sha256": "a8ebe027c084d221fa238fa5da5babfaf778e5232a7541c4796834591c79ba0e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/run-response.json",
+      "sha256": "7c8aeba67d6afb8625e754b41b726ef26cc2fa17299f5f1a29a049d1dced6b11"
+    }
+  ],
+  "components": [
+    {
+      "id": "stock-go",
+      "label": "Go native statement coverage (not line/branch coverage)",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "line": {
+        "status": "unavailable",
+        "reason": "Go native coverage exposes statement/block units; no verified line conversion tool is installed."
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Go native cover does not report branch coverage."
+      },
+      "statement": {
+        "status": "measured",
+        "tool_output": "stock.local/app/main.go:30:\tload\t\t70.0%\nstock.local/app/main.go:45:\tpersist\t\t71.4%\nstock.local/app/main.go:56:\tsend\t\t100.0%\nstock.local/app/main.go:61:\tserve\t\t67.5%\nstock.local/app/main.go:114:\tmain\t\t0.0%\ntotal:\t\t\t\t(statements)\t60.0%\n"
+      }
+    }
+  ]
+}

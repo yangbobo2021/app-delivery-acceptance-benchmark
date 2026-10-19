@@ -1,0 +1,132 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop",
+    "id": "AT-20261019-benchmark-desktop",
+    "scope_sha256": "04ad17ad60fb715fabfa8ce75bacb393be5816c92d277840c6c024c054a70e76",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/knowledge-reads/88efe17bc98440d29bcd709a5f468002.json"
+  },
+  "requirement": {
+    "id": "NOTE-01",
+    "title": "NOTE-01",
+    "text": "NOTE-01：可以新建、选择、编辑、删除便签。每个便签有不变的独立 ID；两个同标题便签独立编辑、删除。"
+  },
+  "scene": {
+    "id": "NOTE-01-S01",
+    "title": "新建并选择不同便签",
+    "priority": "P0",
+    "priority_reason": "无法创建便签或选择对应内容，会阻断日常记录与查阅。",
+    "description": "使用普通合法标题和正文新建并保存两个内容不同、标题不同的便签；两者均可选择，选择后显示对应便签的标题与正文，往返选择不串内容。",
+    "requirement_id": "NOTE-01",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "交付可在本地独立使用的 Electron 便签应用，支持便签独立管理、合法保存、退出后数据持久化及用户数据隔离，并确保文本展示、数据访问和应用退出安全可靠。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "NOTE-01",
+      "NOTE-02",
+      "NOTE-03",
+      "NOTE-04",
+      "NOTE-05",
+      "NOTE-06"
+    ],
+    "exclusions": [
+      "其他同时运行的 Electron 应用不在本需求范围内。",
+      "质量评审后，每个项目仅正式执行选定的两个测试场景，其他场景不执行。"
+    ],
+    "limitations": [
+      "所有原始需求均须生成场景，正式执行的两个场景尚未选定。",
+      "必须运行实际 Electron 桌面应用；项目 README 须提供构建和启动方式，应用须接受独立用户数据目录，不依赖公网或真实用户数据。",
+      "非法保存的错误文案及越界 ID 被拒绝时的具体报错形式不作要求。",
+      "实际实现及运行行为尚未验证。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "NOTE-02",
+      "title": "NOTE-02",
+      "text": "NOTE-02：标题去除首尾空白后必须为 1 至 80 个 Unicode 码点，正文为 0 至 10000 个 Unicode 码点。非法保存显示可见错误且不覆盖最近一次成功保存；错误文案不作要求。"
+    },
+    {
+      "id": "NOTE-03",
+      "title": "NOTE-03",
+      "text": "NOTE-03：成功保存后完全退出应用再启动，标题与正文一致；删除结果也保留。不同用户数据目录互不影响。"
+    },
+    {
+      "id": "NOTE-06",
+      "title": "NOTE-06",
+      "text": "NOTE-06：未选择便签时，保存/删除不得损坏现有数据；关闭后没有残留的本应用 Electron 进程。其他同时运行的 Electron 应用不在本需求范围内。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/scenario-NOTE-01-02/scenarios.current.json",
+  "scenario_source_sha256": "c4cda74cad51653b7ce9631e9c2ff62c24ef5858a4746a97a9c12b00cc177622",
+  "scenario_self_check": "internal",
+  "local_loopback_required": false,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/prepared",
+    "prepared_sha256": "23821b7d22156a80ee8a0f83a457848940caab253577f2631d65eb7a43f4d17a",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/inventory.json",
+    "required_test_files": {
+      "projects/electron-desktop/tests/coverage-adapter.mjs": "9402af7f9079f031873897449f2d13defb692484420c80125a82406886a717ef",
+      "projects/electron-desktop/tests/package-lock.json": "5146160a03f32739340337644f3a7e357d474ff2e8c8c7d0f4e18ba354d98d82",
+      "projects/electron-desktop/tests/package.json": "cf8427fd4c635b8e53f6ae4fefbf8239452b0dd177afcf4eeec36f4abc2d4a7c",
+      "projects/electron-desktop/tests/prepare-native.mjs": "06e7186ff83374c709c6f4e2d61683461f8c4e1a7db28573c3cd5b0c3a897e44",
+      "projects/electron-desktop/tests/probe-electron.mjs": "1e7d4f598db9fbdf165c2f1f39a2934fac10b07b03f5f0aa67821a86fdb8aa83"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop",
+      "id": "AT-20261019-benchmark-desktop",
+      "scope_sha256": "04ad17ad60fb715fabfa8ce75bacb393be5816c92d277840c6c024c054a70e76",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/knowledge-reads/88efe17bc98440d29bcd709a5f468002.json"
+    },
+    "scene_id": "NOTE-01-S01",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT"
+  },
+  "frozen_revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "test_files": [
+    "projects/electron-desktop/tests/coverage-adapter.mjs",
+    "projects/electron-desktop/tests/note-01-s01.mjs",
+    "projects/electron-desktop/tests/note-01-s05.mjs",
+    "projects/electron-desktop/tests/package-lock.json",
+    "projects/electron-desktop/tests/package.json",
+    "projects/electron-desktop/tests/prepare-native.mjs",
+    "projects/electron-desktop/tests/probe-electron.mjs"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/1/coverage-67552-1792394669796-0.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/2/coverage-67567-1792394669635-0.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/3/renderer-2e46694edb.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/4/coverage-final.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/5/coverage-summary.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1/6/command.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/execution-review-1/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/frozen-evidence-review-1.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/execution-review-1/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/execution-review-1/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/coverage-review-1-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/review-repair-1/answer.json",
+  "previous_review": {
+    "status": "repair_required",
+    "coverage": "新建两条不同便签、分别选择及 A/B/A/B 往返选择均有业务断言，可识别内容串用、丢失或第二次保存覆盖第一条。覆盖率绑定本次冻结执行；renderer/preload 行 11/11、原生块分支 6/7，main/store/build 不可用，整体 incomplete，不能视为全项目覆盖。",
+    "oracle": "创建、选择及内容独立性来自 NOTE-01；两组标题正文是测试独立字面量夹具，满足 NOTE-02 合法范围。比较完整输入值用于识别内容错误，不要求特定展示格式或列表顺序。",
+    "evidence": "冻结退出码为 1。observations.json 显示两条记录共存，四次往返选择的标题正文分别匹配夹具，持久化观察一致。已打开 07、08 冻结截图，确认两条入口及对应选中标题可见。唯一记录的异常是收尾 closeError：Cannot read properties of undefined (reading '_object')；测试在 await app.close() 后调用 app.process()，该调用依赖可能已释放的 Playwright 对象映射。没有证据表明本场景业务失败。",
+    "findings": [
+      {
+        "kind": "case_code",
+        "reason": "收尾在关闭应用后获取 app.process()，产生驱动对象访问异常并设置退出码 1；同时 report.status 仍为 passed，使日志自评与实际执行结果冲突。此失败不能归因于产品。",
+        "requested_change": "在关闭前保存进程句柄，关闭后通过该句柄可靠记录退出结果；将收尾错误纳入最终状态并保留异常详情。保留现有业务断言，修补后重新冻结执行。"
+      }
+    ],
+    "summary": "业务观察支持本场景行为正确，但测试收尾缺陷导致冻结执行失败，须修补后再判通过。"
+  },
+  "scope_note": "Second selected scene for this project: ordinary core operation without the seeded defect; independent review must check false positives and any genuine unexpected bug.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/handoff-gate-1.json"
+}

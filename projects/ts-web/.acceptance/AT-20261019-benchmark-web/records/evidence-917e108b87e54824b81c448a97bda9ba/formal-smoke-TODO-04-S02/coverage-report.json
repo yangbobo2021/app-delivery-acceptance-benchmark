@@ -1,0 +1,108 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/prepared",
+  "prepared_sha256": "7ae98ea9b30bae6ec7450a24cd2759456b94b20ba3bea8b6a378c71b58138d19",
+  "scene_id": "TODO-04-S02",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_hashes": {
+    "projects/ts-web/build.mjs": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a",
+    "projects/ts-web/server.mjs": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c",
+    "projects/ts-web/src/app.ts": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502",
+    "projects/ts-web/src/index.html": "ee2b8fa2e51e9a6c03f93ecf3de6918d073381f303f84dc839d4ba29a1ae24c1"
+  },
+  "tools": [
+    {
+      "name": "Google Chrome",
+      "version": "Google Chrome 155.0.8059.80",
+      "role": "browser runtime"
+    },
+    {
+      "name": "Node V8",
+      "version": "14.1.146.11-node.18",
+      "role": "native Node collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.64.1",
+      "role": "Chromium native precise collector"
+    },
+    {
+      "name": "c8",
+      "version": "12.0.0",
+      "role": "complete zero baseline and V8 merge/report"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "source-map conversion"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "statistics/report"
+    },
+    {
+      "name": "istanbul-reports",
+      "version": "3.2.0",
+      "role": "statistics/report"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/execution/execution.json",
+  "execution_sha256": "3dbf7d38efb173dffe7c6d063c483e86c3a1f317d9a77ed9f758a68f94786133",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/execution/native/browser.json",
+      "sha256": "1f027456c916d7bf02fa9ac28137c9e5b2ce6328e112e0f8ac6d040988e0fdf2",
+      "role": "native_v8"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/execution/native/coverage-13590-1792391805427-0.json",
+      "sha256": "646ba6304c5296490b66a9ebdd0a0cd5d4b7077fd69d857098e43999ec6398e9",
+      "role": "native_v8"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/execution/native/coverage-13590-1792391805434-0.json",
+      "sha256": "c15fd4f05a9bc3ef5f2eeb5186c2f00017fb767a034caa74a33c771978d5cfa0",
+      "role": "native_v8"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/execution/build/dist/app.js",
+      "sha256": "b448414842e47d1f6052aa8ad0ca197e8cdd194c4cbc5e21adc9d2ac8e716565",
+      "role": "served_build"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/execution/build/dist/app.js.map",
+      "sha256": "bf16aa483a0807fbf31f31b9c2d669421ea32c0fb631291effc111c9536ff179",
+      "role": "served_build"
+    }
+  ],
+  "components": [
+    {
+      "id": "javascript",
+      "label": "Browser TypeScript and Node build/host",
+      "source_paths": [
+        "projects/ts-web/build.mjs",
+        "projects/ts-web/server.mjs",
+        "projects/ts-web/src/app.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 37,
+        "total": 38,
+        "pct": 97.36
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 22,
+        "total": 28,
+        "pct": 78.57
+      }
+    }
+  ],
+  "report_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/execution/coverage-report.json",
+  "report_sha256": "d50232e83b8252934e0c8cd0a0b16a2bbe30d77c1a4d554e799308c1d2ee4a2f",
+  "capture_end": "2026-10-19T06:36:45.451133+00:00"
+}

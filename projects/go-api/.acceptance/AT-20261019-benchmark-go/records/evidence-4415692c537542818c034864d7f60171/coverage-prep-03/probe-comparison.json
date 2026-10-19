@@ -1,0 +1,48 @@
+{
+  "status": "matched",
+  "zero_native": "stock.local/app/main.go:30:\tload\t\t0.0%\nstock.local/app/main.go:45:\tpersist\t\t0.0%\nstock.local/app/main.go:56:\tsend\t\t0.0%\nstock.local/app/main.go:61:\tserve\t\t0.0%\nstock.local/app/main.go:114:\tmain\t\t0.0%\ntotal:\t\t\t\t(statements)\t0.0%\n",
+  "nonzero_native": "stock.local/app/main.go:30:\tload\t\t60.0%\nstock.local/app/main.go:45:\tpersist\t\t0.0%\nstock.local/app/main.go:56:\tsend\t\t100.0%\nstock.local/app/main.go:61:\tserve\t\t12.5%\nstock.local/app/main.go:114:\tmain\t\t0.0%\ntotal:\t\t\t\t(statements)\t20.0%\n",
+  "adapter_components": [
+    {
+      "id": "stock-go",
+      "label": "Go native statement coverage (not line/branch coverage)",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "line": {
+        "status": "unavailable",
+        "reason": "Go native coverage exposes statement/block units; no verified line conversion tool is installed."
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Go native cover does not report branch coverage."
+      },
+      "statement": {
+        "status": "measured",
+        "tool_output": "stock.local/app/main.go:30:\tload\t\t60.0%\nstock.local/app/main.go:45:\tpersist\t\t0.0%\nstock.local/app/main.go:56:\tsend\t\t100.0%\nstock.local/app/main.go:61:\tserve\t\t12.5%\nstock.local/app/main.go:114:\tmain\t\t0.0%\ntotal:\t\t\t\t(statements)\t20.0%\n"
+      }
+    }
+  ],
+  "direct_components": [
+    {
+      "id": "stock-go",
+      "label": "Go native statement coverage (not line/branch coverage)",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "line": {
+        "status": "unavailable",
+        "reason": "Go native coverage exposes statement/block units; no verified line conversion tool is installed."
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Go native cover does not report branch coverage."
+      },
+      "statement": {
+        "status": "measured",
+        "tool_output": "stock.local/app/main.go:30:\tload\t\t60.0%\nstock.local/app/main.go:45:\tpersist\t\t0.0%\nstock.local/app/main.go:56:\tsend\t\t100.0%\nstock.local/app/main.go:61:\tserve\t\t12.5%\nstock.local/app/main.go:114:\tmain\t\t0.0%\ntotal:\t\t\t\t(statements)\t20.0%\n"
+      }
+    }
+  ],
+  "note": "Go tool cover -func on identical profiles; adapter statement output equals direct CLI bytes."
+}

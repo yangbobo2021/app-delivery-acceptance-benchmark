@@ -1,0 +1,37 @@
+{
+  "status": "host_ready",
+  "test_files": [
+    "projects/electron-desktop/tests/note-01-s01.mjs",
+    "projects/electron-desktop/tests/coverage-adapter.mjs",
+    "projects/electron-desktop/tests/package-lock.json",
+    "projects/electron-desktop/tests/package.json",
+    "projects/electron-desktop/tests/prepare-native.mjs",
+    "projects/electron-desktop/tests/probe-electron.mjs"
+  ],
+  "test_command": [
+    "node",
+    "projects/electron-desktop/tests/note-01-s01.mjs"
+  ],
+  "test_env": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/review-repair-1/debug/attempt-01/state",
+    "UI_EVIDENCE_DIR": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/review-repair-1/debug/attempt-01/execution/ui"
+  },
+  "observations": [
+    "已改为启动后保存进程句柄，关闭后通过该句柄记录退出码、信号和退出状态；收尾异常保留完整堆栈并将最终状态设为 failed。",
+    "保留全部业务断言，以独立字面量夹具为预期，比较界面完整标题、正文及列表入口，并保存 DOM、截图和持久化原文供复审。",
+    "node --check 退出码为 0。",
+    "统一调试入口执行一次，退出码为 1；Electron 报 Process failed to launch!，businessExecution 为 not_started，业务断言执行数为 0。",
+    "公共准备 adapter-chain 的执行记录和运行响应均显示退出码为 0；本次使用全新隔离目录，未重试相同启动。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/review-repair-1/debug/request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/review-repair-1/debug/syntax-check.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/review-repair-1/debug/attempt-01/execution",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/execution.json"
+  ],
+  "limitations": [
+    "本次业务断言及修复后的关闭流程尚未实际执行，须由正式宿主执行和独立复审确认。",
+    "本次覆盖率报告为 incomplete；应用未启动，不能据此认定业务覆盖或全项目覆盖。"
+  ],
+  "reason": "测试收尾缺口已修补且静态检查通过，统一入口受 Agent 原生应用启动环境限制，公共准备已有宿主成功运行证据，返回 host_ready。"
+}

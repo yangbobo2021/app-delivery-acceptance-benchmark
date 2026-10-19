@@ -1,0 +1,48 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: scenario criteria failed
++ actual - expected
+
++ [
++   {
++     actual: '0',
++     criterion: 'global unfinished total',
++     expected: '2',
++     label: 'mixed-completed'
++   },
++   {
++     actual: '0',
++     criterion: 'global unfinished total',
++     expected: '2',
++     label: 'two-active-completed-empty'
++   }
++ ]
+- []
+
+    at file:///Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/todo-04-s02.mjs:59:12
+    at async withApp (file:///Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/browser-fixture.mjs:31:3)
+    at async file:///Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/todo-04-s02.mjs:10:1 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    {
+      label: 'mixed-completed',
+      criterion: 'global unfinished total',
+      actual: '0',
+      expected: '2'
+    },
+    {
+      label: 'two-active-completed-empty',
+      criterion: 'global unfinished total',
+      actual: '0',
+      expected: '2'
+    }
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v25.5.0

@@ -1,0 +1,13 @@
+{
+  "schema": "blocked-case-retirement-v1",
+  "at": "2026-10-19T07:22:28.741977+00:00",
+  "scene_id": "STOCK-02-S01",
+  "state_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/state.json",
+  "state_sha256": "4adcfb967f8cd3f80ab238f820e6f3e272767517f3ed2ec5411cd5f513c7caaf",
+  "owner_sha256": "e86ca22a637bdd5d1010d2a266419d1ba0c36923aa763d4ae95aed07eb4fcc3c",
+  "answer_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case-repair/answer.json",
+  "answer_sha256": "365689e10caeab862e8da314238fc71dc29e4169ececeddf028a5adcd0209bca",
+  "basis": "Inspected frozen local debug: ordinary reservation business assertions passed, but coverage finish expected stock06 child directory. Case repair changed project coverage adapter, invalidating the frozen preparation; no formal execution began. Reprepare project coverage and rerun this same scene in a new frozen attempt.",
+  "business_verdict": null,
+  "next_action": "new frozen scene attempt after external blocker is corrected"
+}

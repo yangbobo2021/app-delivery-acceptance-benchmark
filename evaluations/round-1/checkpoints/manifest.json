@@ -1,0 +1,358 @@
+{
+  "schema": "benchmark-checkpoint-index-v1",
+  "attempts": [
+    {
+      "project": "python-cli",
+      "acceptance_id": "AT-20261019-benchmark-py",
+      "attempt": "formal-smoke-INV-02-S02",
+      "local_raw_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02",
+      "files": [
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/request.frozen.json",
+          "sha256": "3b3900e04741ea5cde4f220df67b7536be5828a082921515a5f72a3bcb66b5bc",
+          "bytes": 3986
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/state.json",
+          "sha256": "7208b1772a94bd1aa5f4894cf03f1f5ef7226ef6502f0abddb40f181cfc3c594",
+          "bytes": 3327
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/case-feedback.json",
+          "sha256": "fcd149b6d6e4a44742b3366a82e9cd68ff2a5f24894ae4095a314fc2d5fd022f",
+          "bytes": 1191
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/blocked-case-retirement.json",
+          "sha256": "01ec876818897b65408c7aae1fa253669f5cdc919be708022314d6276b309a0e",
+          "bytes": 1087
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/case-repair/binding.json",
+          "sha256": "d27bafb57bc782dcf351b28f39b64e427581c1ec901aa089d21ed97f30a318c9",
+          "bytes": 1074
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/case-repair/debug-contract.json",
+          "sha256": "08f2b005e7ddc609ee15062e8cb26e8b39627b0a5825cd884e1005394fc15559",
+          "bytes": 3123
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/case-repair/answer.json",
+          "sha256": "0af2ff6fb738c2d7ff627bbb83929c69ac1ee8bfe390d06de2201e2d7b9275b8",
+          "bytes": 3037
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/case/debug-contract.json",
+          "sha256": "6fedb9a948e9cee9a1fecd7de4aa23dfbb1fededf9f1e971e35cf8e5b57ab356",
+          "bytes": 3116
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/python-cli/formal-smoke-INV-02-S02/case/answer.json",
+          "sha256": "7b6198050e32319c4f60f1e30321bcf7baa785ec12a11e4afc127b9eecb28eae",
+          "bytes": 1779
+        }
+      ]
+    },
+    {
+      "project": "go-api",
+      "acceptance_id": "AT-20261019-benchmark-go",
+      "attempt": "formal-smoke-STOCK-06-S02",
+      "local_raw_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02",
+      "files": [
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/summary.json",
+          "sha256": "829306d48913e415e0a46df35c186e9782bfffab0b5b11cb8b2eea357274928f",
+          "bytes": 8310
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/request.frozen.json",
+          "sha256": "6a38764bbc38a64da05acb1c89e6bc502075edcfc7d60b0fcb275a3015029941",
+          "bytes": 3887
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/coverage-report.json",
+          "sha256": "89e7ed2480b8029471615a2c04fef1bb7ceae400bfb7ffa5f103c1b44f381144",
+          "bytes": 3159
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/state.json",
+          "sha256": "d9a2986b3a2e1585bfc2faa8197077dcb1817a3e86ae262a14966f8a5fb9365a",
+          "bytes": 9549
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/handoff-gate.json",
+          "sha256": "88f5955d7784d497ee713a4707471afdab664d6fdacaa9978b9c0ad73fa91b3a",
+          "bytes": 243
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/frozen-evidence.json",
+          "sha256": "60bf5a2ffffe31fdb47f83db4d07be319f69c140b9d22f0863e7eae3256424e5",
+          "bytes": 10990
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/execution/coverage-report.json",
+          "sha256": "d9a292340c5cd87e7478df21de48bbe4047e7f7e0dbee064c37c0711159a98a2",
+          "bytes": 2818
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/execution/execution.log",
+          "sha256": "c47e1e5a7be3959c3ad8c3918ac6e577bf2a8ef916f0fcfd8172da5c83db93ce",
+          "bytes": 2198
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/execution/run-response.json",
+          "sha256": "b109c620ea1959eedb562002bf97e12def307ef3bdb5022420bf4f614123089f",
+          "bytes": 426
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/execution/execution.json",
+          "sha256": "341f042319dd0312acd3422e127708d67a90fa3f3dcb65da960afe629a551c58",
+          "bytes": 4049
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/execution/host.log",
+          "sha256": "c47e1e5a7be3959c3ad8c3918ac6e577bf2a8ef916f0fcfd8172da5c83db93ce",
+          "bytes": 2198
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/review/decision-gate.json",
+          "sha256": "2e6f9dac378f6426f9bf2b6077b9e03a20c3b0bbfef9e05e86532065d7741bf0",
+          "bytes": 102
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/review/answer.json",
+          "sha256": "62e9bf33a9fe05cdc9c616f225e9e243c4569a02ec21c5aaed835a445f31a323",
+          "bytes": 2503
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/case/debug-contract.json",
+          "sha256": "4bc7b5f7bb2ecf53277c1411446d789f03217321ea13527df5e5a49d5633c669",
+          "bytes": 3313
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02/case/answer.json",
+          "sha256": "64df8447e7dcdde5f51417bfca8feea23663400d33341cb9632119bf29fc779d",
+          "bytes": 2756
+        }
+      ]
+    },
+    {
+      "project": "go-api",
+      "acceptance_id": "AT-20261019-benchmark-go",
+      "attempt": "formal-smoke-STOCK-06-S02-retest-01",
+      "local_raw_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01",
+      "files": [
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/request.frozen.json",
+          "sha256": "8612529a338ec4aa455841ed35a9f717ff7348f9815a067117534317e5295f66",
+          "bytes": 3907
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/state.json",
+          "sha256": "e099ce57e9e4c59684b7bd04924eceb175aaf53f9abf970336eac4e250b89f0e",
+          "bytes": 3420
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/execution/coverage-report.json",
+          "sha256": "83825410470bdf62f0b1e24ebc3e66a3f06f597955aa0985c77c2dec78d9d33c",
+          "bytes": 4489
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/execution/execution.log",
+          "sha256": "ea6562d34de630d69dc26b84ef774ef0a406773ab2e02c42f7c1d32ea61fa2ea",
+          "bytes": 2228
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/execution/run-response.json",
+          "sha256": "7c8aeba67d6afb8625e754b41b726ef26cc2fa17299f5f1a29a049d1dced6b11",
+          "bytes": 436
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/execution/execution.json",
+          "sha256": "077527eb0bf4ed815473c63af30cec8e39f05f15b3576ab95ee2960ff02bc698",
+          "bytes": 4099
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/execution/host.log",
+          "sha256": "ea6562d34de630d69dc26b84ef774ef0a406773ab2e02c42f7c1d32ea61fa2ea",
+          "bytes": 2228
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/case/debug-contract.json",
+          "sha256": "ae0a61f47f08f55c1b131e5daddfb222748dcc481cc2124b907a1b18c1380e3d",
+          "bytes": 3343
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-smoke-STOCK-06-S02-retest-01/case/answer.json",
+          "sha256": "d9b1834aa0bc5164ac4dee39c1406bb6100bb3126d9f855db700ed6c152c80a9",
+          "bytes": 3297
+        }
+      ]
+    },
+    {
+      "project": "go-api",
+      "acceptance_id": "AT-20261019-benchmark-go",
+      "attempt": "formal-clean-STOCK-02-S01",
+      "local_raw_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01",
+      "files": [
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/request.frozen.json",
+          "sha256": "4a5c161b25924a372d15d9871d4fa6a591308d5867734323c1203564c63cb5ec",
+          "bytes": 3773
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/state.json",
+          "sha256": "4adcfb967f8cd3f80ab238f820e6f3e272767517f3ed2ec5411cd5f513c7caaf",
+          "bytes": 3308
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/case-feedback.json",
+          "sha256": "36c4336f6ef893d996b8033b8aec2f5076109ac01daecfb7742b70235a50c00a",
+          "bytes": 1521
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/blocked-case-retirement.json",
+          "sha256": "9af4ace1295f7fc8d9dcd875db5adf7c90e9c183d8f43a0c5acea0fff7564241",
+          "bytes": 1196
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/case-repair/binding.json",
+          "sha256": "66052a04dd488f0d6616267de06a7d0cf607157e4200c5b24883c4d83f14dd96",
+          "bytes": 1075
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/case-repair/debug-contract.json",
+          "sha256": "9c8d5ee0d2ae4d6b5df29304fc47bc64fb91b0d374db6e2b79b251eca45c428a",
+          "bytes": 3333
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/case-repair/answer.json",
+          "sha256": "365689e10caeab862e8da314238fc71dc29e4169ececeddf028a5adcd0209bca",
+          "bytes": 2186
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/case/debug-contract.json",
+          "sha256": "cf4b673a658aebf31a3551214e495554194adff55b9b26652d518f972f62ce62",
+          "bytes": 3326
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/go-api/formal-clean-STOCK-02-S01/case/answer.json",
+          "sha256": "5bd505fdf85298b398dee0495c519b3f2ab5aac9c34379327c84d27418d69573",
+          "bytes": 2900
+        }
+      ]
+    },
+    {
+      "project": "electron-desktop",
+      "acceptance_id": "AT-20261019-benchmark-desktop",
+      "attempt": "formal-smoke-NOTE-01-S05",
+      "local_raw_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05",
+      "files": [
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/request.frozen.json",
+          "sha256": "66977184c3127903ac6a5858a5c765ddb144628ebb753e53a6ac3935bc416a3d",
+          "bytes": 4340
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/state.json",
+          "sha256": "58bc24b4b6b686ffc85597ea8daa6c459033552ad22c358e5e5b7cf4e7677f8b",
+          "bytes": 3394
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/case-feedback.json",
+          "sha256": "08e25584bb3de51165e618a84aa555dad4bc0a668aad74cfc4fea59a69402eaf",
+          "bytes": 1497
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/blocked-case-retirement.json",
+          "sha256": "960857aaf672488eaf8b7f2f127cede72a158df734e6ae533d50067de48899b8",
+          "bytes": 1207
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/case-repair/binding.json",
+          "sha256": "adf9f48ac77a7c497d12a566673c2d9ec2dc2c66dee24705729586ecf991950f",
+          "bytes": 1120
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/case-repair/debug-contract.json",
+          "sha256": "346def949ab9005cbc02cdfc7c996f5f2282024e942833e1b85ec87839193c4e",
+          "bytes": 3573
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/case-repair/answer.json",
+          "sha256": "e7f931b57863847acf114484f6248ffec4606efe0b34283d6e631f88d567889e",
+          "bytes": 3436
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/case/debug-contract.json",
+          "sha256": "3643f9a5eeac9264de7cf1a9a2cb06efaedc68e5ba8afb7c5d531baecef691a5",
+          "bytes": 3566
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05/case/answer.json",
+          "sha256": "4ed62a934068ee48a12cbaa74242181baef18a8fddbd282b54b2e5eb03799676",
+          "bytes": 2684
+        }
+      ]
+    },
+    {
+      "project": "electron-desktop",
+      "acceptance_id": "AT-20261019-benchmark-desktop",
+      "attempt": "formal-smoke-NOTE-01-S05-retest-01",
+      "local_raw_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01",
+      "files": [
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/request.frozen.json",
+          "sha256": "946dedbc2cd6c04e0da56511cf45b35cec0aa9155602be2cb69a44a116fdb4b8",
+          "bytes": 4360
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/coverage-report.json",
+          "sha256": "1435c71b3245314de14d3fdeb1b71dd0bddde0b5e01726bf32c0be5af74cb430",
+          "bytes": 5939
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/state.json",
+          "sha256": "1089dc5818d7230f81cdd0d541580d13833d9b075e9ecabea865bc2e265dfeda",
+          "bytes": 3736
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/execution/coverage-report.json",
+          "sha256": "8ea2705b150e26df11fb5758f47232fa6a17d1ace18bc203bfe1f0d00e0ce6ef",
+          "bytes": 5574
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/execution/execution.log",
+          "sha256": "eed5c4b3ccdd96bc2ba3f9a1a4713b9ac13331eaac98c5df1a38ecab9e337195",
+          "bytes": 360
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/execution/run-response.json",
+          "sha256": "e10a10e261cec7b3aac63aa7bd33a93f561a258955d5af8c177b2008c6f19cda",
+          "bytes": 63
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/execution/execution.json",
+          "sha256": "bf8773755391158ad02aed1bbdc9ba3acf34a6c14f8596cb17dffdfa87ba83a6",
+          "bytes": 4616
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/execution/host.log",
+          "sha256": "eed5c4b3ccdd96bc2ba3f9a1a4713b9ac13331eaac98c5df1a38ecab9e337195",
+          "bytes": 360
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/case/debug-contract.json",
+          "sha256": "f819a58ca1ffeb96176c609558aa22972b4e602bd414b125bb1ed0a65abf4fd6",
+          "bytes": 3596
+        },
+        {
+          "path": "evaluations/round-1/checkpoints/electron-desktop/formal-smoke-NOTE-01-S05-retest-01/case/answer.json",
+          "sha256": "25c5610b7f5e2ec9092796ab8b27e59512fa218652ce822d9b2e1719733c3000",
+          "bytes": 3202
+        }
+      ]
+    }
+  ]
+}

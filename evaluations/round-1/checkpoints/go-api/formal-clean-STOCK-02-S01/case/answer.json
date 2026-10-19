@@ -1,0 +1,39 @@
+{
+  "status": "blocked",
+  "test_files": [
+    "projects/go-api/tests/stock02_sequential_test.go",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/prepare_coverage.py",
+    "projects/go-api/tests/stock06_restart_test.go"
+  ],
+  "test_command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock02SequentialReservations$"
+  ],
+  "test_env": {},
+  "observations": [
+    "通过统一调试入口实际执行本场景，业务测试退出码为 0。",
+    "初始 GET /stock 返回 200，available 为 10。",
+    "ordinary-first 预留 3 返回 201，request_id、quantity 与输入一致，available 为 7；随后独立 GET /stock 确认为 7。",
+    "ordinary-second 预留 2 返回 201，request_id、quantity 与输入一致，available 为 5；随后独立 GET /stock 确认为 5。",
+    "原生覆盖率数据已生成，但 finish 报错：expected one fresh stock06 process run；冻结适配器硬编码依赖上一场景的目录。",
+    "仅新增本场景测试；前一场景测试保留且未执行，产品源码未修改。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/debug/stock02-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/debug/attempt-f3674600e6d2401e8eea4a6668151823/state/stock02-803262329/http-observations.jsonl",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/debug/attempt-f3674600e6d2401e8eea4a6668151823/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/debug/attempt-f3674600e6d2401e8eea4a6668151823/execution/command/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/debug/attempt-f3674600e6d2401e8eea4a6668151823/execution/covdata/parent"
+  ],
+  "limitations": [
+    "ACCEPTANCE_CASE_ROOT 由统一入口新建绑定，ACCEPTANCE_COVERDIR 由项目覆盖率适配器绑定。",
+    "覆盖率收尾及报告验证未完成，不能将本次整体判定为 passed_local；需项目准备方修正适配器并重新冻结准备。",
+    "业务观察仍需独立审查。"
+  ],
+  "reason": "本场景业务断言全部通过，但冻结覆盖率适配器依赖上一场景目录，阻断强制覆盖率流程。"
+}

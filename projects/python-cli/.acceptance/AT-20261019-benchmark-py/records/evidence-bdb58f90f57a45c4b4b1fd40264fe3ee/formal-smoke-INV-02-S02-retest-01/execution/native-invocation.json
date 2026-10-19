@@ -1,0 +1,33 @@
+{
+  "business_command": [
+    "/opt/miniconda3/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "projects/python-cli/tests",
+    "-p",
+    "test_inv_02_s02.py",
+    "-v"
+  ],
+  "collector_command": [
+    "/opt/miniconda3/bin/python",
+    "-m",
+    "coverage",
+    "run",
+    "--rcfile",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli/tests/coverage.ini",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "projects/python-cli/tests",
+    "-p",
+    "test_inv_02_s02.py",
+    "-v"
+  ],
+  "business_exit_code": 1,
+  "combine_exit_code": 0,
+  "combine_stdout": "Combined data file ../workflows/formal-smoke-INV-02-S02-retest-01/execution/native-data.bobos-MacBook-Air-2.local.22521.XfLeOMcx\nCombined data file ../workflows/formal-smoke-INV-02-S02-retest-01/execution/native-data.bobos-MacBook-Air-2.local.22522.XoScZNMx\n",
+  "combine_stderr": ""
+}

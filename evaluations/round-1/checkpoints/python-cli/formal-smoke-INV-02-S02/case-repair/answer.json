@@ -1,0 +1,39 @@
+{
+  "status": "blocked",
+  "test_files": [
+    "projects/python-cli/tests/test_inv_02_s02.py",
+    "projects/python-cli/tests/fixtures/inv_02_s02_int32.csv",
+    "projects/python-cli/tests/coverage_adapter.py",
+    "projects/python-cli/tests/coverage.ini",
+    "projects/python-cli/tests/prepare_coverage.py"
+  ],
+  "test_command": [
+    "/opt/miniconda3/bin/python",
+    "projects/python-cli/tests/test_inv_02_s02.py"
+  ],
+  "test_env": {
+    "PYTHONPATH": "projects/python-cli",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "observations": [
+    "已读取并保留现有六行 CSV、有效断言及历史证据；未修改测试或产品源码。",
+    "独立判据为场景给定的整数常量：两个账号总额分别为 2147483647、2147483648，row_count 为 6；同时检查 JSON 类型、退出码和标准错误。",
+    "本次新建请求并通过规定调试入口执行一次，入口退出码为 1，报错 Scene cannot replace project coverage binding: prepared。",
+    "当前共享覆盖率策略仍绑定 go-api，与本场景 python-cli 的准备目录冲突；业务测试未启动，未生成业务输出或覆盖率报告。",
+    "已保存本次入口原始输出、退出码及策略快照；因阻塞条件未变化，未重复执行。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-repair/debug/request-inv-02-s02-repair-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-repair/debug/entry-repair-01.stdout.bin",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-repair/debug/entry-repair-01.stderr.bin",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-repair/debug/entry-repair-01.exit-code.txt",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-repair/debug/active-coverage-policy-repair-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-repair/debug/binding-diagnostic-repair-01.json"
+  ],
+  "limitations": [
+    "共享 Git 覆盖率策略位于本次可写范围之外，不能通过修改场景测试修复或绕过。",
+    "目标断言尚未实际执行，不能判定业务通过或产品失败。",
+    "需外部调度器修复绑定后通过统一入口重跑，本地结论仍需独立复审。"
+  ],
+  "reason": "共享覆盖率策略仍错误绑定 go-api，规定入口在启动业务测试前拒绝执行，阻塞无法在本次测试修复范围内解除。"
+}

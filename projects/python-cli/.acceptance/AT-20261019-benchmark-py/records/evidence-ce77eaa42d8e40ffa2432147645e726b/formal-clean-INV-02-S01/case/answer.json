@@ -1,0 +1,45 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/python-cli/tests/test_inv_02_s01.py",
+    "projects/python-cli/tests/fixtures/inv_02_s01_interleaved.csv",
+    "projects/python-cli/tests/coverage_subprocess/sitecustomize.py",
+    "projects/python-cli/tests/coverage_adapter.py",
+    "projects/python-cli/tests/coverage.ini",
+    "projects/python-cli/tests/prepare_coverage.py"
+  ],
+  "test_command": [
+    "/opt/miniconda3/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "projects/python-cli/tests",
+    "-p",
+    "test_inv_02_s01.py",
+    "-v"
+  ],
+  "test_env": {
+    "PYTHONPATH": "projects/python-cli",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "observations": [
+    "通过统一调试入口执行，1 个测试通过；CLI 退出码为 0，标准错误为空。",
+    "六条交错记录输出恰好包含 Alpha1=400、Beta2=79、Solo3=18；金额均为 JSON 整数，row_count=6。",
+    "执行前后输入文件字节和输入目录条目一致。",
+    "首次执行业务通过，但子进程覆盖率未采集；加入调用 coverage.py 官方启动 API 的测试夹具后，在全新目录重跑通过。",
+    "最终 coverage.py 7.12.0 原生采集、合并和统计报告：行命中 34/44，分支命中 7/14。",
+    "产品源码未修改，前一场景测试保留。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/case/debug/request-02.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/case/debug/local-02/state/inv-02-s01",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/case/debug/local-02/execution"
+  ],
+  "limitations": [
+    "命令从 workspace 根目录执行；ACCEPTANCE_CASE_ROOT 由统一入口绑定全新目录。",
+    "首次零命中报告不作为最终采集结果；最终报告来自 local-02。",
+    "结论仅限 INV-02-S01，本地通过仍需独立审查。"
+  ],
+  "reason": "真实 CLI 对六条交错记录的账号集合、精确总额、整数类型和数据行数均符合场景要求。"
+}

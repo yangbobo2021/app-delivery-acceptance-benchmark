@@ -1,0 +1,8 @@
+{
+  "schema": "single-scene-review-handoff-v1",
+  "status": "ready_for_review",
+  "scene_id": "STOCK-06-S02",
+  "execution_exit_code": 1,
+  "receipt_sha256": "341f042319dd0312acd3422e127708d67a90fa3f3dcb65da960afe629a551c58",
+  "errors": []
+}

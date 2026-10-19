@@ -1,0 +1,81 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web",
+    "id": "AT-20261019-benchmark-web",
+    "scope_sha256": "6082fc9aca2087f5e4b5b0cd1e70ada127f79f9f707fe7c7ee33f6eb496eb64f",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/knowledge-reads/8081dfc4379b4db8ab09c393ca7e4d16.json"
+  },
+  "progress_schema": "single-agent-scene-v1",
+  "project": {
+    "id": "workspace",
+    "label": "workspace",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "sources": [
+      "projects/ts-web/build.mjs",
+      "projects/ts-web/server.mjs",
+      "projects/ts-web/src/app.ts",
+      "projects/ts-web/src/index.html"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "TODO-01",
+      "title": "TODO-01",
+      "text": "TODO-01：输入非空标题并添加后，列表出现该待办。标题首尾空白会去除；全空白或去除后超过 80 个 Unicode 码点的标题不能添加，并显示可见错误。错误文案不作要求。"
+    },
+    {
+      "id": "TODO-02",
+      "title": "TODO-02",
+      "text": "TODO-02：可以切换待办完成状态，再次切换可恢复未完成。两个标题相同的待办是不同条目，切换一个不影响另一个。"
+    },
+    {
+      "id": "TODO-03",
+      "title": "TODO-03",
+      "text": "TODO-03：提供全部、未完成、已完成三个过滤选项。可见列表与所选过滤一致；切换过滤不修改待办状态。"
+    },
+    {
+      "id": "TODO-04",
+      "title": "TODO-04",
+      "text": "TODO-04：显示所有待办中的未完成总数，不能只统计当前过滤结果。空列表时为 0。"
+    },
+    {
+      "id": "TODO-05",
+      "title": "TODO-05",
+      "text": "TODO-05：可以删除指定待办，删除其他同名待办不受影响。刷新页面后，条目、完成状态与删除结果保留；不同浏览器存储上下文互不影响。"
+    },
+    {
+      "id": "TODO-06",
+      "title": "TODO-06",
+      "text": "TODO-06：标题作为普通文本展示。`<img src=x onerror=alert(1)>` 是合法短标题，不得创建对应图片元素或执行其中代码。列表排序、视觉设计、刷新后默认过滤均不作要求。"
+    }
+  ],
+  "reverse_rules": [],
+  "scene": {
+    "id": "TODO-01-S01",
+    "title": "添加普通标题形成新待办",
+    "priority": "P0",
+    "priority_reason": "普通有效标题不能形成列表条目，会阻断创建待办这一主要业务入口。",
+    "description": "在全部过滤下，分别向空列表和已有待办的列表添加普通非空短标题。每次添加后列表均出现对应的新待办，原有条目及其完成状态保持不变。",
+    "requirement_id": "TODO-01",
+    "kind": "BLACK_BOX"
+  },
+  "case_catalog": [],
+  "case_input_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-bind-TODO-01-S01/case-input.json",
+  "config_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-bind-TODO-01-S01/config.json",
+  "change": {
+    "inventory": {
+      "schema": "fixed-revision-inventory-v1",
+      "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+      "source_paths": [
+        "projects/ts-web/build.mjs",
+        "projects/ts-web/server.mjs",
+        "projects/ts-web/src/app.ts",
+        "projects/ts-web/src/index.html"
+      ],
+      "changed_files": [],
+      "changed_lines": {},
+      "change_scope": "unavailable: no base/head diff requested"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "status": "matched",
+  "nonzero_chain": true,
+  "zero_baseline_verified": true,
+  "source_paths": [
+    "src/main.ts",
+    "src/preload.ts",
+    "src/renderer.ts",
+    "src/store.ts"
+  ],
+  "native_maps_identical": true,
+  "adapter_summary": {
+    "project": {
+      "status": "incomplete",
+      "reason": "Only renderer/preload metrics verified; main/store/build unavailable. Static HTML is non-executable.",
+      "components": [
+        {
+          "id": "renderer-preload",
+          "label": "Electron renderer + sandbox preload; native V8 block branches",
+          "source_paths": [
+            "projects/electron-desktop/src/renderer.ts",
+            "projects/electron-desktop/src/preload.ts"
+          ],
+          "line": {
+            "status": "measured",
+            "covered": 11,
+            "total": 11,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 3,
+            "total": 4,
+            "pct": 75
+          }
+        },
+        {
+          "id": "main-store",
+          "label": "Electron main + bundled Store",
+          "source_paths": [
+            "projects/electron-desktop/src/main.ts",
+            "projects/electron-desktop/src/store.ts"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+          }
+        },
+        {
+          "id": "build",
+          "label": "Build helper",
+          "source_paths": [
+            "projects/electron-desktop/build.mjs"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "Build helper is not exercised by desktop scenes; separate complete native baseline has not been verified."
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "Build helper native branch denominator has not been verified."
+          }
+        }
+      ]
+    },
+    "changed_files": {
+      "status": "unavailable",
+      "reason": "Requirements benchmark has no frozen base/head change inventory. Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+    },
+    "changed_lines": {
+      "status": "unavailable",
+      "reason": "Requirements benchmark has no frozen base/head changed lines. Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+    }
+  },
+  "direct_renderer_preload": {
+    "lines": {
+      "total": 11,
+      "covered": 11,
+      "skipped": 0,
+      "pct": 100
+    },
+    "statements": {
+      "total": 11,
+      "covered": 11,
+      "skipped": 0,
+      "pct": 100
+    },
+    "functions": {
+      "total": 8,
+      "covered": 3,
+      "skipped": 0,
+      "pct": 37.5
+    },
+    "branches": {
+      "total": 4,
+      "covered": 3,
+      "skipped": 0,
+      "pct": 75
+    },
+    "branchesTrue": {
+      "total": 0,
+      "covered": 0,
+      "skipped": 0,
+      "pct": "Unknown"
+    }
+  },
+  "scopes": {
+    "project": "renderer/preload match direct native; main/store/build unavailable",
+    "changed_files": "unavailable: bundled store baseline not verified",
+    "changed_lines": "unavailable: bundled store baseline not verified"
+  },
+  "zero_baseline_gap": {
+    "main": {
+      "lines": {
+        "total": 9,
+        "covered": 9,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 9,
+        "covered": 9,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    },
+    "store": {
+      "lines": {
+        "total": 17,
+        "covered": 17,
+        "skipped": 0,
+        "pct": 100
+      },
+      "functions": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      },
+      "statements": {
+        "total": 17,
+        "covered": 17,
+        "skipped": 0,
+        "pct": 100
+      },
+      "branches": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    }
+  },
+  "operations": [
+    "run",
+    "finish",
+    "verify-report",
+    "summarize"
+  ],
+  "probe_is_not_acceptance": true
+}

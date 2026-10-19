@@ -1,0 +1,58 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution-review-1",
+  "files": [
+    "projects/ts-web/tests/browser-fixture.mjs",
+    "projects/ts-web/tests/coverage-adapter.mjs",
+    "projects/ts-web/tests/coverage-config.json",
+    "projects/ts-web/tests/node-flush.cjs",
+    "projects/ts-web/tests/package-lock.json",
+    "projects/ts-web/tests/package.json",
+    "projects/ts-web/tests/prepare-coverage.mjs",
+    "projects/ts-web/tests/probe.mjs",
+    "projects/ts-web/tests/todo-01-s01.mjs",
+    "projects/ts-web/tests/todo-04-s02.mjs"
+  ],
+  "command": [
+    "node",
+    "projects/ts-web/tests/todo-01-s01.mjs"
+  ],
+  "env": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/fresh-review-1",
+    "ACCEPTANCE_EVIDENCE_DIR": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/fresh-review-1/evidence"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/fresh-review-1"
+  ],
+  "business_command_binding": null,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/prepared",
+    "prepared_sha256": "7ae98ea9b30bae6ec7450a24cd2759456b94b20ba3bea8b6a378c71b58138d19",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/inventory.json",
+    "required_test_files": {
+      "projects/ts-web/tests/browser-fixture.mjs": "26ae69a77fac3e15d1907e666aa2c9008cbee41451f6a8df76a7e2adaa29b985",
+      "projects/ts-web/tests/coverage-adapter.mjs": "108647e9d9cffa892fcb3114ddd04be31f20676ee977ffd180f891e4e74ab838",
+      "projects/ts-web/tests/coverage-config.json": "4e109bc4b44b6ea93b6f3cd9b3b6323d8c2a98466e3fca36d90d81681c362535",
+      "projects/ts-web/tests/node-flush.cjs": "90b3b49b5d246c1b1cc228b11325d9c8f68c83f56df6df030387f0e68c627cf6",
+      "projects/ts-web/tests/package-lock.json": "25927db589abb442b80a1e6fe4abb5c0a70026599eb1d0d985f8ec328b7a7f01",
+      "projects/ts-web/tests/package.json": "318775d733b380afa22c885bcd772afaf089635fba9b9a0492d4403e22b28729",
+      "projects/ts-web/tests/prepare-coverage.mjs": "77e7181cdf4cdb5aa73f1898513c5823b1964058f61dd36847b0f0d79fc9dd73",
+      "projects/ts-web/tests/probe.mjs": "a5c687e745fe543ddfb15d93dc1537173b8887e82df0f52bfffeeebe61584cab"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web",
+      "id": "AT-20261019-benchmark-web",
+      "scope_sha256": "6082fc9aca2087f5e4b5b0cd1e70ada127f79f9f707fe7c7ee33f6eb496eb64f",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/knowledge-reads/8081dfc4379b4db8ab09c393ca7e4d16.json"
+    },
+    "scene_id": "TODO-01-S01",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/prepared",
+  "scene_id": "TODO-01-S01",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/inventory.json",
+  "prepared_sha256": "7ae98ea9b30bae6ec7450a24cd2759456b94b20ba3bea8b6a378c71b58138d19"
+}

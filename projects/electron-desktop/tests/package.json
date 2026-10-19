@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "desktop": "cd .. && node tests/desktop-scene.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1",
+    "c8": "11.0.0",
+    "v8-to-istanbul": "9.3.0",
+    "istanbul-lib-coverage": "3.2.2"
+  }
+}

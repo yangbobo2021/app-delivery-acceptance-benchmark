@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/run_case.py",
+    "TestCoverageProbe"
+  ],
+  "native_coverdir": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/covdata/parent",
+  "native_files": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/covdata/parent/covcounters.92693296bbc058414674b6688e10b66b.34354.1792393087356010000",
+      "sha256": "39ba0be45fe06d60d9a3454adaa2786df2bce58cbc43a9755d54be26932e56bd"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/covdata/parent/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+    }
+  ]
+}

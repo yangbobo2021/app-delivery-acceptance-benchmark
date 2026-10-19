@@ -1,0 +1,14 @@
+{
+  "status": "product_bug",
+  "coverage": "同标题共存、不同ID、分别编辑及交叉选择已有冻结证据；删除后两条均消失，无法继续验证幸存记录可选。覆盖率来自本次冻结执行：renderer/preload行11/11、分支9/12；main/store及build不可用，整体incomplete，不能替代业务判断。",
+  "oracle": "NOTE-01原文明示ID不变及同标题便签独立编辑、删除，因此删除甲必须保留乙的ID、标题和正文。标题与正文取自测试固定合法文本，ID在创建后记录；失败预期未引入额外业务策略。",
+  "evidence": "冻结命令退出码1，失败于note-01-s05.mjs:75：预期保留乙，实际持久化为[]。observations.json记录删除前两条均存在且分别编辑正确，删除后持久化和DOM列表均为空。已查看13-before-delete.png和14-after-delete.png，与观察一致。测试经真实Electron界面、preload和IPC调用Store；src/store.ts及实际入口dist/main.js均按标题过滤删除。收尾另有驱动closeError，但业务断言在此前已失败。覆盖率使用本次V8/Chromium计数，经c8 11.0.0、v8-to-istanbul 9.3.0转换及istanbul-lib-coverage 3.2.2汇总。",
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "Store.remove按n.title !== selected.title保留记录，导致删除任一同标题便签时全部同标题记录被删除，直接违反NOTE-01的独立删除要求。",
+      "requested_change": "按所选便签ID删除，仅移除目标记录，并保留其他同标题便签的ID、标题和正文。"
+    }
+  ],
+  "summary": "冻结失败可靠地识别了同标题便签被连带删除的产品缺陷。"
+}

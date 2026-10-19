@@ -1,0 +1,56 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-19T07:23:42.154657+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace",
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/coverage-adapter.mjs",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution-review-1/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution-review-1/run-response.json"
+  ],
+  "env_changes": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/fresh-review-1",
+    "ACCEPTANCE_EVIDENCE_DIR": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/fresh-review-1/evidence"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/fresh-review-1"
+  ],
+  "head_before": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/ts-web/tests/browser-fixture.mjs\n?? projects/ts-web/tests/coverage-adapter.mjs\n?? projects/ts-web/tests/coverage-config.json\n?? projects/ts-web/tests/node-flush.cjs\n?? projects/ts-web/tests/package-lock.json\n?? projects/ts-web/tests/package.json\n?? projects/ts-web/tests/prepare-coverage.mjs\n?? projects/ts-web/tests/probe.mjs\n?? projects/ts-web/tests/todo-01-s01.mjs\n?? projects/ts-web/tests/todo-04-s02.mjs",
+  "test_file_sha256_before": {
+    "projects/ts-web/tests/browser-fixture.mjs": "26ae69a77fac3e15d1907e666aa2c9008cbee41451f6a8df76a7e2adaa29b985",
+    "projects/ts-web/tests/coverage-adapter.mjs": "108647e9d9cffa892fcb3114ddd04be31f20676ee977ffd180f891e4e74ab838",
+    "projects/ts-web/tests/coverage-config.json": "4e109bc4b44b6ea93b6f3cd9b3b6323d8c2a98466e3fca36d90d81681c362535",
+    "projects/ts-web/tests/node-flush.cjs": "90b3b49b5d246c1b1cc228b11325d9c8f68c83f56df6df030387f0e68c627cf6",
+    "projects/ts-web/tests/package-lock.json": "25927db589abb442b80a1e6fe4abb5c0a70026599eb1d0d985f8ec328b7a7f01",
+    "projects/ts-web/tests/package.json": "318775d733b380afa22c885bcd772afaf089635fba9b9a0492d4403e22b28729",
+    "projects/ts-web/tests/prepare-coverage.mjs": "77e7181cdf4cdb5aa73f1898513c5823b1964058f61dd36847b0f0d79fc9dd73",
+    "projects/ts-web/tests/probe.mjs": "a5c687e745fe543ddfb15d93dc1537173b8887e82df0f52bfffeeebe61584cab",
+    "projects/ts-web/tests/todo-01-s01.mjs": "4337f7b69e09066818c406a60566ffcba689e5ef8b99dec04f87fe490579ffa1",
+    "projects/ts-web/tests/todo-04-s02.mjs": "4367ba3bd1af9f6e772cf671524ca83e46ad093417d47ee4684d77fdcd3a82f9"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/execution-review-1/coverage-request.json",
+  "coverage_session_sha256": "79b8e56acf01e55dd1ae931ae948e8ecdd475a2737e086e3bc1648af8f1a7e52",
+  "child_pid": 66214,
+  "end_utc": "2026-10-19T07:23:44.709798+00:00",
+  "duration_seconds": 2.51728116592858,
+  "exit_code": 0,
+  "head_after": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/ts-web/tests/browser-fixture.mjs\n?? projects/ts-web/tests/coverage-adapter.mjs\n?? projects/ts-web/tests/coverage-config.json\n?? projects/ts-web/tests/node-flush.cjs\n?? projects/ts-web/tests/package-lock.json\n?? projects/ts-web/tests/package.json\n?? projects/ts-web/tests/prepare-coverage.mjs\n?? projects/ts-web/tests/probe.mjs\n?? projects/ts-web/tests/todo-01-s01.mjs\n?? projects/ts-web/tests/todo-04-s02.mjs",
+  "test_file_sha256_after": {
+    "projects/ts-web/tests/browser-fixture.mjs": "26ae69a77fac3e15d1907e666aa2c9008cbee41451f6a8df76a7e2adaa29b985",
+    "projects/ts-web/tests/coverage-adapter.mjs": "108647e9d9cffa892fcb3114ddd04be31f20676ee977ffd180f891e4e74ab838",
+    "projects/ts-web/tests/coverage-config.json": "4e109bc4b44b6ea93b6f3cd9b3b6323d8c2a98466e3fca36d90d81681c362535",
+    "projects/ts-web/tests/node-flush.cjs": "90b3b49b5d246c1b1cc228b11325d9c8f68c83f56df6df030387f0e68c627cf6",
+    "projects/ts-web/tests/package-lock.json": "25927db589abb442b80a1e6fe4abb5c0a70026599eb1d0d985f8ec328b7a7f01",
+    "projects/ts-web/tests/package.json": "318775d733b380afa22c885bcd772afaf089635fba9b9a0492d4403e22b28729",
+    "projects/ts-web/tests/prepare-coverage.mjs": "77e7181cdf4cdb5aa73f1898513c5823b1964058f61dd36847b0f0d79fc9dd73",
+    "projects/ts-web/tests/probe.mjs": "a5c687e745fe543ddfb15d93dc1537173b8887e82df0f52bfffeeebe61584cab",
+    "projects/ts-web/tests/todo-01-s01.mjs": "4337f7b69e09066818c406a60566ffcba689e5ef8b99dec04f87fe490579ffa1",
+    "projects/ts-web/tests/todo-04-s02.mjs": "4367ba3bd1af9f6e772cf671524ca83e46ad093417d47ee4684d77fdcd3a82f9"
+  },
+  "log_sha256": "55fdd27bdf33b9b1d1f4d1ad99896b379881948c3ee106a6ca0184ae76b876c8"
+}

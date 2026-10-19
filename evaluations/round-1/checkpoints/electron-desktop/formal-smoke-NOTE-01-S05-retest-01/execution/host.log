@@ -1,0 +1,1 @@
+{"status":"failed","checks":[],"failure":"page.content: Unable to retrieve content because the page is navigating and changing the content.","evidence":"/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/ui/observations.json"}

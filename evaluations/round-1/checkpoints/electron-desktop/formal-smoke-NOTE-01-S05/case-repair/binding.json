@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-bind/case-input.json",
+    "sha256": "0a4a280811db23a57e51c3947fc862e095dd0ef4b99d57fac76d3c2e97f260dd"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-feedback.json",
+    "sha256": "08e25584bb3de51165e618a84aa555dad4bc0a668aad74cfc4fea59a69402eaf"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/catalog.json",
+    "sha256": "9f859a8f293a3122038fa40711de8d3aa4c57ec0c98395c65a2706d661050c88"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/project-guide/guide.json",
+    "sha256": "d49fc69aa53da344c67e1bdeeab65d0d15ead9d981316bbd8bb50779de878533"
+  }
+]

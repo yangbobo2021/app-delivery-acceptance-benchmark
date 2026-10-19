@@ -1,0 +1,1 @@
+{"include":["dist/app.js","build.mjs","server.mjs"],"exclude":["tests/**","node_modules/**"],"extension":[".js",".mjs"],"all":true,"reporter":["json","json-summary"],"excludeAfterRemap":false}

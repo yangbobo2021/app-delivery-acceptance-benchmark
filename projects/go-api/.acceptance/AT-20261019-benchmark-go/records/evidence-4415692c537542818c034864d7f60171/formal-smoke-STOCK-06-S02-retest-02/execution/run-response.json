@@ -1,0 +1,19 @@
+{
+  "exit_code": 1,
+  "command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock06RestartIdempotency$"
+  ],
+  "native_coverdir": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/parent",
+  "native_files": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/parent/covcounters.92693296bbc058414674b6688e10b66b.38075.1792393311291602000",
+      "sha256": "1c472c80c4b83a32a98bae2f385c04b8dcc3d32a6ce9f444196c49a570fc2d89"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/parent/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "scene_id": "STOCK-06-S02",
+  "review_status": "product_bug",
+  "review_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/review/answer.json",
+  "review_completion_reason": "bounded independent review loop completed",
+  "stages": {
+    "prepare": {
+      "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+      "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/catalog.json",
+      "setup_seconds": 0,
+      "check_seconds": 0.182
+    },
+    "case": {
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/case/metrics.json",
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/case/answer.json",
+      "seconds": 217.89302441700002,
+      "usage": {
+        "toolUses": 30,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 505310,
+              "uncached": 40414,
+              "cacheRead": 464896,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 8950,
+              "visible": 6120,
+              "reasoning": 2830
+            }
+          }
+        }
+      },
+      "tool_calls": 30,
+      "restarted_after_unavailable_session": false
+    },
+    "execution": {
+      "receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/execution/execution.json",
+      "log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/execution/execution.log",
+      "exit_code": 1,
+      "seconds": 1.518843041965738,
+      "test_files": [
+        "projects/go-api/tests/coverage_adapter.py",
+        "projects/go-api/tests/coverage_probe_test.go",
+        "projects/go-api/tests/http_fixture_test.go",
+        "projects/go-api/tests/prepare_coverage.py",
+        "projects/go-api/tests/run_case.py",
+        "projects/go-api/tests/stock06_restart_test.go"
+      ]
+    },
+    "evidence": {
+      "manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence.json",
+      "paths": [
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/0/execution.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/0/execution.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/1/native.coverprofile",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/2/native-statements.txt",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/3/run-response.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/after-ready",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/after-service.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/after.coverprofile",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/before-ready",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/before-service.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/before.coverprofile",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/binding-after-ready",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/binding-after-service.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/binding-after.coverprofile",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/binding-before-ready",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/binding-before-service.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/binding-before.coverprofile",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/binding-state/stock.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/http-observations.jsonl",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/frozen-evidence/4/stock06-997048518/state/stock.json"
+      ],
+      "file_count": 20,
+      "bytes": 20225
+    },
+    "gate": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/handoff-gate.json",
+      "seconds": 0.525
+    },
+    "review": {
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/review/answer.json",
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/review/metrics.json",
+      "status": "product_bug",
+      "seconds": 72.629615125,
+      "usage": {
+        "toolUses": 13,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 167785,
+              "uncached": 24809,
+              "cacheRead": 142976,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 2889,
+              "visible": 2292,
+              "reasoning": 597
+            }
+          }
+        }
+      },
+      "tool_calls": 13,
+      "restarted_after_unavailable_session": false
+    }
+  },
+  "total_seconds": 292.56648258396575
+}

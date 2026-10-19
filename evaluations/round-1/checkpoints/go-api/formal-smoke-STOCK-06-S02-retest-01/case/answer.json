@@ -1,0 +1,40 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/go-api/tests/stock06_restart_test.go",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/prepare_coverage.py"
+  ],
+  "test_command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock06RestartIdempotency$"
+  ],
+  "test_env": {},
+  "observations": [
+    "复用已有用例，通过指定统一调试入口执行一次，使用本次新建的隔离状态目录。",
+    "两笔首次预留分别返回201及完整响应：{\"request_id\":\"restart-first\",\"quantity\":2,\"available\":8}、{\"request_id\":\"restart-second\",\"quantity\":3,\"available\":5}。",
+    "正常关闭并使用原目录启动新进程后，GET /stock返回200，available为5。",
+    "第一笔原量重试返回201，available为3；第二笔原量重试返回201，available为0。均未返回200及首次响应，且发生重复扣减。",
+    "随后第一笔改量为1返回409，但库存仍为0，不满足库存保持5。",
+    "独立隔离分支重新预留2和3并正常重启，未进行原量重试即将第一笔改量为1，返回201且库存降为4，表明数量绑定未恢复。",
+    "四个服务进程均记录正常关闭且退出无错误；业务测试退出码为1。",
+    "覆盖率收尾校验报错：native coverage evidence is outside its execution/preparation；未将该报告认定为已验证覆盖率。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/case/debug/request-stock06-s02.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/case/debug/attempt-0545aecc1dc642358496ada7fd3bbc51/state/stock06-3338673205/http-observations.jsonl",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/case/debug/attempt-0545aecc1dc642358496ada7fd3bbc51/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/case/debug/attempt-0545aecc1dc642358496ada7fd3bbc51/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "统一入口将状态目录置于execution目录之外，冻结适配器引用其中的子进程覆盖率文件，导致覆盖率路径门禁拒绝；未修改框架或冻结适配器。",
+    "复用用例通过独立测试进程承载真实loader及HTTP handler，并执行正常HTTP关闭，未验证CLI启动入口。",
+    "运行所需ACCEPTANCE_CASE_ROOT和ACCEPTANCE_COVERPROFILE由统一入口及准备适配器注入；正式执行应重新绑定新目录。",
+    "业务结论仍需独立审查；覆盖率程序验证尚未完成。"
+  ],
+  "reason": "正常重启后成功请求的幂等记录丢失，导致原量重试重复扣减，并允许已有request_id改量成功。"
+}

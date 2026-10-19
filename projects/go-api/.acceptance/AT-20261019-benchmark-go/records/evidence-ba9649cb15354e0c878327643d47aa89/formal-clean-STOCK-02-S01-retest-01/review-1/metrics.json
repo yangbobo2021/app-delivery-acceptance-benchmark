@@ -1,0 +1,29 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "started_at": "2026-10-19T07:27:54.558Z",
+  "prompt_characters": 14238,
+  "status": "success",
+  "usage": {
+    "toolUses": 4,
+    "tokens": {
+      "coverage": "partial",
+      "totals": {
+        "input": {
+          "total": 150467,
+          "uncached": 15427,
+          "cacheRead": 135040,
+          "cacheWrite": 0
+        },
+        "output": {
+          "total": 1743,
+          "visible": 1598,
+          "reasoning": 145
+        }
+      }
+    }
+  },
+  "seconds": 50.975796583,
+  "tool_calls": 4,
+  "finished_at": "2026-10-19T07:28:45.540Z"
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "fixed-revision-inventory-v1",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_paths": [
+    "projects/ts-web/build.mjs",
+    "projects/ts-web/server.mjs",
+    "projects/ts-web/src/app.ts",
+    "projects/ts-web/src/index.html"
+  ],
+  "changed_files": [],
+  "changed_lines": {},
+  "change_scope": "unavailable: no base/head diff requested"
+}

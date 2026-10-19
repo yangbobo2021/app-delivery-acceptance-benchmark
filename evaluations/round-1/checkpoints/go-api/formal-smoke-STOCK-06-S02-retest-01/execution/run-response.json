@@ -1,0 +1,10 @@
+{
+  "exit_code": 1,
+  "command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock06RestartIdempotency$"
+  ],
+  "native_profile": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/native.coverprofile",
+  "profile_sha256": "7356ce29481033b89a21f69616a7f1d6d72bc2641e527df68a7528af80c74f27"
+}

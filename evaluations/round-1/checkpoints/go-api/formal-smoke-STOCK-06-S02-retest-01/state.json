@@ -1,0 +1,77 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "c01fa8ff731dcadda909f69f6db864e0defdcb03c014efbbc8826efb7e467201",
+  "bindings": {
+    "case_input": "c16cb2357768539667c075ac7e8f9fdeb503c71ec9ffd99e24434d7d2e7a9958",
+    "guide": "1f8562890b23265939e463d24967aa7098c0b95f93d6679bc4da1f524338fedf",
+    "template_catalog": "3fcda6a3466d289182fb9f94ee3c93ba83eff2f16393aab598752f8f93b217b5"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:53:21.318904+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0.145
+      },
+      "finished_at": "2026-10-19T06:53:22.185817+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:53:22.271115+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/case/answer.json",
+        "seconds": 102.428300667,
+        "usage": {
+          "toolUses": 10,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 356401,
+                "uncached": 34225,
+                "cacheRead": 322176,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 3648,
+                "visible": 2620,
+                "reasoning": 1028
+              }
+            }
+          }
+        },
+        "tool_calls": 10,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-19T06:55:05.598368+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:55:05.695708+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-01/execution/execution.log",
+        "exit_code": 1,
+        "seconds": 1.528825500048697,
+        "test_files": [
+          "projects/go-api/tests/coverage_adapter.py",
+          "projects/go-api/tests/coverage_probe_test.go",
+          "projects/go-api/tests/http_fixture_test.go",
+          "projects/go-api/tests/prepare_coverage.py",
+          "projects/go-api/tests/run_case.py",
+          "projects/go-api/tests/stock06_restart_test.go"
+        ]
+      },
+      "finished_at": "2026-10-19T06:55:08.552696+00:00"
+    },
+    "evidence": {
+      "status": "parked",
+      "started_at": "2026-10-19T06:55:08.629580+00:00",
+      "error": "native coverage evidence is outside its execution/preparation"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "matched",
+  "zero": {
+    "covered_lines": 0,
+    "num_statements": 44,
+    "percent_covered": 0.0,
+    "percent_covered_display": "0",
+    "missing_lines": 44,
+    "excluded_lines": 0,
+    "percent_statements_covered": 0.0,
+    "percent_statements_covered_display": "0",
+    "num_branches": 14,
+    "num_partial_branches": 0,
+    "covered_branches": 0,
+    "missing_branches": 14,
+    "percent_branches_covered": 0.0,
+    "percent_branches_covered_display": "0"
+  },
+  "hit": {
+    "covered_lines": 34,
+    "num_statements": 44,
+    "percent_covered": 70.6896551724138,
+    "percent_covered_display": "71",
+    "missing_lines": 10,
+    "excluded_lines": 0,
+    "percent_statements_covered": 77.27272727272727,
+    "percent_statements_covered_display": "77",
+    "num_branches": 14,
+    "num_partial_branches": 5,
+    "covered_branches": 7,
+    "missing_branches": 7,
+    "percent_branches_covered": 50.0,
+    "percent_branches_covered_display": "50"
+  },
+  "comparison": "Complete native coverage.py JSON totals agree for each same SQLite database."
+}

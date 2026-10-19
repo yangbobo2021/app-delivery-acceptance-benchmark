@@ -1,0 +1,46 @@
+{
+  "schema": "acceptance-debug-contract-v1",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api",
+    "id": "AT-20261019-benchmark-go",
+    "scope_sha256": "7de49e440f3b01b49948909c342ef68b857952b63c10e6a3abd8f192bcb5514a",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/knowledge-reads/8fae4d5bb3eb44b998e54a10ca97aa2d.json"
+  },
+  "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+  "workspace_policy": "single-acceptance-v1",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "scene_id": "STOCK-02-S01",
+  "catalog_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/catalog.json",
+  "catalog_sha256": "41e283489183f7b7d22498a319efaa8b8023508925aa2999d5db6aca69ab1d79",
+  "input_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-bind-STOCK-02-S01/case-input.json",
+  "input_sha256": "f1e351dc608eee48636250588916a3e99e4ddb73a66e4cb201fddb73b9abf66b",
+  "debug_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case-repair/debug",
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/prepared",
+    "prepared_sha256": "b636ab23c02412dbc0e9fe936f1ab0391f39e9f47692d2792901a7c503f39f61",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/inventory.json",
+    "required_test_files": {
+      "projects/go-api/tests/coverage_adapter.py": "e1ad5c6662f8ae753a2b36899147141315f753837c795b8a611b23f9acca748f",
+      "projects/go-api/tests/run_case.py": "b0ad413a59c763c4c59eac257011d9fb364dbac6f95f9d2f7c417e4b58c04711",
+      "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+      "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+      "projects/go-api/tests/prepare_coverage.py": "20d0c63deb87e711a75717f3f10a24a828f2476af790caa8fb707d2e7bb42355"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api",
+      "id": "AT-20261019-benchmark-go",
+      "scope_sha256": "7de49e440f3b01b49948909c342ef68b857952b63c10e6a3abd8f192bcb5514a",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/knowledge-reads/8fae4d5bb3eb44b998e54a10ca97aa2d.json"
+    },
+    "scene_id": "STOCK-02-S01",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT",
+    "evidence_env_dir_keys": [
+      "ACCEPTANCE_CASE_ROOT"
+    ]
+  }
+}

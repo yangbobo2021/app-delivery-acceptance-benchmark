@@ -1,0 +1,46 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-19T06:45:43.746741+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace",
+  "command": [
+    "/opt/miniconda3/bin/python",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli/tests/coverage_adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/run-response.json"
+  ],
+  "env_changes": {
+    "PYTHONPATH": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli",
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/fresh-execution"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/fresh-execution"
+  ],
+  "head_before": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/python-cli/tests/coverage.ini\n?? projects/python-cli/tests/coverage_adapter.py\n?? projects/python-cli/tests/fixtures/inv_02_s02_int32.csv\n?? projects/python-cli/tests/prepare_coverage.py\n?? projects/python-cli/tests/test_inv_02_s02.py",
+  "test_file_sha256_before": {
+    "projects/python-cli/tests/coverage.ini": "5d90049c92ffb295e212e5386729ff8be341197268481a33cd1b502166407df7",
+    "projects/python-cli/tests/coverage_adapter.py": "88d7f82f0b21c5cf293c06ac25f1926ce881ae2452995f0c106143dffd50a7b5",
+    "projects/python-cli/tests/fixtures/inv_02_s02_int32.csv": "a4b9c59178fd051731c32685915d86c1b5f03d83b291803627a1ba84ba6a828e",
+    "projects/python-cli/tests/prepare_coverage.py": "d1f7eab8387e5da24b0143a7ef75df772be6337c39e344808d7155ab9a6d2eb9",
+    "projects/python-cli/tests/test_inv_02_s02.py": "eec9331341aee86e56a83f897275c279abd4a923092ab04d2bc2b8332dbde810"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/coverage-request.json",
+  "coverage_session_sha256": "2011729805fab2bd8405e8ce9399b0f2c24e03ce5fa683f31e2ebcd6a69d985f",
+  "child_pid": 22520,
+  "end_utc": "2026-10-19T06:45:44.134581+00:00",
+  "duration_seconds": 0.3507665409706533,
+  "exit_code": 1,
+  "head_after": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/python-cli/tests/coverage.ini\n?? projects/python-cli/tests/coverage_adapter.py\n?? projects/python-cli/tests/fixtures/inv_02_s02_int32.csv\n?? projects/python-cli/tests/prepare_coverage.py\n?? projects/python-cli/tests/test_inv_02_s02.py",
+  "test_file_sha256_after": {
+    "projects/python-cli/tests/coverage.ini": "5d90049c92ffb295e212e5386729ff8be341197268481a33cd1b502166407df7",
+    "projects/python-cli/tests/coverage_adapter.py": "88d7f82f0b21c5cf293c06ac25f1926ce881ae2452995f0c106143dffd50a7b5",
+    "projects/python-cli/tests/fixtures/inv_02_s02_int32.csv": "a4b9c59178fd051731c32685915d86c1b5f03d83b291803627a1ba84ba6a828e",
+    "projects/python-cli/tests/prepare_coverage.py": "d1f7eab8387e5da24b0143a7ef75df772be6337c39e344808d7155ab9a6d2eb9",
+    "projects/python-cli/tests/test_inv_02_s02.py": "eec9331341aee86e56a83f897275c279abd4a923092ab04d2bc2b8332dbde810"
+  },
+  "log_sha256": "e1aff90eed96a06df4b27256c5e1b2e8bc40ff1e94904ac25ce3038d30a3289c"
+}

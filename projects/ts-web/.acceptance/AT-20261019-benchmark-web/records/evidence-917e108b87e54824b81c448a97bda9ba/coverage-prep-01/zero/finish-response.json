@@ -1,0 +1,90 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/building",
+  "prepared_sha256": "5acbce95d8c83cc921c44d7a75ab18fa7d50698b692f1c3b798854fc6c2d9577",
+  "scene_id": "preparation-zero",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_hashes": {
+    "projects/ts-web/build.mjs": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a",
+    "projects/ts-web/server.mjs": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c",
+    "projects/ts-web/src/app.ts": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502",
+    "projects/ts-web/src/index.html": "ee2b8fa2e51e9a6c03f93ecf3de6918d073381f303f84dc839d4ba29a1ae24c1"
+  },
+  "tools": [
+    {
+      "name": "Google Chrome",
+      "version": "Google Chrome 155.0.8059.80",
+      "role": "browser runtime"
+    },
+    {
+      "name": "Node V8",
+      "version": "14.1.146.11-node.18",
+      "role": "native Node collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.64.1",
+      "role": "Chromium native precise collector"
+    },
+    {
+      "name": "c8",
+      "version": "12.0.0",
+      "role": "complete zero baseline and V8 merge/report"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "source-map conversion"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "statistics/report"
+    },
+    {
+      "name": "istanbul-reports",
+      "version": "3.2.0",
+      "role": "statistics/report"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/receipt.json",
+  "execution_sha256": "00da890ea3c8d371d7ff54c39f15b332f147287e76fd548bef16f8c1fcc8b7ac",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/build/dist/app.js",
+      "sha256": "b448414842e47d1f6052aa8ad0ca197e8cdd194c4cbc5e21adc9d2ac8e716565",
+      "role": "served_build"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/build/dist/app.js.map",
+      "sha256": "bf16aa483a0807fbf31f31b9c2d669421ea32c0fb631291effc111c9536ff179",
+      "role": "served_build"
+    }
+  ],
+  "components": [
+    {
+      "id": "javascript",
+      "label": "Browser TypeScript and Node build/host",
+      "source_paths": [
+        "projects/ts-web/build.mjs",
+        "projects/ts-web/server.mjs",
+        "projects/ts-web/src/app.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 0,
+        "total": 38,
+        "pct": 0
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 0,
+        "total": 3,
+        "pct": 0
+      }
+    }
+  ]
+}

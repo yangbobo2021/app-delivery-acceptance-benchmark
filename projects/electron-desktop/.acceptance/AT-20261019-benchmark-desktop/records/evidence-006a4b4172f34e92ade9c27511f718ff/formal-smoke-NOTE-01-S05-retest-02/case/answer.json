@@ -1,0 +1,39 @@
+{
+  "status": "host_ready",
+  "test_files": [
+    "projects/electron-desktop/tests/note-01-s05.mjs",
+    "projects/electron-desktop/tests/coverage-adapter.mjs",
+    "projects/electron-desktop/tests/package.json",
+    "projects/electron-desktop/tests/package-lock.json",
+    "projects/electron-desktop/tests/prepare-native.mjs",
+    "projects/electron-desktop/tests/probe-electron.mjs"
+  ],
+  "test_command": [
+    "node",
+    "projects/electron-desktop/tests/note-01-s05.mjs"
+  ],
+  "test_env": {
+    "DEBUG": "pw:browser"
+  },
+  "observations": [
+    "复用已有场景用例，覆盖同标题记录共存、独立 ID、分别编辑及删除后的保留检查；同时核对界面和持久化记录。",
+    "调整为进入窗口后先记录当前 DOM，再定位操作控件；node --check 通过。",
+    "两次均通过统一覆盖率调试入口执行，使用本次新建的状态与输出目录。",
+    "第二次对齐公共准备已验证的 Electron 可执行文件路径，仍在窗口出现前报 Process failed to launch!，启动日志另记录 kill EPERM；业务检查数量为零。",
+    "公共准备 execution.json 记录退出码 0，runtime.json 记录真实 Electron 44.9.0、应用页面及可见 Notes。",
+    "本次覆盖率报告状态为 incomplete；未据此声称业务通过或产品失败。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/case/debug/request-local-02.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/case/debug/attempt-205c5c43e87e4685b9d8cf49468aa69e/execution",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/ui/probe/runtime.json"
+  ],
+  "limitations": [
+    "同标题共存、独立编辑及删除后的保留判据均未在本地执行，须由正式宿主运行并独立复审。",
+    "ACCEPTANCE_CASE_ROOT、UI_EVIDENCE_DIR 和覆盖率目录由统一执行入口绑定，须保持每次执行状态隔离。",
+    "启动失败后的进程清理未获确认，日志记录 kill EPERM。",
+    "公共准备已声明 main/store/build 覆盖率缺口，本次启动失败也不能提供业务覆盖结论。"
+  ],
+  "reason": "用例、状态隔离和静态检查已完成，公共准备证明宿主具备运行能力，但当前 Agent 环境无法启动原生 Electron，交由正式宿主执行。"
+}

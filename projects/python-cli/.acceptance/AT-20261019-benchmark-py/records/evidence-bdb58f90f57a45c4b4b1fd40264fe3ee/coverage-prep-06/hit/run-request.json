@@ -1,0 +1,23 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit",
+  "scene_id": "preparation-hit",
+  "command": [
+    "/opt/miniconda3/bin/python",
+    "-m",
+    "invoice",
+    "--input",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/sample.csv"
+  ],
+  "env": {
+    "PYTHONPATH": "projects/python-cli"
+  },
+  "files": [
+    "projects/python-cli/tests/coverage_adapter.py",
+    "projects/python-cli/tests/coverage.ini",
+    "projects/python-cli/tests/prepare_coverage.py"
+  ],
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/prepared",
+  "prepared_sha256": "8af6e14cb4d560991ebf19d3f2943921a28d4e0064de5c55148e4cd81ad7209d",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+}

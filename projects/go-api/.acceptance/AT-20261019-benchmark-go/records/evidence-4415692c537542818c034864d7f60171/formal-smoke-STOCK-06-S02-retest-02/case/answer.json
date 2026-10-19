@@ -1,0 +1,40 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/go-api/tests/stock06_restart_test.go",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/prepare_coverage.py"
+  ],
+  "test_command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock06RestartIdempotency$"
+  ],
+  "test_env": {},
+  "observations": [
+    "复用既有用例，未修改产品源码或前面场景的测试；通过统一调试入口在本次全新状态目录执行，退出码为1。",
+    "初始库存10；依次预留2、3均返回201，首次响应的available分别为8、5。",
+    "读取成功响应后正常关闭进程，以原目录启动新进程，库存恢复为5。",
+    "重启后两笔原量重试均错误返回201，available分别为3、0；未返回200及各自首次响应，发生重复扣减。",
+    "随后第一笔改量为1返回409，但库存已为0，未满足库存仍为5。",
+    "另一全新状态目录完成相同预留并正常重启后，在任何原量重试之前将第一笔改量为1，错误返回201，库存从5扣至4，证明恢复后的数量绑定丢失。",
+    "四个服务进程均正常退出；恢复代码在读取持久化状态后清空Requests，与HTTP观察一致。",
+    "统一入口生成了父进程和四个服务进程的原生覆盖率数据及合并报告。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/case/debug/restart-request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/case/debug/attempt-a13bcb264f3f43d6bcbdbd9cdaf30eaa/state/stock06-1415639087/http-observations.jsonl",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/case/debug/attempt-a13bcb264f3f43d6bcbdbd9cdaf30eaa/execution/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/case/debug/attempt-a13bcb264f3f43d6bcbdbd9cdaf30eaa/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "测试通过独立进程运行真实加载器和HTTP处理器，以HTTP Shutdown正常关闭；未测试CLI启动参数。",
+    "ACCEPTANCE_CASE_ROOT及覆盖率输出变量由统一入口绑定，重跑须使用全新目录。",
+    "覆盖率仅支持Go原生语句指标；行和分支指标为unavailable。",
+    "结论仍需正式冻结重跑与独立复审。"
+  ],
+  "reason": "正常重启保留库存但丢失成功请求的完整幂等记录，导致重复扣减并允许已有请求改量。"
+}

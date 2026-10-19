@@ -1,0 +1,21 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain",
+  "scene_id": "PREPARATION-NONBUSINESS-PROBE",
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "projects/electron-desktop/tests/probe-electron.mjs",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/ui/probe"
+  ],
+  "env": {},
+  "files": [
+    "projects/electron-desktop/tests/coverage-adapter.mjs",
+    "projects/electron-desktop/tests/package.json",
+    "projects/electron-desktop/tests/package-lock.json",
+    "projects/electron-desktop/tests/probe-electron.mjs",
+    "projects/electron-desktop/tests/prepare-native.mjs"
+  ],
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/probe-prepared",
+  "prepared_sha256": "2eaaace3305561443c4e24bffe0a6355476bdaea6b4c635f9179e0600dead0a3"
+}

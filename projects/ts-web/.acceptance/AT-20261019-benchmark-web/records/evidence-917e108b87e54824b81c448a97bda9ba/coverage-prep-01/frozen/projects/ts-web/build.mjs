@@ -1,0 +1,1 @@
+import {build} from 'esbuild'; import {copyFile, mkdir} from 'node:fs/promises'; await mkdir('dist',{recursive:true}); await build({entryPoints:['src/app.ts'],outfile:'dist/app.js',bundle:true,sourcemap:true,format:'esm',target:'es2022'}); await copyFile('src/index.html','dist/index.html');

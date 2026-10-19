@@ -1,0 +1,44 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/python-cli/tests/test_inv_02_s02.py",
+    "projects/python-cli/tests/fixtures/inv_02_s02_int32.csv",
+    "projects/python-cli/tests/coverage_adapter.py",
+    "projects/python-cli/tests/coverage.ini",
+    "projects/python-cli/tests/prepare_coverage.py"
+  ],
+  "test_command": [
+    "/opt/miniconda3/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "projects/python-cli/tests",
+    "-p",
+    "test_inv_02_s02.py",
+    "-v"
+  ],
+  "test_env": {
+    "PYTHONPATH": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli"
+  },
+  "observations": [
+    "复用已有用例及六行 CSV，补充输入内容和目录条目的前后观察；未修改产品源码或覆盖率适配器。",
+    "经统一调试入口执行，CLI 退出码为 0、标准错误为空，输出为可解析 JSON，row_count 为整数 6。",
+    "AtLimit 精确输出整数 2147483647；AboveLimit 错误输出整数 -2147483648，预期为 2147483648。",
+    "最终用例仅金额断言失败，业务测试退出码为 1；原始 stdout、stderr 和输入已保留。",
+    "执行前后输入文件字节相同，输入目录均仅包含 amounts.csv。",
+    "coverage.py 7.12.0 已经统一入口调用，但出现 no-data-collected 警告，生成报告记录零命中，不能证明产品子进程覆盖率采集成功。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/case/debug/request-int32-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/case/debug/attempt-e7a479559ebb405da0eb7447a1e67ba9/state/inv-02-s02",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/case/debug/attempt-e7a479559ebb405da0eb7447a1e67ba9/execution"
+  ],
+  "limitations": [
+    "覆盖率原始资料已保留，但本次行与分支命中数据不足；不认可报告中的零命中为可靠实测覆盖率。",
+    "重跑须由统一入口注入新的 ACCEPTANCE_CASE_ROOT。",
+    "输入快照只能证明最终内容及目录条目未变，不能排除瞬时写入。",
+    "结论限于 INV-02-S02，仍需独立审查。"
+  ],
+  "reason": "合法账号总额 2147483648 被回绕为 -2147483648，违反精确整数汇总要求。"
+}

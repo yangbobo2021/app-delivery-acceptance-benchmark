@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/coverage_adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/hit/run-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/hit/run-response.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"native_build_command\": [\"go\", \"test\", \"-c\", \"-overlay\", \"/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/hit/covdata/go-overlay-v2w5c_ki/overlay.json\", \"-covermode=atomic\", \"-coverpkg=stock.local/app\", \"-o\", \"/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/hit/covdata/go-overlay-v2w5c_ki/stock.test\", \".\"]}\n{\"native_test_command\": [\"/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/hit/covdata/go-overlay-v2w5c_ki/stock.test\", \"-test.v\", \"-test.run=TestCoverageProbe\", \"-test.gocoverdir=/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/hit/covdata/parent\"], \"native_coverdir\": \"/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-04/hit/covdata/parent\"}\n=== RUN   TestCoverageProbe\n--- PASS: TestCoverageProbe (0.00s)\nPASS\ncoverage: 20.0% of statements in stock.local/app\n",
+  "stderr": ""
+}

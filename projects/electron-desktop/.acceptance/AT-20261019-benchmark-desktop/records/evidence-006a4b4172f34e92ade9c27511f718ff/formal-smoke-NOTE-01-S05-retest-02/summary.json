@@ -1,0 +1,118 @@
+{
+  "scene_id": "NOTE-01-S05",
+  "review_status": "product_bug",
+  "review_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/review/answer.json",
+  "review_completion_reason": "bounded independent review loop completed",
+  "stages": {
+    "prepare": {
+      "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+      "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/catalog.json",
+      "setup_seconds": 0,
+      "check_seconds": 0.317
+    },
+    "case": {
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/case/metrics.json",
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/case/answer.json",
+      "seconds": 135.31526475,
+      "usage": {
+        "toolUses": 26,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 528352,
+              "uncached": 44640,
+              "cacheRead": 483712,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 5060,
+              "visible": 4118,
+              "reasoning": 942
+            }
+          }
+        }
+      },
+      "tool_calls": 26,
+      "restarted_after_unavailable_session": false
+    },
+    "execution": {
+      "receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/execution/execution.json",
+      "log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/execution/execution.log",
+      "exit_code": 1,
+      "seconds": 3.4415779589908198,
+      "test_files": [
+        "projects/electron-desktop/tests/coverage-adapter.mjs",
+        "projects/electron-desktop/tests/note-01-s05.mjs",
+        "projects/electron-desktop/tests/package-lock.json",
+        "projects/electron-desktop/tests/package.json",
+        "projects/electron-desktop/tests/prepare-native.mjs",
+        "projects/electron-desktop/tests/probe-electron.mjs"
+      ]
+    },
+    "evidence": {
+      "manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence.json",
+      "paths": [
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/0/execution.log",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/0/execution.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/1/coverage-31777-1792392912856-0.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/2/coverage-31884-1792392912733-0.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/3/renderer-656f306f07.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/4/coverage-final.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/5/coverage-summary.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/6/command.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/01-initial-dom.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/02-first-created.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/03-first-created-select-a7b13960-959e-45a2-a7d3-2014033d01f1.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/04-two-created.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/05-two-created-select-a7b13960-959e-45a2-a7d3-2014033d01f1.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/06-two-created-select-ce5cac25-6036-4548-be81-d97da35a4194.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/07-first-edited.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/08-first-edited-select-a7b13960-959e-45a2-a7d3-2014033d01f1.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/09-first-edited-select-ce5cac25-6036-4548-be81-d97da35a4194.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/10-second-edited.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/11-second-edited-select-a7b13960-959e-45a2-a7d3-2014033d01f1.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/12-second-edited-select-ce5cac25-6036-4548-be81-d97da35a4194.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/13-before-delete.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/14-after-delete.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/15-failure.png",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/observations.json",
+        "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/frozen-evidence/7/renderer.json"
+      ],
+      "file_count": 25,
+      "bytes": 3846075
+    },
+    "gate": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/handoff-gate.json",
+      "seconds": 0.686
+    },
+    "review": {
+      "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/review/answer.json",
+      "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/review/metrics.json",
+      "status": "product_bug",
+      "seconds": 73.1987555,
+      "usage": {
+        "toolUses": 7,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 239147,
+              "uncached": 30507,
+              "cacheRead": 208640,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 2986,
+              "visible": 2703,
+              "reasoning": 283
+            }
+          }
+        }
+      },
+      "tool_calls": 7,
+      "restarted_after_unavailable_session": false
+    }
+  },
+  "total_seconds": 212.64159820899084
+}

@@ -1,0 +1,17 @@
+{"native_test_command": ["go", "test", "-overlay", "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/execution/go-overlay-l_u3k9n9/overlay.json", "-count=1", "-v", "-covermode=atomic", "-coverpkg=stock.local/app", "-coverprofile=/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/execution/native.coverprofile", "-run", "^TestStock06RestartIdempotency$", "."]}
+=== RUN   TestStock06RestartIdempotency
+    acceptance_stock06_restart_test.go:62: evidence directory: /Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02/fresh-execution/stock06-997048518
+    acceptance_stock06_restart_test.go:185: retry 1 status: got 201 want 200; body={"request_id":"restart-first","quantity":2,"available":3}
+    acceptance_stock06_restart_test.go:187: retry 1 differs from complete first response: got map[available:3 quantity:2 request_id:restart-first] want map[available:8 quantity:2 request_id:restart-first]
+    acceptance_stock06_restart_test.go:189: after retry 1 available: got 3 want 5
+    acceptance_stock06_restart_test.go:185: retry 2 status: got 201 want 200; body={"request_id":"restart-second","quantity":3,"available":0}
+    acceptance_stock06_restart_test.go:187: retry 2 differs from complete first response: got map[available:0 quantity:3 request_id:restart-second] want map[available:5 quantity:3 request_id:restart-second]
+    acceptance_stock06_restart_test.go:189: after retry 2 available: got 0 want 5
+    acceptance_stock06_restart_test.go:192: after changed quantity available: got 0 want 5
+    acceptance_stock06_restart_test.go:213: changed quantity before any retry status: got 201 want 409; body={"request_id":"restart-first","quantity":1,"available":4}
+    acceptance_stock06_restart_test.go:214: binding after changed quantity available: got 4 want 5
+--- FAIL: TestStock06RestartIdempotency (0.10s)
+FAIL
+coverage: 0.0% of statements in stock.local/app
+FAIL	stock.local/app	0.648s
+FAIL

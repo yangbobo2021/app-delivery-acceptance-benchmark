@@ -1,0 +1,6 @@
+stock.local/app/main.go:30:	load		60.0%
+stock.local/app/main.go:45:	persist		71.4%
+stock.local/app/main.go:56:	send		100.0%
+stock.local/app/main.go:61:	serve		60.0%
+stock.local/app/main.go:114:	main		0.0%
+total:				(statements)	54.3%

@@ -1,0 +1,19 @@
+{
+  "business_command": [
+    "/opt/miniconda3/bin/python",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/noop.py"
+  ],
+  "collector_command": [
+    "/opt/miniconda3/bin/python",
+    "-m",
+    "coverage",
+    "run",
+    "--rcfile",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli/tests/coverage.ini",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/noop.py"
+  ],
+  "business_exit_code": 0,
+  "combine_exit_code": 0,
+  "combine_stdout": "Combined data file ../workflows/coverage-prep-06/zero/native-data.bobos-MacBook-Air-2.local.2024.XIuzIPpx\n",
+  "combine_stderr": ""
+}

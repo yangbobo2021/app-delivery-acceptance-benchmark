@@ -1,0 +1,45 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';import {createRequire} from 'node:module';import libCoverage from 'istanbul-lib-coverage';
+const workspace=process.cwd(),root=path.join(workspace,'projects/electron-desktop'),base=path.resolve(process.argv[2]),require=createRequire(import.meta.url);
+fs.mkdirSync(base,{recursive:true});
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const save=(p,x)=>{fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,JSON.stringify(x,null,2)+'\n');};
+const read=p=>JSON.parse(fs.readFileSync(p));
+const run=(command,log,cwd=workspace)=>{const r=spawnSync(command[0],command.slice(1),{cwd,encoding:'utf8'});save(log,{command,exit_code:r.status,stdout:r.stdout,stderr:r.stderr});if(r.status)throw Error(r.stderr||r.stdout);return r;};
+const git=(...a)=>spawnSync('git',a,{encoding:'utf8'}).stdout.trim();
+const revision=git('rev-parse','HEAD');
+const sources=['src/index.html','src/main.ts','src/preload.ts','src/renderer.ts','src/store.ts','build.mjs'].map(x=>'projects/electron-desktop/'+x);
+const source_hashes=Object.fromEntries(sources.map(n=>[n,sha(path.join(workspace,n))]));
+const inventory={schema:'fixed-revision-inventory-v1',revision,source_paths:sources,changed_files:[],changed_lines:{},change_scope:'unavailable: requirements benchmark has no base/head diff'};
+save(path.join(base,'inventory.json'),inventory);
+const tools=[{name:'Electron / V8 NODE_V8_COVERAGE + Chromium precise coverage',version:'44.9.0 / 15.2.124.43-electron.0',role:'collector'},{name:'playwright',version:require('playwright/package.json').version,role:'collector'},{name:'c8',version:require('c8/package.json').version,role:'converter/source-map/zero-units'},{name:'v8-to-istanbul',version:require('v8-to-istanbul/package.json').version,role:'converter/source-map'},{name:'istanbul-lib-coverage',version:require('istanbul-lib-coverage/package.json').version,role:'merge/statistics'}];
+const adapters=['coverage-adapter.mjs','package.json','package-lock.json','probe-electron.mjs','prepare-native.mjs'].map(x=>'projects/electron-desktop/tests/'+x);
+const profile={schema:'project-coverage-preparation-v1',entry:[process.execPath,path.join(root,'tests/coverage-adapter.mjs')],adapter_files:Object.fromEntries(adapters.map(p=>[p,sha(path.join(workspace,p))])),tools,spec:{project_root:workspace,revision,components:{},source_hashes,inventory_path:path.join(base,'inventory.json'),inventory_sha256:sha(path.join(base,'inventory.json')),registry_path:path.join(base,'registry.json')},source_dispositions:Object.fromEntries(sources.map(n=>[n,{kind:['projects/electron-desktop/src/renderer.ts','projects/electron-desktop/src/preload.ts'].includes(n)?'measured':n.endsWith('.html')?'non_executable':'unsupported',reason:n.endsWith('.html')?'Static document; no embedded executable script.':n==='projects/electron-desktop/build.mjs'?'Build helper native baseline not verified.':['projects/electron-desktop/src/main.ts','projects/electron-desktop/src/store.ts'].includes(n)?'Zero-native bundled sourcemap baseline yielded falsely covered lines; metric unavailable.':'c8 verified native precise coverage and zero-hit baseline.'}])),preparation_evidence:[],artifact_aliases:{},probe_only:true};
+const probePrepared=path.join(base,'probe-prepared');save(path.join(probePrepared,'prepared.json'),profile);
+const output=path.join(base,'adapter-chain'),session=path.join(base,'probe-session.json');
+fs.mkdirSync(output);
+const sessionData={cwd:workspace,output,scene_id:'PREPARATION-NONBUSINESS-PROBE',command:[process.execPath,'projects/electron-desktop/tests/probe-electron.mjs',path.join(output,'ui/probe')],env:{},files:adapters,revision,prepared:probePrepared,prepared_sha256:sha(path.join(probePrepared,'prepared.json'))};save(session,sessionData);
+const command=[...profile.entry,'run',session,path.join(output,'run-response.json')];const start=new Date().toISOString();
+const actual=run(command,path.join(base,'chain-run-command.json'));
+const receipt=path.join(output,'execution.json');save(receipt,{command,cwd:workspace,exit_code:actual.status,head_before:revision,head_after:git('rev-parse','HEAD'),started_at:start,finished_at:new Date().toISOString(),coverage_session_path:session,coverage_session_sha256:sha(session)});
+function invoke(operation,request,response){const p=path.join(base,'request-'+operation+'.json');save(p,request);run([...profile.entry,operation,p,response],path.join(base,'command-'+operation+'.json'));return read(response);}
+const report=invoke('finish',{request:session,receipt,output},path.join(output,'coverage-report.json'));
+invoke('verify-report',{report:path.join(output,'coverage-report.json')},path.join(base,'verify-report.json'));
+const summary=invoke('summarize',{reports:[path.join(output,'coverage-report.json')],inventory},path.join(base,'adapter-summary.json'));
+// Independent direct c8 CLI call over exactly the same native files; no adapter statistics used.
+const direct=path.join(base,'direct-native');const directCmd=[process.execPath,require.resolve('c8/bin/c8.js'),'report','--all','--src','dist','--temp-directory',path.join(output,'native'),'--reports-dir',direct,'--reporter','json','--reporter','json-summary','--exclude-after-remap','--exclude','tests/**','--exclude','node_modules/**'];run(directCmd,path.join(base,'direct-command.json'),root);
+const directMap=read(path.join(direct,'coverage-final.json')),adapterMap=read(path.join(output,'c8/coverage-final.json'));
+if(JSON.stringify(directMap)!==JSON.stringify(adapterMap))throw Error('Direct/native raw mapped units differ');
+const picked=libCoverage.createCoverageMap({});for(const [f,c] of Object.entries(directMap))if(['src/renderer.ts','src/preload.ts'].includes(path.relative(root,f)))picked.addFileCoverage(c);
+const ds=picked.getCoverageSummary().toJSON(),component=summary.scopes.project.components[0];
+for(const [label,key] of [['line','lines'],['branch','branches']])for(const k of ['covered','total','pct'])if(component[label][k]!==ds[key][k])throw Error('Direct summary mismatch '+label+k);
+if(!component.line.covered||!component.branch.covered)throw Error('Nonzero probe missing');
+const zero=path.join(base,'zero-native');fs.mkdirSync(zero);const zeroOut=path.join(base,'zero-report');run([process.execPath,require.resolve('c8/bin/c8.js'),'report','--all','--src','dist','--temp-directory',zero,'--reports-dir',zeroOut,'--reporter','json','--reporter','json-summary','--exclude-after-remap','--exclude','tests/**','--exclude','node_modules/**'],path.join(base,'zero-command.json'),root);
+const zs=read(path.join(zeroOut,'coverage-summary.json'));for(const n of ['src/renderer.ts','src/preload.ts'])if(zs[path.join(root,n)].lines.covered!==0)throw Error('Renderer/preload zero baseline mismatch');
+const comparison={status:'matched',nonzero_chain:true,zero_baseline_verified:true,source_paths:Object.keys(directMap).map(p=>path.relative(root,p)),native_maps_identical:true,adapter_summary:summary.scopes,direct_renderer_preload:ds,scopes:{project:'renderer/preload match direct native; main/store/build unavailable',changed_files:'unavailable: bundled store baseline not verified',changed_lines:'unavailable: bundled store baseline not verified'},zero_baseline_gap:{main:zs[path.join(root,'src/main.ts')],store:zs[path.join(root,'src/store.ts')]},operations:['run','finish','verify-report','summarize'],probe_is_not_acceptance:true};
+save(path.join(base,'comparison.json'),comparison);
+const prepared=path.join(base,'prepared');fs.mkdirSync(prepared);
+const evidence=[...fs.readdirSync(base).filter(n=>n.endsWith('.json')).map(n=>path.join(base,n)),path.join(output,'coverage-report.json'),path.join(output,'execution.json'),path.join(output,'c8/coverage-final.json'),path.join(output,'c8/coverage-summary.json'),path.join(direct,'coverage-final.json'),path.join(direct,'coverage-summary.json'),path.join(zeroOut,'coverage-final.json'),path.join(zeroOut,'coverage-summary.json'),...report.raw_evidence.map(x=>x.path),path.join(probePrepared,'prepared.json')];
+profile.probe_only=false;profile.probe_comparison={path:path.join(base,'comparison.json'),sha256:sha(path.join(base,'comparison.json'))};profile.zero_summary={path:path.join(zeroOut,'coverage-summary.json'),sha256:sha(path.join(zeroOut,'coverage-summary.json'))};profile.preparation_evidence=[...new Set(evidence)].map(p=>({path:p,sha256:sha(p)}));
+for(const n of [...sources,...adapters,...fs.readdirSync(path.join(root,'dist')).map(n=>'projects/electron-desktop/dist/'+n)]){const original=path.join(workspace,n),frozen=path.join(base,'frozen',n);fs.mkdirSync(path.dirname(frozen),{recursive:true});fs.copyFileSync(original,frozen);profile.artifact_aliases[original]={path:frozen,sha256:sha(frozen)};}
+save(path.join(prepared,'prepared.json'),profile);
+console.log(JSON.stringify({prepared,prepared_sha256:sha(path.join(prepared,'prepared.json')),comparison:comparison.status,scopes:summary.scopes}));

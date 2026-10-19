@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-bind-STOCK-02-S01/case-input.json",
+    "sha256": "f1e351dc608eee48636250588916a3e99e4ddb73a66e4cb201fddb73b9abf66b"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case-feedback.json",
+    "sha256": "36c4336f6ef893d996b8033b8aec2f5076109ac01daecfb7742b70235a50c00a"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/catalog.json",
+    "sha256": "41e283489183f7b7d22498a319efaa8b8023508925aa2999d5db6aca69ab1d79"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/project-guide/guide.json",
+    "sha256": "1f8562890b23265939e463d24967aa7098c0b95f93d6679bc4da1f524338fedf"
+  }
+]

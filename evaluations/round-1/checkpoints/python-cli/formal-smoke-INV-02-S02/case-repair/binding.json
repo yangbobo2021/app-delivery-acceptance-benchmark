@@ -1,0 +1,18 @@
+[
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-bind/case-input.json",
+    "sha256": "4866eedb723d6909b0867c51ede5a0592f82816d71883dcf775ed0b093739216"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-feedback.json",
+    "sha256": "fcd149b6d6e4a44742b3366a82e9cd68ff2a5f24894ae4095a314fc2d5fd022f"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/catalog.json",
+    "sha256": "8bae407dd72dab74035d1e9802af341121ddfed3d86d7c294071f7f27ce970f2"
+  },
+  {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/project-guide/guide.json",
+    "sha256": "694785a5e8632125f6e65374b3c574a1d3fcf3512cfa5b48f31476cab00d47ae"
+  }
+]

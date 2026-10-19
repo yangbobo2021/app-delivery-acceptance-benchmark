@@ -1,0 +1,272 @@
+{
+  "schema": "acceptance-catalog-v1",
+  "project": {
+    "id": "python-cli",
+    "label": "python-cli",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "requirements": [
+    {
+      "id": "INV-01",
+      "title": "INV-01",
+      "text": "INV-01：CSV 必须且仅有 `account,amount_cents` 两列表头，顺序如此。account 是非空 ASCII 字母数字串；amount_cents 是 0 至 1000000000 的十进制整数。空文件、无数据行、坏表头、坏记录应失败。"
+    },
+    {
+      "id": "INV-02",
+      "title": "INV-02",
+      "text": "INV-02：按 account 汇总所有记录的 amount_cents，使用精确整数计算。一个 account 的结果可以超过 32 位有符号整数最大值。"
+    },
+    {
+      "id": "INV-03",
+      "title": "INV-03",
+      "text": "INV-03：成功时标准输出为一个 JSON 对象，字段为 `totals`（account 到整数总额的对象）与 `row_count`（数据行数），退出码为 0。JSON 键顺序及空白不作要求，标准错误为空。"
+    },
+    {
+      "id": "INV-04",
+      "title": "INV-04",
+      "text": "INV-04：缺少参数、未知参数、输入文件不存在或输入不合法时，退出码为 2；标准错误包含非空诊断；标准输出为空，不输出部分汇总。具体诊断措辞不作要求。"
+    },
+    {
+      "id": "INV-05",
+      "title": "INV-05",
+      "text": "INV-05：不能修改输入文件，也不能在输入目录写入其他文件。使用者可从任意工作目录以绝对输入路径执行。"
+    },
+    {
+      "id": "INV-06",
+      "title": "INV-06",
+      "text": "INV-06：同一输入重复执行得到相同汇总。账号大小写敏感，`A` 与 `a` 分开统计；不对 account 做大小写转换。"
+    }
+  ],
+  "reverse_rules": [],
+  "scenarios": [
+    {
+      "id": "INV-01-S01",
+      "title": "普通合法 CSV 可处理",
+      "priority": "P0",
+      "priority_reason": "普通合规输入若被拒绝，用户无法完成 CSV 金额汇总的主要目的。",
+      "description": "输入表头为 account,amount_cents，数据行为 Acct7,125 和 User8,300 的 UTF-8 CSV；执行处理，应通过输入校验并成功完成。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-01-S02",
+      "title": "允许各类合法 ASCII 账号",
+      "priority": "P1",
+      "priority_reason": "额外限制账号组成或最小长度，会使一类合规账号无法参与汇总。",
+      "description": "使用正确表头和合法金额，分别包含账号 A、7、abc、123、aB9；执行处理，这些非空 ASCII 字母数字账号均应通过校验。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-01-S03",
+      "title": "金额包含上下界",
+      "priority": "P1",
+      "priority_reason": "排除金额端点会拒绝零金额记录或合同允许的最大单笔金额，阻断相关文件的处理。",
+      "description": "使用正确表头和合法账号，金额分别取 0 和 1000000000；执行处理，两种金额均应通过校验。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-01-S04",
+      "title": "拒绝不匹配的表头",
+      "priority": "P1",
+      "priority_reason": "错误表头被接受可能导致字段含义错配，使不符合输入合同的数据进入汇总。",
+      "description": "在后续数据合法的条件下，分别使用颠倒顺序、缺少列、增加列、重复列名、改变列名大小写或给列名添加空格的表头，并覆盖直接以数据行开头的文件；执行处理，各文件均应判为输入不合法而失败。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-01-S05",
+      "title": "拒绝没有数据的文件",
+      "priority": "P1",
+      "priority_reason": "没有数据仍报告成功，会把空输入误认为已完成有效汇总。",
+      "description": "分别提供零字节文件，以及仅含正确表头而没有数据行的文件；执行处理，两者均应失败。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-01-S06",
+      "title": "拒绝非法账号",
+      "priority": "P1",
+      "priority_reason": "非法账号被接受会使汇总结果包含合同不允许的账号标识，影响结果可用性。",
+      "description": "使用正确表头和合法金额，在合法记录之后分别加入账号为空、含首尾或内部空格、含下划线或连字符、含中文、含重音字母或全角数字的记录；执行处理，各文件均应因非法账号而失败，不能通过修剪或替换字符使其通过校验。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-01-S07",
+      "title": "拒绝非法金额",
+      "priority": "P1",
+      "priority_reason": "非法金额被接受或转换为合法值，会让汇总建立在不符合金额合同的数据上。",
+      "description": "使用正确表头和合法账号，在合法记录之后分别加入金额为空、-1、1000000001、1.5、1e2、0x10 或 abc 的记录；执行处理，各文件均应因非法金额而失败。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-01-S08",
+      "title": "拒绝结构损坏的记录",
+      "priority": "P1",
+      "priority_reason": "忽略或勉强解析坏记录，会使缺失或错位的数据被当成有效输入处理。",
+      "description": "使用正确表头，在合法记录之后分别加入只有一个字段、包含三个字段或存在未闭合引号的 CSV 记录；执行处理，各文件均应因坏记录而失败。",
+      "requirement_id": "INV-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-02-S01",
+      "title": "按账号完整累加交错记录",
+      "priority": "P0",
+      "priority_reason": "普通输入发生漏加、覆盖或串账，会使主要汇总结果错误。",
+      "description": "输入合法 CSV，Alpha1 的金额依次为 125、230、45，Beta2 为 70、9，Solo3 为 18，各账号记录交错排列。执行汇总后，totals 应恰好包含 Alpha1=400、Beta2=79、Solo3=18，非相邻记录和单条记录均计入各自账号。",
+      "requirement_id": "INV-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-02-S02",
+      "title": "账号总额跨越有符号32位上限",
+      "priority": "P1",
+      "priority_reason": "使用32位累加或限制总额范围，会使合法的大额账号汇总失败或金额失真。",
+      "description": "输入合法 CSV，一个账号的金额为 1000000000、1000000000、147483647，另一个账号为 1000000000、1000000000、147483648。执行汇总后，两者总额应分别精确为 2147483647 和 2147483648，均能正常得到汇总结果。",
+      "requirement_id": "INV-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-02-S03",
+      "title": "超过浮点连续整数范围仍精确累加",
+      "priority": "P1",
+      "priority_reason": "浮点累加或转换会丢失合法账号总额中的整数精度，输出错误金额。",
+      "description": "输入合法 CSV，同一账号先有 9007199 条金额为 1000000000 的记录，随后有一条金额为 254740993 的记录。执行汇总后，该账号总额应精确为 9007199254740993，不得因浮点舍入而改变金额。",
+      "requirement_id": "INV-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-02-S04",
+      "title": "零金额记录不清除已有累计金额",
+      "priority": "P1",
+      "priority_reason": "零金额触发重置或删除累计值，会丢失该账号已经计入的正金额。",
+      "description": "输入合法 CSV，同一账号的金额依次为 120、0、30、0。执行汇总后，该账号总额应为 150，中间和末尾的零金额均不清除已有累计金额。",
+      "requirement_id": "INV-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-02-S05",
+      "title": "保留只有零金额记录的账号",
+      "priority": "P2",
+      "priority_reason": "过滤零总额账号会遗漏实际出现的账号，但此条件下不造成正金额损失。",
+      "description": "输入合法 CSV，Zero1 仅有一条零金额记录，Zero2 有多条零金额记录，并包含一个正金额账号作为对照。执行汇总后，Zero1 和 Zero2 均应出现在 totals 中，且总额均为整数 0。",
+      "requirement_id": "INV-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-03-S01",
+      "title": "普通成功输出符合 JSON 合同",
+      "priority": "P0",
+      "priority_reason": "普通有效输入无法得到约定的 JSON 结果或成功退出状态，会阻断 CLI 结果的正常消费。",
+      "description": "使用两条普通有效记录：Alpha 为 120、Beta 为 230，执行汇总。标准输出整体为一个 JSON 对象，仅含 totals 与 row_count；totals 为 {\"Alpha\":120,\"Beta\":230}，金额为整数，row_count 为整数 2；退出码为 0，标准错误为空，不限制 JSON 键顺序和空白。",
+      "requirement_id": "INV-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-03-S02",
+      "title": "重复账号仍按数据行报告数量",
+      "priority": "P1",
+      "priority_reason": "重复账号被合并后若按账号数报告 row_count，会少报实际处理行数，影响处理数量核对。",
+      "description": "使用三条有效记录，其中两条属于同一账号、另一条属于另一账号，执行汇总。成功结果中的 row_count 为整数 3，既不按两个账号计数，也不把表头计入数据行数。",
+      "requirement_id": "INV-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-04-S01",
+      "title": "缺少必需参数时返回统一错误",
+      "priority": "P1",
+      "priority_reason": "缺参时若返回成功或缺少诊断，使用者及调用脚本无法正确识别和修正调用错误。",
+      "description": "分别在未提供 --input、提供 --input 但缺少路径值的条件下执行。每次均应退出码为 2、标准错误包含非空诊断、标准输出为空。",
+      "requirement_id": "INV-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-04-S02",
+      "title": "未知参数不能被忽略",
+      "priority": "P1",
+      "priority_reason": "忽略未知参数会让错误调用被当作成功执行，使使用者误以为所传选项已经生效。",
+      "description": "提供指向合法 CSV 的 --input，同时传入一个未定义参数后执行。应退出码为 2、标准错误包含非空诊断、标准输出为空。",
+      "requirement_id": "INV-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-04-S03",
+      "title": "输入文件不存在时返回统一错误",
+      "priority": "P1",
+      "priority_reason": "文件路径错误若未按合同反馈，调用方无法可靠判断本次汇总未完成。",
+      "description": "通过 --input 指定一个父目录存在且可访问、文件本身不存在的路径并执行。应退出码为 2、标准错误包含非空诊断、标准输出为空。",
+      "requirement_id": "INV-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-04-S04",
+      "title": "无有效数据可处理的非法输入返回统一错误",
+      "priority": "P1",
+      "priority_reason": "初始校验失败若返回成功或缺少诊断，会掩盖输入不可处理的事实并妨碍修正。",
+      "description": "分别使用 INV-01 已明确不合法的空文件、仅含合法表头而无数据行的文件、坏表头文件执行。各次均应退出码为 2、标准错误包含非空诊断、标准输出为空。",
+      "requirement_id": "INV-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-04-S05",
+      "title": "有效记录后的坏记录不得留下部分汇总",
+      "priority": "P1",
+      "priority_reason": "处理中途失败若仍输出已有记录的汇总，调用方可能把不完整金额当作本次处理结果。",
+      "description": "使用表头合法、先含若干合法数据行、随后出现一条依据 INV-01 明确不合法记录的 CSV 执行。应退出码为 2、标准错误包含非空诊断，且整个标准输出为空，不得输出有效前缀的部分汇总。",
+      "requirement_id": "INV-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-05-S01",
+      "title": "从不同工作目录使用绝对输入路径",
+      "priority": "P1",
+      "priority_reason": "依赖当前目录解析路径会使用户在程序或输入目录之外无法正常使用 CLI。",
+      "description": "准备普通合法 CSV，分别从与程序及输入文件无关的普通工作目录、名称含空格和非 ASCII 字符的工作目录，以绝对输入路径执行。两种情况下均应成功处理指定输入，不能因当前工作目录不同而找不到程序资源或输入文件。",
+      "requirement_id": "INV-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-05-S02",
+      "title": "成功与失败处理均不写入输入及其目录",
+      "priority": "P1",
+      "priority_reason": "处理过程中的写入可能破坏用户持有的源文件、覆盖目录内已有文件或留下非预期文件。",
+      "description": "在允许写入且已有其他文件的输入目录中，分别处理普通合法 CSV，以及前部记录合法、后部记录非法的 CSV。整个处理过程中，输入文件均不得被写入、截断或替换；不得在输入目录创建其他文件，包括随后删除的中间文件，也不得写入目录内已有的其他文件。",
+      "requirement_id": "INV-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-05-S03",
+      "title": "输入文件及目录只读时仍可处理合法输入",
+      "priority": "P1",
+      "priority_reason": "额外要求输入或其目录可写，会阻止用户汇总具有读取权限的合法文件。",
+      "description": "准备普通合法 CSV，使运行身份可以读取输入并遍历其目录，但不能写入输入文件或所在目录，其他运行条件正常。使用绝对输入路径执行应成功，不能因输入文件或目录不可写而拒绝处理。",
+      "requirement_id": "INV-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-06-BB-001",
+      "title": "普通输入重复执行的汇总一致",
+      "priority": "P0",
+      "priority_reason": "普通合法输入的汇总随重复执行变化，会使主要汇总结果无法稳定复用。",
+      "description": "使用包含两个普通账号、同账号有多条记录的合法 CSV，在输入内容不变时重复执行。各次 totals 的账号集合及对应整数总额必须一致，不要求 JSON 键顺序或空白一致。",
+      "requirement_id": "INV-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "INV-06-BB-002",
+      "title": "大小写不同的账号分别汇总并保留原文",
+      "priority": "P1",
+      "priority_reason": "大小写不同的合法账号被合并或改名，会使这些账号的汇总归属错误。",
+      "description": "使用包含 A、a、Ab1、aB1 的合法 CSV，为各账号安排多条记录且使各账号总额互不相同。totals 必须保留这四个原样账号键，各键仅汇总与其大小写完全一致的记录，不得合并账号或转换账号大小写。",
+      "requirement_id": "INV-06",
+      "kind": "BLACK_BOX"
+    }
+  ],
+  "acceptance_id": "AT-20261019-benchmark-py",
+  "scope_sha256": "1b99a57ba687861f543626baf45a7ddfe543d2b40dde2898e94a5b0636b87da6",
+  "updated_at": "2026-10-19T07:12:27.895954+00:00"
+}

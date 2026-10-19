@@ -1,0 +1,151 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/coverage_adapter.py"
+  ],
+  "adapter_files": {
+    "projects/go-api/tests/coverage_adapter.py": "e1ad5c6662f8ae753a2b36899147141315f753837c795b8a611b23f9acca748f",
+    "projects/go-api/tests/run_case.py": "b0ad413a59c763c4c59eac257011d9fb364dbac6f95f9d2f7c417e4b58c04711",
+    "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+    "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+    "projects/go-api/tests/prepare_coverage.py": "20d0c63deb87e711a75717f3f10a24a828f2476af790caa8fb707d2e7bb42355"
+  },
+  "tools": [
+    {
+      "name": "Go native coverage",
+      "version": "go version go1.25.7 darwin/arm64",
+      "role": "collector and statement statistics"
+    }
+  ],
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "components": {},
+    "source_hashes": {
+      "projects/go-api/main.go": "7178bfc3e470cb27e0c1b0b816030411049cf0fa85b4cf90e5f106df892566ec"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/inventory.json",
+    "inventory_sha256": "4253a12e32eaf0c5436f9d0ecbc643cd90d7f6a1ae28e3f56edf3714f04e286f",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/registry.json"
+  },
+  "source_dispositions": {
+    "projects/go-api/main.go": {
+      "kind": "measured",
+      "reason": "go test native coverprofile instruments main.go"
+    }
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/covdata/parent/covcounters.92693296bbc058414674b6688e10b66b.34354.1792393087356010000",
+      "sha256": "39ba0be45fe06d60d9a3454adaa2786df2bce58cbc43a9755d54be26932e56bd"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/covdata/parent/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/direct-statements.txt",
+      "sha256": "247ea13b8586123c5d454ecbee75668667b4646e4627bd54ebc0089157c4dabf"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/finish-invocation.json",
+      "sha256": "d938bd3c2cef386eca64356331157ce0c82b0f4c35448a159e81eb103578b7f0"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/finish-request.json",
+      "sha256": "712ba3baaf479cf0351efa61226d46c6d25f9eceeca4779dfba7279020599fe0"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/finish-response.json",
+      "sha256": "c308a055c4e490731c8be153d5838e7a90009c16d39e875b565a7b30c897e929"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/merged.coverprofile",
+      "sha256": "ff0a93bb4dcddb037b940ef0c3ee6f484089b9bfe54ff8b1609179baf8c6ac2b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/run-invocation.json",
+      "sha256": "86e594bd813f4f2943794144856826690a2ab3134f91b87f87a9e95f461d4868"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/run-request.json",
+      "sha256": "1c4bd4a76bfbea16d6404c73d05c09e41424b1cf7a5524208268578309b03ec3"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/run-response.json",
+      "sha256": "b8e62e1be36b0006ce9d94497d80e4a3d3f994cddfbef151e765342dd08677ad"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/inventory.json",
+      "sha256": "4253a12e32eaf0c5436f9d0ecbc643cd90d7f6a1ae28e3f56edf3714f04e286f"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/probe-comparison.json",
+      "sha256": "7377c4c5dad05efec6c5ab44bfb7905b6f723878098eb6880373a657c500b570"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/covdata/parent/covcounters.92693296bbc058414674b6688e10b66b.34321.1792393085929075000",
+      "sha256": "e2cecdf3704badd7c095bc9cc5c16d9b0d693a62b491dbf3d4619ce969bf113c"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/covdata/parent/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/direct-statements.txt",
+      "sha256": "047a551a8ab889dafcc59ff2e3816a54d30705fa9774a24360c771b465ce06d9"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/finish-invocation.json",
+      "sha256": "fb8837f911d052efb6f3af09b198eff0a2dece39d0772925d8097f85635cd559"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/finish-request.json",
+      "sha256": "1a659e123c9819c20d3565f1649209803af2b049d3e2818922757738744882e2"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/finish-response.json",
+      "sha256": "c115db5adaf736987e10dec8bc0433fed1ef964b26c8f34910f6d8d1108b1557"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/merged.coverprofile",
+      "sha256": "7356ce29481033b89a21f69616a7f1d6d72bc2641e527df68a7528af80c74f27"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/run-invocation.json",
+      "sha256": "c97188a9b1c13d04f986118dabaa1e00564a8fc3185782fc66fc8c16782db98a"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/run-request.json",
+      "sha256": "b2d62b3380a6c881627905a7277aadbfd49cc435e65f85839e4e8e8c9f5174ed"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/run-response.json",
+      "sha256": "dd184fed951276ee59a05a2cc2d733002a39b128f5189f0a8d887219ff7bc754"
+    }
+  ],
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/main.go": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/frozen/projects/go-api/main.go",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/coverage_adapter.py": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/frozen/projects/go-api/tests/coverage_adapter.py",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/run_case.py": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/frozen/projects/go-api/tests/run_case.py",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/http_fixture_test.go": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/frozen/projects/go-api/tests/http_fixture_test.go",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/coverage_probe_test.go": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/frozen/projects/go-api/tests/coverage_probe_test.go",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/prepare_coverage.py": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/frozen/projects/go-api/tests/prepare_coverage.py"
+  },
+  "probe_comparison": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/probe-comparison.json",
+  "probe_profiles": {
+    "zero": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/merged.coverprofile",
+      "sha256": "7356ce29481033b89a21f69616a7f1d6d72bc2641e527df68a7528af80c74f27"
+    },
+    "hit": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/merged.coverprofile",
+      "sha256": "ff0a93bb4dcddb037b940ef0c3ee6f484089b9bfe54ff8b1609179baf8c6ac2b"
+    }
+  },
+  "probe_stats": {
+    "zero": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/zero/direct-statements.txt",
+    "hit": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit/direct-statements.txt"
+  }
+}

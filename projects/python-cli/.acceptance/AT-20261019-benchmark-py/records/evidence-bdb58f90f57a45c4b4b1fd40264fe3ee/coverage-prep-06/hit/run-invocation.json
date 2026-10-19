@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/miniconda3/bin/python",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli/tests/coverage_adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/run-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/run-response.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"totals\": {\"A\": 1}, \"row_count\": 1}\n",
+  "stderr": ""
+}

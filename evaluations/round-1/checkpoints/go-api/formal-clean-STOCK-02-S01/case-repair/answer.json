@@ -1,0 +1,35 @@
+{
+  "status": "blocked",
+  "test_files": [
+    "projects/go-api/tests/stock02_sequential_test.go",
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/prepare_coverage.py",
+    "projects/go-api/tests/stock06_restart_test.go"
+  ],
+  "test_command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock02SequentialReservations$"
+  ],
+  "test_env": {},
+  "observations": [
+    "已修正适配器：当前执行没有 STOCK-06 子进程目录时，仅使用父进程原生覆盖率；已有子进程目录的完整性检查保留。",
+    "Python 语法检查通过；业务测试、前一场景测试和产品源码未修改。",
+    "统一调试入口退出码为 1，报 coverage bound file missing or changed，指向 coverage_adapter.py；本次业务命令尚未启动。",
+    "保留历史业务通过观察。预期库存由固定输入独立计算为 10−3=7、7−2=5，测试通过后续 GET /stock 校验，不从 POST 响应推导预期值。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case-repair/debug/stock02-repair-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case-repair/debug/repair-diagnostic.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01/case/answer.json"
+  ],
+  "limitations": [
+    "适配器修复尚未通过运行验证，覆盖率收尾和报告验证未完成。",
+    "需外部调度器生成新覆盖率准备、catalog 和调试绑定；旧准备及冻结证据未修改。",
+    "重新执行后的业务与覆盖率结论仍需独立复审。"
+  ],
+  "reason": "目录依赖修复已提交到测试适配器，但当前冻结准备拒绝变更后的文件，阻断本地验证。"
+}

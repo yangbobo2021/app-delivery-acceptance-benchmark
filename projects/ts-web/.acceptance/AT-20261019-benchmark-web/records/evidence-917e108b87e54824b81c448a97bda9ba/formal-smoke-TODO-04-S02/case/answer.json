@@ -1,0 +1,37 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/ts-web/tests/todo-04-s02.mjs",
+    "projects/ts-web/tests/browser-fixture.mjs",
+    "projects/ts-web/tests/coverage-adapter.mjs",
+    "projects/ts-web/tests/coverage-config.json",
+    "projects/ts-web/tests/node-flush.cjs",
+    "projects/ts-web/tests/package.json",
+    "projects/ts-web/tests/package-lock.json",
+    "projects/ts-web/tests/prepare-coverage.mjs",
+    "projects/ts-web/tests/probe.mjs"
+  ],
+  "test_command": [
+    "node",
+    "projects/ts-web/tests/todo-04-s02.mjs"
+  ],
+  "test_env": {},
+  "observations": [
+    "全新浏览器上下文，通过真实页面操作创建2条未完成和1条已完成待办。",
+    "全部、未完成、已完成过滤下，可见条目及完成状态均符合预期；未完成总数依次为2、2、0，第三项应为2。",
+    "删除已完成条目后，仅剩2条未完成待办；选择已完成过滤，可见列表为空，未完成总数错误显示0，应为2。",
+    "两次返回全部过滤后，总数均恢复为2，条目完成状态未变。",
+    "统一调试入口执行一次，14项检查中12项通过、2项统计断言失败；未观察到页面脚本错误。",
+    "已保留同次执行的原始覆盖率及报告，报告中的行和分支状态均为measured。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/case/debug/attempt-e04c93c69b244bf28054f4dd22b6f47e/state/evidence",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/case/debug/attempt-e04c93c69b244bf28054f4dd22b6f47e/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-smoke-TODO-04-S02/case/debug/attempt-e04c93c69b244bf28054f4dd22b6f47e/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "结论为本地执行结果，仍需独立审查。",
+    "运行状态及ACCEPTANCE_EVIDENCE_DIR由统一入口绑定；未修改产品源码。"
+  ],
+  "reason": "已完成过滤将未完成总数缩小为0，违反始终统计所有待办中2条未完成任务的场景要求。"
+}

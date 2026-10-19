@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "coverage": "本场景断言可识别覆盖旧值、仅累加相邻行、漏掉单条账号和串账。覆盖率来自本次冻结用例：coverage.py 7.12.0，行34/44、分支7/14；不据此推断大整数边界或整个INV-02通过。",
+  "oracle": "独立CSV夹具可直接验算：Alpha1=125+230+45=400，Beta2=70+9=79，Solo3=18，共6行。汇总依据INV-02；JSON字段、整数类型、退出码和空stderr依据INV-03；输入保护依据业务目标。未约束JSON键序或空白。",
+  "evidence": "冻结命令退出0，实际调用README指定的python -m invoice --input入口，无产品计算替身。原始stdout为预期totals及row_count=6，stderr为空，输入字节和目录条目检查通过。覆盖率原生调用、合并记录和命中行支持真实CLI子进程采集；测试宿主的no-data警告未导致产品路径数据缺失。",
+  "findings": [],
+  "summary": "冻结证据支持INV-02-S01通过，结论仅限本场景。"
+}

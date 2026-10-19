@@ -1,0 +1,13 @@
+{
+  "schema": "blocked-case-retirement-v1",
+  "at": "2026-10-19T06:42:57.677588+00:00",
+  "scene_id": "INV-02-S02",
+  "state_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/state.json",
+  "state_sha256": "7208b1772a94bd1aa5f4894cf03f1f5ef7226ef6502f0abddb40f181cfc3c594",
+  "owner_sha256": "ea5074037515f2edf85f68542d6203fe1378b78ee4ff220fea47f27cbd203c87",
+  "answer_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case-repair/answer.json",
+  "answer_sha256": "0af2ff6fb738c2d7ff627bbb83929c69ac1ee8bfe390d06de2201e2d7b9275b8",
+  "basis": "Inspected original and repair debug entries: shared Git common-dir coverage policy pointed at go-api; both stopped before business execution. Coverage policy now worktree-scoped and reactivated for python-cli.",
+  "business_verdict": null,
+  "next_action": "new frozen scene attempt after external blocker is corrected"
+}

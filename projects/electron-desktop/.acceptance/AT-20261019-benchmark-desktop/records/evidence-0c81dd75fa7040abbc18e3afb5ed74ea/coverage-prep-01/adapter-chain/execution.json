@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/coverage-adapter.mjs",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/probe-session.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/run-response.json"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+  "exit_code": 0,
+  "head_before": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "head_after": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "started_at": "2026-10-19T06:37:13.224Z",
+  "finished_at": "2026-10-19T06:37:27.250Z",
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/probe-session.json",
+  "coverage_session_sha256": "53a2a78ad6501a64d655af6b301371c1cba6de65de832c4326e3d8a1ad44e811"
+}

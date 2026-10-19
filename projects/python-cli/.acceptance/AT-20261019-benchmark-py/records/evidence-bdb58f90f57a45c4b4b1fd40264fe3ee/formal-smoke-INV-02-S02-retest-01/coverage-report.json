@@ -1,0 +1,76 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/prepared",
+  "prepared_sha256": "b37b44a76dfc24e0ac6d09fd30280e06a05d58b872d86127c1be937aada54521",
+  "scene_id": "INV-02-S02",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_hashes": {
+    "projects/python-cli/invoice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "projects/python-cli/invoice/__main__.py": "252c6574b1687570e0d1a43afc6d17d3fddff15e1effceff86ded16d2b761d43",
+    "projects/python-cli/invoice/totals.py": "f636bf0630ce37b44cd8bb580623ff13008672e3437e0ec0c67863ea4bdd6a3c"
+  },
+  "tools": [
+    {
+      "name": "coverage.py",
+      "version": "7.12.0",
+      "role": "native Python line/branch collection, subprocess merge and statistics"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/execution.json",
+  "execution_sha256": "1a0a734a081646777bcd36ff421ce6cfb7e45473257c64f37879d352dee447e6",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/native-data",
+      "sha256": "2a28869830ada24b29698d672ffe9f78d4b62cacb95e713431bd8f3f84329fe4"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/native-data.bobos-MacBook-Air-2.local.22521.XfLeOMcx",
+      "sha256": "7041b57eaf3cb886302fb8b52f3626afe6631377016a582eac05d1f13cf39611"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/native-data.bobos-MacBook-Air-2.local.22522.XoScZNMx",
+      "sha256": "bbef1929acb99677f975a1692c80d45c491b21f7236a67b7a4bbcaba1463c506"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/native-report.json",
+      "sha256": "d1c166a79f1285b5e2c202ec3caaba324a409416f339cf80cd115b3a007653e1"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/native-invocation.json",
+      "sha256": "04d79e2af2019985b0c1949858720872cea72278686b2e72d932535333440848"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/run-response.json",
+      "sha256": "a1dd04ecc6c37fedb1a9e18c644dc9b32b5cbb49c1632610f674e72fad03e6b7"
+    }
+  ],
+  "components": [
+    {
+      "id": "invoice-python",
+      "label": "coverage.py native lines and arcs",
+      "source_paths": [
+        "projects/python-cli/invoice/__init__.py",
+        "projects/python-cli/invoice/__main__.py",
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 34,
+        "total": 44,
+        "pct": 77.27272727272727
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 7,
+        "total": 14,
+        "pct": 50.0
+      }
+    }
+  ],
+  "report_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02-retest-01/execution/coverage-report.json",
+  "report_sha256": "1f138bc76b7868894ff39e4a49017d296111c43d2f3967dd31a2737fe5bdb5b3",
+  "capture_end": "2026-10-19T06:45:44.134581+00:00"
+}

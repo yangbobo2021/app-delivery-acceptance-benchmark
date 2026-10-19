@@ -1,0 +1,96 @@
+{
+  "tools": [
+    {
+      "name": "Electron / V8 NODE_V8_COVERAGE + Chromium precise coverage",
+      "version": "44.9.0 / 15.2.124.43-electron.0",
+      "role": "collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.61.1",
+      "role": "collector"
+    },
+    {
+      "name": "c8",
+      "version": "11.0.0",
+      "role": "converter/source-map/zero-units"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "converter/source-map"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "merge/statistics"
+    }
+  ],
+  "scopes": {
+    "project": {
+      "status": "incomplete",
+      "reason": "Only renderer/preload metrics verified; main/store/build unavailable. Static HTML is non-executable.",
+      "components": [
+        {
+          "id": "renderer-preload",
+          "label": "Electron renderer + sandbox preload; native V8 block branches",
+          "source_paths": [
+            "projects/electron-desktop/src/renderer.ts",
+            "projects/electron-desktop/src/preload.ts"
+          ],
+          "line": {
+            "status": "measured",
+            "covered": 11,
+            "total": 11,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 3,
+            "total": 4,
+            "pct": 75
+          }
+        },
+        {
+          "id": "main-store",
+          "label": "Electron main + bundled Store",
+          "source_paths": [
+            "projects/electron-desktop/src/main.ts",
+            "projects/electron-desktop/src/store.ts"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+          }
+        },
+        {
+          "id": "build",
+          "label": "Build helper",
+          "source_paths": [
+            "projects/electron-desktop/build.mjs"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "Build helper is not exercised by desktop scenes; separate complete native baseline has not been verified."
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "Build helper native branch denominator has not been verified."
+          }
+        }
+      ]
+    },
+    "changed_files": {
+      "status": "unavailable",
+      "reason": "Requirements benchmark has no frozen base/head change inventory. Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+    },
+    "changed_lines": {
+      "status": "unavailable",
+      "reason": "Requirements benchmark has no frozen base/head changed lines. Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+    }
+  }
+}

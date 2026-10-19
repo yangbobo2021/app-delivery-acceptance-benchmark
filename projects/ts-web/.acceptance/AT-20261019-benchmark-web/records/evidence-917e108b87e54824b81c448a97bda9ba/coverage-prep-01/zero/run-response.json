@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "-e",
+    "process.exit(0)"
+  ],
+  "native": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/native"
+}

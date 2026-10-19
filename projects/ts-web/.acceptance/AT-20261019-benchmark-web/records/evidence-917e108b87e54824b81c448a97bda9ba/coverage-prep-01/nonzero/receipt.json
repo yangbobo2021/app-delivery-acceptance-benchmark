@@ -1,0 +1,15 @@
+{
+  "schema": "preparation-probe-receipt-v1",
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/coverage-adapter.mjs",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-response.json"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace",
+  "exit_code": 0,
+  "output": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-response.json",
+  "output_sha256": "dbf5334150e5b39c82164d4870def9b6f36111dfc6ab89f332ad0249adba61d9",
+  "note": "Toolchain-only probe; not a scene execution."
+}

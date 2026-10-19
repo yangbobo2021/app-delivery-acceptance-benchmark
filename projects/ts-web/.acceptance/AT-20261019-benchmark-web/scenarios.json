@@ -1,0 +1,254 @@
+{
+  "schema": "acceptance-catalog-v1",
+  "project": {
+    "id": "ts-web",
+    "label": "ts-web",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "requirements": [
+    {
+      "id": "TODO-01",
+      "title": "TODO-01",
+      "text": "TODO-01：输入非空标题并添加后，列表出现该待办。标题首尾空白会去除；全空白或去除后超过 80 个 Unicode 码点的标题不能添加，并显示可见错误。错误文案不作要求。"
+    },
+    {
+      "id": "TODO-02",
+      "title": "TODO-02",
+      "text": "TODO-02：可以切换待办完成状态，再次切换可恢复未完成。两个标题相同的待办是不同条目，切换一个不影响另一个。"
+    },
+    {
+      "id": "TODO-03",
+      "title": "TODO-03",
+      "text": "TODO-03：提供全部、未完成、已完成三个过滤选项。可见列表与所选过滤一致；切换过滤不修改待办状态。"
+    },
+    {
+      "id": "TODO-04",
+      "title": "TODO-04",
+      "text": "TODO-04：显示所有待办中的未完成总数，不能只统计当前过滤结果。空列表时为 0。"
+    },
+    {
+      "id": "TODO-05",
+      "title": "TODO-05",
+      "text": "TODO-05：可以删除指定待办，删除其他同名待办不受影响。刷新页面后，条目、完成状态与删除结果保留；不同浏览器存储上下文互不影响。"
+    },
+    {
+      "id": "TODO-06",
+      "title": "TODO-06",
+      "text": "TODO-06：标题作为普通文本展示。`<img src=x onerror=alert(1)>` 是合法短标题，不得创建对应图片元素或执行其中代码。列表排序、视觉设计、刷新后默认过滤均不作要求。"
+    }
+  ],
+  "reverse_rules": [],
+  "scenarios": [
+    {
+      "id": "TODO-01-S01",
+      "title": "添加普通标题形成新待办",
+      "priority": "P0",
+      "priority_reason": "普通有效标题不能形成列表条目，会阻断创建待办这一主要业务入口。",
+      "description": "在全部过滤下，分别向空列表和已有待办的列表添加普通非空短标题。每次添加后列表均出现对应的新待办，原有条目及其完成状态保持不变。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S02",
+      "title": "去除首尾空白并保留内部空格",
+      "priority": "P2",
+      "priority_reason": "首尾空格残留或内部空格被删除会改变局部标题内容，但普通待办创建仍可完成。",
+      "description": "添加首尾带普通空格、内部含连续空格的短标题，例如“  准备  周会  ”。新增待办的标题应为“准备  周会”，仅去除首尾空白。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S03",
+      "title": "拒绝空标题和全空白标题",
+      "priority": "P1",
+      "priority_reason": "接受空内容会产生无有效标题的条目；全空白输入缺少错误反馈会使用户无法明确识别添加失败。",
+      "description": "在已有待办时，分别尝试添加空字符串和仅含普通空格的标题，均不得新增条目，已有条目及状态保持不变。全空白标题被拒绝时须显示可见错误，不限定错误文案。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S04",
+      "title": "按去空白后的 Unicode 码点数执行长度上限",
+      "priority": "P1",
+      "priority_reason": "错误计数会拒绝合法的 Unicode 标题，或接受超过明确上限的标题，显著影响允许输入域及校验可靠性。",
+      "description": "分别添加去除首尾普通空格后恰为80个码点的普通字母标题、补充平面字符标题和含组合附加符的标题，均应成功且显示去空白后的标题。尝试添加去空白后为81个码点的普通字母标题及含组合附加符的标题，均不得新增条目，须显示可见错误，已有条目及状态保持不变。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S05",
+      "title": "允许添加已有的同名标题",
+      "priority": "P1",
+      "priority_reason": "按标题去重或覆盖会阻止记录重复任务，或丢失已有同名待办。",
+      "description": "列表已有一个普通短标题待办时，再次添加完全相同的标题。列表应新增一个同名条目，原有条目及其状态保持不变；此处不验证同名条目的切换或删除行为。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-02-BB-01",
+      "title": "待办完成状态可往返切换",
+      "priority": "P0",
+      "priority_reason": "普通待办无法标记完成或恢复未完成，会阻断完成状态管理的主要使用流程。",
+      "description": "准备一条普通短标题的未完成待办，切换后该条目变为已完成。再次切换该条目，其状态恢复为未完成。",
+      "requirement_id": "TODO-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-02-BB-02",
+      "title": "同名待办的状态切换互不影响",
+      "priority": "P1",
+      "priority_reason": "按标题关联状态会误改另一条同名待办，使这些独立事项的完成记录失真。",
+      "description": "准备两个标题完全相同且均未完成的待办，先后将它们切换为已完成，每次另一条均保持操作前的状态。随后分别将两条恢复未完成，每次也只有被操作条目的状态改变。",
+      "requirement_id": "TODO-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S01",
+      "title": "三个过滤选项展示对应条目",
+      "priority": "P0",
+      "priority_reason": "普通混合列表无法按完成状态查看，会直接阻断主要过滤用途。",
+      "description": "准备包含已完成和未完成待办的列表，使用全部、未完成、已完成三个过滤选项。全部展示所有条目；未完成仅展示所有未完成条目；已完成仅展示所有已完成条目，各自无遗漏或混入。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S02",
+      "title": "往返切换过滤保留原有状态",
+      "priority": "P1",
+      "priority_reason": "切换查看范围会改写已有完成记录，导致用户需要重新核对和恢复待办状态。",
+      "description": "准备完成状态已知的混合列表，在三个过滤选项间往返切换后回到全部。逐项核对操作前后的完成状态，所有条目均保持原状态。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S03",
+      "title": "没有匹配条目时列表为空",
+      "priority": "P2",
+      "priority_reason": "无匹配项时错误展示条目会妨碍确认当前状态是否清空，但仍可通过全部列表核对。",
+      "description": "列表没有任何待办时，三个过滤选项下均不展示待办；列表全部已完成时，未完成过滤下不展示待办；列表全部未完成时，已完成过滤下不展示待办。不要求特定空状态文案。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S04",
+      "title": "状态改变后保持过滤结果一致",
+      "priority": "P1",
+      "priority_reason": "完成状态变化后仍显示不匹配的条目，会使用户继续处理已移出当前状态范围的待办。",
+      "description": "在未完成过滤下将一个待办切换为已完成，该条目应退出当前可见列表，并能在已完成过滤下看到；在已完成过滤下将一个待办恢复为未完成，预期反向成立。每次状态变更完成后，当前过滤下的其他匹配条目仍完整可见。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S01",
+      "title": "按全部条目统计未完成数",
+      "priority": "P1",
+      "priority_reason": "混合列表计数错误会误报剩余工作量，同名条目被合并统计也会造成漏计。",
+      "description": "选择全部过滤，列表有2条未完成和1条已完成时，显示未完成总数为2；列表有3条未完成（其中2条同名）和1条已完成时，显示3，按条目累计。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S02",
+      "title": "过滤不缩小统计范围",
+      "priority": "P1",
+      "priority_reason": "按当前可见结果计数会在已完成过滤下漏报剩余任务，使用户误判工作已完成。",
+      "description": "列表有2条未完成和1条已完成时，依次选择全部、未完成、已完成过滤，显示的未完成总数始终为2；列表只有2条未完成时，选择已完成过滤后，未完成总数仍为2。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S03",
+      "title": "条目变化后更新统计",
+      "priority": "P1",
+      "priority_reason": "添加、完成或删除后计数未正确更新，会持续误报当前剩余工作量。",
+      "description": "在全部过滤下，从2条未完成和1条已完成开始，添加1条未完成后总数为3，将其中1条切为已完成后为2，再恢复未完成后为3；随后删除1条已完成，总数仍为3，再删除1条未完成，总数为2。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S04",
+      "title": "没有未完成条目时显示零",
+      "priority": "P2",
+      "priority_reason": "没有剩余任务时显示空值或非零值，会造成局部统计误导，当前没有未完成任务被漏报。",
+      "description": "空列表显示未完成总数为0，仅含已完成条目的非空列表也显示0；分别将最后1条未完成待办切为已完成或删除后，总数均归零。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S05",
+      "title": "刷新后统计已恢复的条目",
+      "priority": "P1",
+      "priority_reason": "已恢复条目未计入统计，会使用户重新进入页面时漏看已有任务的剩余工作量。",
+      "description": "准备已持久保存的2条未完成和1条已完成待办，刷新页面并恢复这些条目后，显示未完成总数为2，不受刷新后所处过滤选项影响。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S01",
+      "title": "删除指定普通待办",
+      "priority": "P0",
+      "priority_reason": "普通条目无法删除会阻断日常待办删除功能；误删其他条目会损失已有待办。",
+      "description": "列表中有多个标题不同的普通待办，删除其中指定的一条。该条目消失，其余条目的标题与完成状态保持不变。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S02",
+      "title": "删除同名条目保持其他条目",
+      "priority": "P1",
+      "priority_reason": "按标题误删会连带移除其他同名待办，造成该组独立条目的数据损失。",
+      "description": "准备两个标题相同、完成状态不同的待办，删除其中指定的一条。仅目标条目消失，另一条仍保留原标题和原完成状态。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S03",
+      "title": "刷新保留普通条目及全部变更",
+      "priority": "P0",
+      "priority_reason": "刷新后丢失普通条目、完成状态或删除结果，会使日常待办管理无法持续。",
+      "description": "准备标题不同的普通待办，包含此前刷新后仍存在的条目；保留部分条目，新增条目，将部分条目标为已完成、将已完成条目恢复为未完成，并删除另一条后刷新。查看全部待办时，条目集合、标题及各自完成状态与刷新前一致，删除的条目不再出现。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S04",
+      "title": "刷新保留同名条目的独立记录",
+      "priority": "P1",
+      "priority_reason": "持久化时按标题合并会丢失同名条目或其独立状态，影响允许存在的重复待办。",
+      "description": "准备两个标题相同、完成状态不同的待办后刷新，并再次刷新。每次查看全部待办时，仍有两个同名条目，分别保持原有的已完成和未完成状态。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S05",
+      "title": "不同存储上下文互不影响",
+      "priority": "P1",
+      "priority_reason": "跨上下文串用数据会使一方的新增、状态变更或删除干扰另一方的独立待办列表。",
+      "description": "在两个独立浏览器存储上下文中分别准备待办，包含各自独有的标题及跨上下文同名的条目。在一方新增、切换状态及删除待办后刷新双方，另一方的条目和完成状态保持原样；交换操作方重复上述变更，原操作方的数据同样不受影响。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-06-S01",
+      "title": "标题中的代码不得执行",
+      "priority": "P0",
+      "priority_reason": "标题代码执行会获得应用同源权限，可读写当前存储上下文的全部待办数据，影响不限于当前条目。",
+      "description": "添加合法短标题 `<img src=x onerror=alert(1)>` 和 `<svg onload=alert(1)>`，并在刷新后选择“全部”再次显示这些已保存标题。首次显示和恢复显示时，标题中的事件处理代码均不得执行。",
+      "requirement_id": "TODO-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-06-S02",
+      "title": "合法标记和特殊字符按普通文本展示",
+      "priority": "P1",
+      "priority_reason": "额外拒绝或解释合法标题会阻碍这类事项录入，或使标题内容失真，但普通标题仍可使用。",
+      "description": "分别添加 `<img src=x onerror=alert(1)>`、`<svg onload=alert(1)>`、`<b>买牛奶</b>`、`A&B \"茶\"` 和 `&lt;待办&gt;`；这些合法短标题均可添加，显示文字与输入逐字一致，不创建标题所描述的图片、SVG 或加粗元素。刷新后选择“全部”再次显示时，仍保持相同的普通文本内容，实体样式文字不得变成其他字符，也不得出现额外可见的转义字符。",
+      "requirement_id": "TODO-06",
+      "kind": "BLACK_BOX"
+    }
+  ],
+  "acceptance_id": "AT-20261019-benchmark-web",
+  "scope_sha256": "6082fc9aca2087f5e4b5b0cd1e70ada127f79f9f707fe7c7ee33f6eb496eb64f",
+  "updated_at": "2026-10-19T07:12:27.902293+00:00"
+}

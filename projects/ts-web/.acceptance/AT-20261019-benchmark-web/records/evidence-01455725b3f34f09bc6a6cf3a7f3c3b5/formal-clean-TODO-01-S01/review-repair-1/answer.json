@@ -1,0 +1,40 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/ts-web/tests/todo-01-s01.mjs",
+    "projects/ts-web/tests/browser-fixture.mjs",
+    "projects/ts-web/tests/coverage-adapter.mjs",
+    "projects/ts-web/tests/coverage-config.json",
+    "projects/ts-web/tests/node-flush.cjs",
+    "projects/ts-web/tests/package-lock.json",
+    "projects/ts-web/tests/package.json",
+    "projects/ts-web/tests/prepare-coverage.mjs",
+    "projects/ts-web/tests/probe.mjs"
+  ],
+  "test_command": [
+    "node",
+    "projects/ts-web/tests/todo-01-s01.mjs"
+  ],
+  "test_env": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-repair-1/debug/attempt-0c466efe39984287b5c14e5e2aec6387/state",
+    "ACCEPTANCE_EVIDENCE_DIR": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-repair-1/debug/attempt-0c466efe39984287b5c14e5e2aec6387/state/evidence"
+  },
+  "observations": [
+    "仅修补场景测试：移除新条目默认完成状态约束，保留标题、数量、可见性和既有状态保持断言；通过复选框显式构造完成与未完成基线。",
+    "预期标题来自固定输入；通过页面DOM、复选框状态和截图观察结果，不依赖产品实现推导预期。",
+    "语法检查通过；统一调试入口首次运行退出码0，24项断言全部通过。",
+    "真实Chrome经127.0.0.1访问产品，六阶段条目数为0→1→1→2→2→3；三次添加标题均可见，既有条目状态保持，页面无脚本错误，最终截图与记录一致。",
+    "同次执行覆盖率报告为行37/38、分支17/24；c8 12.0.0报告调用退出码0，使用v8-to-istanbul 9.3.0和istanbul-lib-coverage 3.2.2。",
+    "未修改产品源码，保留其他场景测试及原有证据。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-repair-1/debug/request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-repair-1/debug/attempt-0c466efe39984287b5c14e5e2aec6387/state/evidence",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/formal-clean-TODO-01-S01/review-repair-1/debug/attempt-0c466efe39984287b5c14e5e2aec6387/execution"
+  ],
+  "limitations": [
+    "本地结论仍需外部调度器冻结重跑并独立复审。",
+    "覆盖率仅描述本次执行，不替代业务判断。"
+  ],
+  "reason": "已移除缺乏需求依据的新条目默认状态断言，修补后的全部针对性断言在真实浏览器执行中通过。"
+}

@@ -1,0 +1,38 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/go-api/tests/stock02_sequential_test.go",
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/prepare_coverage.py",
+    "projects/go-api/tests/stock06_restart_test.go"
+  ],
+  "test_command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock02(SequentialReservations|IntegerResponseValues)$"
+  ],
+  "test_env": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/review-repair-1/debug/numeric-repair-01/state"
+  },
+  "observations": [
+    "仅修补数字断言，使用精确有理数比较 JSON 数字的整数值，未修改产品源码。",
+    "13 个断言自检通过：允许 7、7e0、7.0、70e-1；拒绝字符串、缺失字段、非数字、错误整数及非整数，包括 7.00000000000000001。",
+    "统一调试入口退出码为 0；真实回环 HTTP 观察依次为 GET 200/10、POST 201/3/7、GET 200/7、POST 201/2/5、GET 200/5，两个 request_id 正确回显。",
+    "库存预期独立按 10−3=7、7−2=5 推导，并通过各次独立 GET 核验；完整原始请求、响应和状态码已保存。",
+    "本次执行 Go 1.25.7 原生语句覆盖率为 54.3%。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/review-repair-1/debug/numeric-repair-01/execution/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/review-repair-1/debug/numeric-repair-01/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/review-repair-1/debug/numeric-repair-01/execution/coverage-report.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/review-repair-1/debug/numeric-repair-01/state/stock02-3090256032/http-observations.jsonl"
+  ],
+  "limitations": [
+    "行覆盖率和分支覆盖率不可用，语句覆盖率不替代这两项指标。",
+    "本地结论仍需外部调度器冻结重跑和独立复审。"
+  ],
+  "reason": "已消除无需求依据的数字词法限制，修补后的断言自检及原有真实 HTTP 业务断言均执行通过。"
+}

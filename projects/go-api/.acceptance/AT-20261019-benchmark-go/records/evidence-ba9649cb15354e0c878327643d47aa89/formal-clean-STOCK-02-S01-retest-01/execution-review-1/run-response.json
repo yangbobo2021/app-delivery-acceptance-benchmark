@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "command": [
+    "python3",
+    "projects/go-api/tests/run_case.py",
+    "^TestStock02(SequentialReservations|IntegerResponseValues)$"
+  ],
+  "native_coverdir": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/parent",
+  "native_files": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/parent/covcounters.92693296bbc058414674b6688e10b66b.71673.1792394870043124000",
+      "sha256": "5ebd849bf8cdded5e84672f26e7f338d62168c4c1c75ab2ff067cd6630415616"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/parent/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+    }
+  ]
+}

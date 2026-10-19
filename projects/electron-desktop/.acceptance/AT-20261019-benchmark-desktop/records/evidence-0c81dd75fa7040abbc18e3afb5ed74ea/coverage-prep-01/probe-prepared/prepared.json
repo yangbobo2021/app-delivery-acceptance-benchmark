@@ -1,0 +1,86 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/coverage-adapter.mjs"
+  ],
+  "adapter_files": {
+    "projects/electron-desktop/tests/coverage-adapter.mjs": "9402af7f9079f031873897449f2d13defb692484420c80125a82406886a717ef",
+    "projects/electron-desktop/tests/package.json": "cf8427fd4c635b8e53f6ae4fefbf8239452b0dd177afcf4eeec36f4abc2d4a7c",
+    "projects/electron-desktop/tests/package-lock.json": "5146160a03f32739340337644f3a7e357d474ff2e8c8c7d0f4e18ba354d98d82",
+    "projects/electron-desktop/tests/probe-electron.mjs": "1e7d4f598db9fbdf165c2f1f39a2934fac10b07b03f5f0aa67821a86fdb8aa83",
+    "projects/electron-desktop/tests/prepare-native.mjs": "06e7186ff83374c709c6f4e2d61683461f8c4e1a7db28573c3cd5b0c3a897e44"
+  },
+  "tools": [
+    {
+      "name": "Electron / V8 NODE_V8_COVERAGE + Chromium precise coverage",
+      "version": "44.9.0 / 15.2.124.43-electron.0",
+      "role": "collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.61.1",
+      "role": "collector"
+    },
+    {
+      "name": "c8",
+      "version": "11.0.0",
+      "role": "converter/source-map/zero-units"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "converter/source-map"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "merge/statistics"
+    }
+  ],
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "components": {},
+    "source_hashes": {
+      "projects/electron-desktop/src/index.html": "290572169376d87c9f593caa9b56911e06cd59aa55767304b1eb5e4ded546cdc",
+      "projects/electron-desktop/src/main.ts": "9ce2366d42a7f028e011073e3e69f219be444132b565679b54df920cede55461",
+      "projects/electron-desktop/src/preload.ts": "f7688c1dc92c29923f2f3e74a446ec74c74ae38bafa3f8f4ef633a2f182b9b85",
+      "projects/electron-desktop/src/renderer.ts": "4f6d9362b24aa24bb75dfd9b2c7b224fa0ab27eaff6b4e1679b48235ff73d475",
+      "projects/electron-desktop/src/store.ts": "56e1b585f6ca75ce437667b507ca7e6b6cffdf3f26182b40136e636cc3c5d76f",
+      "projects/electron-desktop/build.mjs": "84116660e600773715ccf8c8d47c760bd34f9b91325acf4c6f4c3c4e1e3645be"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/inventory.json",
+    "inventory_sha256": "4f02bbaece4991c669641ae56f1452edfd699c9a5413c3c7b315cf0cfa5c703d",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/registry.json"
+  },
+  "source_dispositions": {
+    "projects/electron-desktop/src/index.html": {
+      "kind": "non_executable",
+      "reason": "Static document; no embedded executable script."
+    },
+    "projects/electron-desktop/src/main.ts": {
+      "kind": "unsupported",
+      "reason": "Zero-native bundled sourcemap baseline yielded falsely covered lines; metric unavailable."
+    },
+    "projects/electron-desktop/src/preload.ts": {
+      "kind": "measured",
+      "reason": "c8 verified native precise coverage and zero-hit baseline."
+    },
+    "projects/electron-desktop/src/renderer.ts": {
+      "kind": "measured",
+      "reason": "c8 verified native precise coverage and zero-hit baseline."
+    },
+    "projects/electron-desktop/src/store.ts": {
+      "kind": "unsupported",
+      "reason": "Zero-native bundled sourcemap baseline yielded falsely covered lines; metric unavailable."
+    },
+    "projects/electron-desktop/build.mjs": {
+      "kind": "unsupported",
+      "reason": "Build helper native baseline not verified."
+    }
+  },
+  "preparation_evidence": [],
+  "artifact_aliases": {},
+  "probe_only": true
+}

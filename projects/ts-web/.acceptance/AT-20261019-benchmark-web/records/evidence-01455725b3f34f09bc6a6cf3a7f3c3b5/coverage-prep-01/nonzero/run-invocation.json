@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/coverage-adapter.mjs",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-response.json"
+  ],
+  "exit_code": 0,
+  "stdout": "PREPARATION_PROBE_OK\n",
+  "stderr": ""
+}

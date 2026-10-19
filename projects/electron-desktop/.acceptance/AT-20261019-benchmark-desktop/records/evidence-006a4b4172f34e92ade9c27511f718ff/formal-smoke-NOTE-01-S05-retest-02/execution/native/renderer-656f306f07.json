@@ -1,0 +1,157 @@
+{
+  "result": [
+    {
+      "url": "file:///Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/preload.js",
+      "scriptId": "39",
+      "functions": [
+        {
+          "functionName": "",
+          "isBlockCoverage": false,
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 367,
+              "count": 1
+            }
+          ]
+        },
+        {
+          "functionName": "list",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 126,
+              "endOffset": 180,
+              "count": 6
+            }
+          ]
+        },
+        {
+          "functionName": "save",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 188,
+              "endOffset": 254,
+              "count": 4
+            }
+          ]
+        },
+        {
+          "functionName": "remove",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 264,
+              "endOffset": 326,
+              "count": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "file:///Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/renderer.js",
+      "scriptId": "44",
+      "functions": [
+        {
+          "functionName": "",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 1536,
+              "count": 1
+            }
+          ]
+        },
+        {
+          "functionName": "",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 1,
+              "endOffset": 1494,
+              "count": 1
+            }
+          ]
+        },
+        {
+          "functionName": "render",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 197,
+              "endOffset": 660,
+              "count": 6
+            },
+            {
+              "startOffset": 352,
+              "endOffset": 656,
+              "count": 7
+            }
+          ]
+        },
+        {
+          "functionName": "b.onclick",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 486,
+              "endOffset": 627,
+              "count": 10
+            }
+          ]
+        },
+        {
+          "functionName": "document.querySelector.onclick",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 704,
+              "endOffset": 807,
+              "count": 2
+            }
+          ]
+        },
+        {
+          "functionName": "document.querySelector.onclick",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 853,
+              "endOffset": 1151,
+              "count": 4
+            },
+            {
+              "startOffset": 1093,
+              "endOffset": 1147,
+              "count": 0
+            }
+          ]
+        },
+        {
+          "functionName": "document.querySelector.onclick",
+          "isBlockCoverage": true,
+          "ranges": [
+            {
+              "startOffset": 1199,
+              "endOffset": 1479,
+              "count": 1
+            },
+            {
+              "startOffset": 1232,
+              "endOffset": 1239,
+              "count": 0
+            },
+            {
+              "startOffset": 1421,
+              "endOffset": 1475,
+              "count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

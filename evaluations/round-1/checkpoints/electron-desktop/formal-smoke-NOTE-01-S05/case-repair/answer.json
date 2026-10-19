@@ -1,0 +1,42 @@
+{
+  "status": "blocked",
+  "test_files": [
+    "projects/electron-desktop/tests/note-01-s05.mjs",
+    "projects/electron-desktop/tests/coverage-adapter.mjs",
+    "projects/electron-desktop/tests/package-lock.json",
+    "projects/electron-desktop/tests/package.json",
+    "projects/electron-desktop/tests/prepare-native.mjs",
+    "projects/electron-desktop/tests/probe-electron.mjs"
+  ],
+  "test_command": [
+    "node",
+    "projects/electron-desktop/tests/note-01-s05.mjs"
+  ],
+  "test_env": {
+    "DEBUG": "pw:browser*",
+    "ELECTRON_ENABLE_LOGGING": "1"
+  },
+  "observations": [
+    "仅修改本场景测试：恢复 Playwright 默认 Electron 解析及官方引导脚本，增加致命启动错误留存；保留原业务断言，未修改产品源码。",
+    "语法检查通过；通过指定统一入口执行一次，使用全新状态目录，退出码为 1。",
+    "执行日志确认官方 loader.js 已加载；Electron PID 20132 在 macOS 应用注册阶段触发 SIGABRT，未获得可操作窗口，随后清理报告 kill EPERM。",
+    "新增错误留存已实际生效，保存完整错误堆栈；businessExecution=not_started，业务 observations 和 checks 均为空。",
+    "观察方案保留固定同标题与不同正文输入，通过持久化文件、DOM 列表、逐条选择后的完整文本及截图交叉核对，不以产品 API 返回值作为唯一依据。",
+    "统一入口生成覆盖率报告，状态为 incomplete；未进行无新依据的重跑。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/debug/request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/debug/diagnosis.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/debug/current-launch-crash.ips",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/debug/attempt-3e4da888460048a694b8b4585bd40338/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/debug/attempt-3e4da888460048a694b8b4585bd40338/execution/ui/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/debug/attempt-3e4da888460048a694b8b4585bd40338/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "启动阻塞定位到 macOS 应用注册阶段，具体环境限制或系统服务原因尚未确认，不能判定产品业务失败。",
+    "全部业务断言仍待实际执行验证，不能声明场景通过。",
+    "覆盖率不完整，不能作为全项目实测覆盖率。",
+    "本地结论仍需独立复审。"
+  ],
+  "reason": "已修复测试启动设置并验证错误留存，但 Electron 仍在 macOS 应用注册阶段崩溃，业务验证受阻。"
+}

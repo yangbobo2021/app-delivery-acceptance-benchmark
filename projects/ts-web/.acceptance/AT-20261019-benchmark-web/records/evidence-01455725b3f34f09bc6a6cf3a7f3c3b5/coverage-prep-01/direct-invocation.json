@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/node_modules/c8/bin/c8.js",
+    "report",
+    "--all",
+    "--temp-directory",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/native",
+    "--reports-dir",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/direct",
+    "--reporter",
+    "json",
+    "--reporter",
+    "json-summary",
+    "--include",
+    "dist/app.js",
+    "--include",
+    "build.mjs",
+    "--include",
+    "server.mjs",
+    "--extension",
+    ".js",
+    "--extension",
+    ".mjs"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,276 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/coverage-adapter.mjs"
+  ],
+  "adapter_files": {
+    "projects/electron-desktop/tests/coverage-adapter.mjs": "9402af7f9079f031873897449f2d13defb692484420c80125a82406886a717ef",
+    "projects/electron-desktop/tests/package.json": "cf8427fd4c635b8e53f6ae4fefbf8239452b0dd177afcf4eeec36f4abc2d4a7c",
+    "projects/electron-desktop/tests/package-lock.json": "5146160a03f32739340337644f3a7e357d474ff2e8c8c7d0f4e18ba354d98d82",
+    "projects/electron-desktop/tests/probe-electron.mjs": "1e7d4f598db9fbdf165c2f1f39a2934fac10b07b03f5f0aa67821a86fdb8aa83",
+    "projects/electron-desktop/tests/prepare-native.mjs": "06e7186ff83374c709c6f4e2d61683461f8c4e1a7db28573c3cd5b0c3a897e44"
+  },
+  "tools": [
+    {
+      "name": "Electron / V8 NODE_V8_COVERAGE + Chromium precise coverage",
+      "version": "44.9.0 / 15.2.124.43-electron.0",
+      "role": "collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.61.1",
+      "role": "collector"
+    },
+    {
+      "name": "c8",
+      "version": "11.0.0",
+      "role": "converter/source-map/zero-units"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "converter/source-map"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "merge/statistics"
+    }
+  ],
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "components": {},
+    "source_hashes": {
+      "projects/electron-desktop/src/index.html": "290572169376d87c9f593caa9b56911e06cd59aa55767304b1eb5e4ded546cdc",
+      "projects/electron-desktop/src/main.ts": "9ce2366d42a7f028e011073e3e69f219be444132b565679b54df920cede55461",
+      "projects/electron-desktop/src/preload.ts": "f7688c1dc92c29923f2f3e74a446ec74c74ae38bafa3f8f4ef633a2f182b9b85",
+      "projects/electron-desktop/src/renderer.ts": "4f6d9362b24aa24bb75dfd9b2c7b224fa0ab27eaff6b4e1679b48235ff73d475",
+      "projects/electron-desktop/src/store.ts": "56e1b585f6ca75ce437667b507ca7e6b6cffdf3f26182b40136e636cc3c5d76f",
+      "projects/electron-desktop/build.mjs": "84116660e600773715ccf8c8d47c760bd34f9b91325acf4c6f4c3c4e1e3645be"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/inventory.json",
+    "inventory_sha256": "4f02bbaece4991c669641ae56f1452edfd699c9a5413c3c7b315cf0cfa5c703d",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/registry.json"
+  },
+  "source_dispositions": {
+    "projects/electron-desktop/src/index.html": {
+      "kind": "non_executable",
+      "reason": "Static document; no embedded executable script."
+    },
+    "projects/electron-desktop/src/main.ts": {
+      "kind": "unsupported",
+      "reason": "Zero-native bundled sourcemap baseline yielded falsely covered lines; metric unavailable."
+    },
+    "projects/electron-desktop/src/preload.ts": {
+      "kind": "measured",
+      "reason": "c8 verified native precise coverage and zero-hit baseline."
+    },
+    "projects/electron-desktop/src/renderer.ts": {
+      "kind": "measured",
+      "reason": "c8 verified native precise coverage and zero-hit baseline."
+    },
+    "projects/electron-desktop/src/store.ts": {
+      "kind": "unsupported",
+      "reason": "Zero-native bundled sourcemap baseline yielded falsely covered lines; metric unavailable."
+    },
+    "projects/electron-desktop/build.mjs": {
+      "kind": "unsupported",
+      "reason": "Build helper native baseline not verified."
+    }
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-summary.json",
+      "sha256": "905fd275e2224fd01abacbf48ce467726bf17314e56af5171cc35f9e5ee721f4"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/chain-run-command.json",
+      "sha256": "deea77676e56c5f336b200882583c4af2de4907116f92d0c6a681cfd9c2e7d7e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/command-finish.json",
+      "sha256": "cc9ae86a52161eac26917cab3aea57fe76aff5e0a20d7f22f9b6ea97379cbc1b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/command-summarize.json",
+      "sha256": "b203bf9c3db3d5a3f4d178fd6dcc926c907cb8eb5c081dc0845700a0783b26b1"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/command-verify-report.json",
+      "sha256": "31495f65741b4c13c4c608ba56a88c7d8647f011bb0fee027d9209dc8416deb9"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/comparison.json",
+      "sha256": "8626824898fcdd8ccf49679c8b6deea35082210549cd2be3e89c4f0a12fe281b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/direct-command.json",
+      "sha256": "9fe4ea95324aaa6be56fd5c9f079b5fbc1e483863fb46ae657a9e2d113602bc2"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/inventory.json",
+      "sha256": "4f02bbaece4991c669641ae56f1452edfd699c9a5413c3c7b315cf0cfa5c703d"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/probe-session.json",
+      "sha256": "53a2a78ad6501a64d655af6b301371c1cba6de65de832c4326e3d8a1ad44e811"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/request-finish.json",
+      "sha256": "56c274b48ce0183e008aa72583a30084846115a47b6f4ea8d11a83053c4a820b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/request-summarize.json",
+      "sha256": "b14104e30f94ba78456842521d53939dd3f95f44346d71829460fda20e78bab5"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/request-verify-report.json",
+      "sha256": "f6a4ca5ada1f2a28908182403ba61a6a0006ca785aa14d55241f81c5996adc74"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/verify-report.json",
+      "sha256": "4ede2ee9f83d5af6f9a4505f576562f77284523e47e462e57610fa6603bcb191"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/zero-command.json",
+      "sha256": "386ca9a29b388f830b49741d646b4d9f04b11109bb1e4426b781fd9e77507667"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/coverage-report.json",
+      "sha256": "d3b2b68736cfc3002b6ee4f228a5f845fb9335291641ec21cff12e75bdaf1ae2"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/execution.json",
+      "sha256": "ab43fd308a1b9300e922681bed3163f45cefe29e12681cb15d06ac0c38e8e352"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/c8/coverage-final.json",
+      "sha256": "c8b2c954e671beb2b71704cdc281f7f70c0e7daaef63a0ef83b291f9bcd117fa"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/c8/coverage-summary.json",
+      "sha256": "db4772e2a381d0efe0d990f7f231f51e4b1ddeb25395db2985615bbecf69994e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/direct-native/coverage-final.json",
+      "sha256": "c8b2c954e671beb2b71704cdc281f7f70c0e7daaef63a0ef83b291f9bcd117fa"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/direct-native/coverage-summary.json",
+      "sha256": "db4772e2a381d0efe0d990f7f231f51e4b1ddeb25395db2985615bbecf69994e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/zero-report/coverage-final.json",
+      "sha256": "38d9b0c9480767f7916596e3afeffa1cd19e71390295966f6cd8518ae0f58906"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/zero-report/coverage-summary.json",
+      "sha256": "c35e79f469175743aa9b1cdddb78eb09d8d1d25977df5fb18b8aaaa50382bb2b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/native/coverage-14330-1792391847038-0.json",
+      "sha256": "209739ad05cd8b61afe6d07197fbb5243b7583cda749a4a49c8ea6e7de9ac56a"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/native/coverage-14333-1792391841798-0.json",
+      "sha256": "61629086f2f727c475a5291198b27f8c7298900b49540e22d8268f2a735a2e83"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/native/renderer-e7c5822203.json",
+      "sha256": "a1bd852a0c0f30024e046e5a8b11231587ad8b6cc6f46a7684755543daea8961"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/adapter-chain/c8/command.json",
+      "sha256": "20c90e9118de479f90929b27169c263ef19d9b415db688fdeea34e616cdf67ff"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/probe-prepared/prepared.json",
+      "sha256": "2eaaace3305561443c4e24bffe0a6355476bdaea6b4c635f9179e0600dead0a3"
+    }
+  ],
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/src/index.html": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/src/index.html",
+      "sha256": "290572169376d87c9f593caa9b56911e06cd59aa55767304b1eb5e4ded546cdc"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/src/main.ts": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/src/main.ts",
+      "sha256": "9ce2366d42a7f028e011073e3e69f219be444132b565679b54df920cede55461"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/src/preload.ts": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/src/preload.ts",
+      "sha256": "f7688c1dc92c29923f2f3e74a446ec74c74ae38bafa3f8f4ef633a2f182b9b85"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/src/renderer.ts": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/src/renderer.ts",
+      "sha256": "4f6d9362b24aa24bb75dfd9b2c7b224fa0ab27eaff6b4e1679b48235ff73d475"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/src/store.ts": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/src/store.ts",
+      "sha256": "56e1b585f6ca75ce437667b507ca7e6b6cffdf3f26182b40136e636cc3c5d76f"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/build.mjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/build.mjs",
+      "sha256": "84116660e600773715ccf8c8d47c760bd34f9b91325acf4c6f4c3c4e1e3645be"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/coverage-adapter.mjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/tests/coverage-adapter.mjs",
+      "sha256": "9402af7f9079f031873897449f2d13defb692484420c80125a82406886a717ef"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/package.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/tests/package.json",
+      "sha256": "cf8427fd4c635b8e53f6ae4fefbf8239452b0dd177afcf4eeec36f4abc2d4a7c"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/package-lock.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/tests/package-lock.json",
+      "sha256": "5146160a03f32739340337644f3a7e357d474ff2e8c8c7d0f4e18ba354d98d82"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/probe-electron.mjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/tests/probe-electron.mjs",
+      "sha256": "1e7d4f598db9fbdf165c2f1f39a2934fac10b07b03f5f0aa67821a86fdb8aa83"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/prepare-native.mjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/tests/prepare-native.mjs",
+      "sha256": "06e7186ff83374c709c6f4e2d61683461f8c4e1a7db28573c3cd5b0c3a897e44"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/index.html": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/dist/index.html",
+      "sha256": "290572169376d87c9f593caa9b56911e06cd59aa55767304b1eb5e4ded546cdc"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/main.js": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/dist/main.js",
+      "sha256": "b29b4532b5e6fbc6cac801fdfd8f76280414e6483732e51d5c1e9cc1f94032f1"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/main.js.map": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/dist/main.js.map",
+      "sha256": "be252a95f45cfb16d99acf999155e526d6f0e5c70c3c5a7740cef9d4b3eac7ad"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/preload.js": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/dist/preload.js",
+      "sha256": "053887e7beb1711d9a60fa3667c240d7245f22d7cef8e5157da2b370d805ba0b"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/preload.js.map": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/dist/preload.js.map",
+      "sha256": "74823b378c162cc60e2a44cefae0dec957b6a8ecd3d91cd82d9a08d5d5c337d4"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/renderer.js": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/dist/renderer.js",
+      "sha256": "a6da7af3745343f787156ed056becbc905fb2686f6a1d552b91e2f7377c0538a"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/dist/renderer.js.map": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/frozen/projects/electron-desktop/dist/renderer.js.map",
+      "sha256": "77c7e9818963758a85dfc672609d6f2204841afe787808dfe0cada1fe013928a"
+    }
+  },
+  "probe_only": false,
+  "probe_comparison": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/comparison.json",
+    "sha256": "8626824898fcdd8ccf49679c8b6deea35082210549cd2be3e89c4f0a12fe281b"
+  },
+  "zero_summary": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/zero-report/coverage-summary.json",
+    "sha256": "c35e79f469175743aa9b1cdddb78eb09d8d1d25977df5fb18b8aaaa50382bb2b"
+  }
+}

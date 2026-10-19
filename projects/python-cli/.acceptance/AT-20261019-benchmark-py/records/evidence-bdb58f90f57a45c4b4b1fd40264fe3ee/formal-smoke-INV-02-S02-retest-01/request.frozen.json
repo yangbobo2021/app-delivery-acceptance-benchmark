@@ -1,0 +1,79 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli",
+    "id": "AT-20261019-benchmark-py",
+    "scope_sha256": "1b99a57ba687861f543626baf45a7ddfe543d2b40dde2898e94a5b0636b87da6",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/knowledge-reads/cd0ec4a64c9743548f94378b8c69ff54.json"
+  },
+  "progress_schema": "single-agent-scene-v1",
+  "project": {
+    "id": "workspace",
+    "label": "workspace",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "sources": [
+      "projects/python-cli/invoice/__init__.py",
+      "projects/python-cli/invoice/__main__.py",
+      "projects/python-cli/invoice/totals.py"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "INV-01",
+      "title": "INV-01",
+      "text": "INV-01：CSV 必须且仅有 `account,amount_cents` 两列表头，顺序如此。account 是非空 ASCII 字母数字串；amount_cents 是 0 至 1000000000 的十进制整数。空文件、无数据行、坏表头、坏记录应失败。"
+    },
+    {
+      "id": "INV-02",
+      "title": "INV-02",
+      "text": "INV-02：按 account 汇总所有记录的 amount_cents，使用精确整数计算。一个 account 的结果可以超过 32 位有符号整数最大值。"
+    },
+    {
+      "id": "INV-03",
+      "title": "INV-03",
+      "text": "INV-03：成功时标准输出为一个 JSON 对象，字段为 `totals`（account 到整数总额的对象）与 `row_count`（数据行数），退出码为 0。JSON 键顺序及空白不作要求，标准错误为空。"
+    },
+    {
+      "id": "INV-04",
+      "title": "INV-04",
+      "text": "INV-04：缺少参数、未知参数、输入文件不存在或输入不合法时，退出码为 2；标准错误包含非空诊断；标准输出为空，不输出部分汇总。具体诊断措辞不作要求。"
+    },
+    {
+      "id": "INV-05",
+      "title": "INV-05",
+      "text": "INV-05：不能修改输入文件，也不能在输入目录写入其他文件。使用者可从任意工作目录以绝对输入路径执行。"
+    },
+    {
+      "id": "INV-06",
+      "title": "INV-06",
+      "text": "INV-06：同一输入重复执行得到相同汇总。账号大小写敏感，`A` 与 `a` 分开统计；不对 account 做大小写转换。"
+    }
+  ],
+  "reverse_rules": [],
+  "scene": {
+    "id": "INV-02-S02",
+    "title": "账号总额跨越有符号32位上限",
+    "priority": "P1",
+    "priority_reason": "使用32位累加或限制总额范围，会使合法的大额账号汇总失败或金额失真。",
+    "description": "输入合法 CSV，一个账号的金额为 1000000000、1000000000、147483647，另一个账号为 1000000000、1000000000、147483648。执行汇总后，两者总额应分别精确为 2147483647 和 2147483648，均能正常得到汇总结果。",
+    "requirement_id": "INV-02",
+    "kind": "BLACK_BOX"
+  },
+  "case_catalog": [],
+  "case_input_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-bind-retest-01/case-input.json",
+  "config_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-bind-retest-01/config.json",
+  "change": {
+    "inventory": {
+      "schema": "fixed-revision-inventory-v1",
+      "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+      "source_paths": [
+        "projects/python-cli/invoice/__init__.py",
+        "projects/python-cli/invoice/__main__.py",
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "changed_files": [],
+      "changed_lines": {},
+      "change_scope": "unavailable: requirements benchmark has no base/head diff"
+    }
+  }
+}

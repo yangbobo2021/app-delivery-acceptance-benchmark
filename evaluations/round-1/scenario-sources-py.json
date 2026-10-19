@@ -1,0 +1,38 @@
+[
+  {
+    "requirement_id": "INV-01",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/scenario-INV-01-01/scenarios.current.json",
+    "sha256": "34d38333f34f6a4a1f3acfe6dd650762b0f23ffda0d547a83a8b3bff163a0a77",
+    "count": 8
+  },
+  {
+    "requirement_id": "INV-02",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/scenario-INV-02-02/scenarios.current.json",
+    "sha256": "701d8dcb57e48982757f1c11f33b4621734de330cea56b0416709667892bcff4",
+    "count": 5
+  },
+  {
+    "requirement_id": "INV-03",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/scenario-INV-03-01/scenarios.current.json",
+    "sha256": "e8da39aae02261e18a58784b0f98ac9787d9c8a03104a2939c60140a7f36071f",
+    "count": 2
+  },
+  {
+    "requirement_id": "INV-04",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/scenario-INV-04-01/scenarios.current.json",
+    "sha256": "a5fb2ff6fcb1fbd2b583c5f82c248bd62f05251ec693332e51b6b9817827d5e1",
+    "count": 5
+  },
+  {
+    "requirement_id": "INV-05",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/scenario-INV-05-01/scenarios.current.json",
+    "sha256": "e1c7d85cfe22bc90cd22869ff1c2700861c67e80caa3d2d303ce5fbf12efd100",
+    "count": 3
+  },
+  {
+    "requirement_id": "INV-06",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/scenario-INV-06-01/scenarios.current.json",
+    "sha256": "9b73759ae411b43cc0ee197cd4c0d6dfe460cce2f638554f5e11e83cba017083",
+    "count": 2
+  }
+]

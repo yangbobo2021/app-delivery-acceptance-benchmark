@@ -1,0 +1,130 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/coverage-prep-01/prepared",
+  "prepared_sha256": "23821b7d22156a80ee8a0f83a457848940caab253577f2631d65eb7a43f4d17a",
+  "scene_id": "NOTE-01-S05",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_hashes": {
+    "projects/electron-desktop/src/index.html": "290572169376d87c9f593caa9b56911e06cd59aa55767304b1eb5e4ded546cdc",
+    "projects/electron-desktop/src/main.ts": "9ce2366d42a7f028e011073e3e69f219be444132b565679b54df920cede55461",
+    "projects/electron-desktop/src/preload.ts": "f7688c1dc92c29923f2f3e74a446ec74c74ae38bafa3f8f4ef633a2f182b9b85",
+    "projects/electron-desktop/src/renderer.ts": "4f6d9362b24aa24bb75dfd9b2c7b224fa0ab27eaff6b4e1679b48235ff73d475",
+    "projects/electron-desktop/src/store.ts": "56e1b585f6ca75ce437667b507ca7e6b6cffdf3f26182b40136e636cc3c5d76f",
+    "projects/electron-desktop/build.mjs": "84116660e600773715ccf8c8d47c760bd34f9b91325acf4c6f4c3c4e1e3645be"
+  },
+  "tools": [
+    {
+      "name": "Electron / V8 NODE_V8_COVERAGE + Chromium precise coverage",
+      "version": "44.9.0 / 15.2.124.43-electron.0",
+      "role": "collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.61.1",
+      "role": "collector"
+    },
+    {
+      "name": "c8",
+      "version": "11.0.0",
+      "role": "converter/source-map/zero-units"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "converter/source-map"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "merge/statistics"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "incomplete",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/execution.json",
+  "execution_sha256": "bf8773755391158ad02aed1bbdc9ba3acf34a6c14f8596cb17dffdfa87ba83a6",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/native/coverage-26803-1792392616208-0.json",
+      "sha256": "8b6207196ac10b363ed0b2eb704b0e6890874856ff3a04a8bee90a5186d76163",
+      "role": "v8"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/native/coverage-26804-1792392616121-0.json",
+      "sha256": "8fd8cbadce62ef33d23155f389e257615a108dbceb953f486942ecd7bc897ec2",
+      "role": "v8"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/c8/coverage-final.json",
+      "sha256": "8e8122964157b24fa8fb6dcb49ee54e71787dbecb45aebca1ff8469ef2ff683c",
+      "role": "c8"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/c8/coverage-summary.json",
+      "sha256": "3b3f4a03d4dc54240364963bb8a98a7144fc7abcd412da34cb747e642ce0d2fd",
+      "role": "c8"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/c8/command.json",
+      "sha256": "c5a22f720703e1a27e5e53d98ce00c02b992cdabb502c3eb60e90e1555b0a21a",
+      "role": "c8"
+    }
+  ],
+  "components": [
+    {
+      "id": "renderer-preload",
+      "label": "Electron renderer + sandbox preload; native V8 block branches",
+      "source_paths": [
+        "projects/electron-desktop/src/renderer.ts",
+        "projects/electron-desktop/src/preload.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 0,
+        "total": 11,
+        "pct": 0
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 0,
+        "total": 2,
+        "pct": 0
+      }
+    },
+    {
+      "id": "main-store",
+      "label": "Electron main + bundled Store",
+      "source_paths": [
+        "projects/electron-desktop/src/main.ts",
+        "projects/electron-desktop/src/store.ts"
+      ],
+      "line": {
+        "status": "unavailable",
+        "reason": "Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Bundled main/store source-map zero baseline reports falsely covered lines; reliable complete native metrics remain unavailable. Raw counts are diagnostics only."
+      }
+    },
+    {
+      "id": "build",
+      "label": "Build helper",
+      "source_paths": [
+        "projects/electron-desktop/build.mjs"
+      ],
+      "line": {
+        "status": "unavailable",
+        "reason": "Build helper is not exercised by desktop scenes; separate complete native baseline has not been verified."
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Build helper native branch denominator has not been verified."
+      }
+    }
+  ],
+  "report_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-01/execution/coverage-report.json",
+  "report_sha256": "8ea2705b150e26df11fb5758f47232fa6a17d1ace18bc203bfe1f0d00e0ce6ef",
+  "capture_end": "2026-10-19T06:50:16.245820+00:00"
+}

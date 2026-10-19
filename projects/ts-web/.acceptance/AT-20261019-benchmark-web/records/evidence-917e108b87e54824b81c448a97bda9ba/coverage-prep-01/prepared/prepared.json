@@ -1,0 +1,236 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/coverage-adapter.mjs"
+  ],
+  "adapter_files": {
+    "projects/ts-web/tests/package.json": "318775d733b380afa22c885bcd772afaf089635fba9b9a0492d4403e22b28729",
+    "projects/ts-web/tests/package-lock.json": "25927db589abb442b80a1e6fe4abb5c0a70026599eb1d0d985f8ec328b7a7f01",
+    "projects/ts-web/tests/coverage-config.json": "4e109bc4b44b6ea93b6f3cd9b3b6323d8c2a98466e3fca36d90d81681c362535",
+    "projects/ts-web/tests/coverage-adapter.mjs": "108647e9d9cffa892fcb3114ddd04be31f20676ee977ffd180f891e4e74ab838",
+    "projects/ts-web/tests/browser-fixture.mjs": "26ae69a77fac3e15d1907e666aa2c9008cbee41451f6a8df76a7e2adaa29b985",
+    "projects/ts-web/tests/node-flush.cjs": "90b3b49b5d246c1b1cc228b11325d9c8f68c83f56df6df030387f0e68c627cf6",
+    "projects/ts-web/tests/prepare-coverage.mjs": "77e7181cdf4cdb5aa73f1898513c5823b1964058f61dd36847b0f0d79fc9dd73",
+    "projects/ts-web/tests/probe.mjs": "a5c687e745fe543ddfb15d93dc1537173b8887e82df0f52bfffeeebe61584cab"
+  },
+  "tools": [
+    {
+      "name": "Google Chrome",
+      "version": "Google Chrome 155.0.8059.80",
+      "role": "browser runtime"
+    },
+    {
+      "name": "Node V8",
+      "version": "14.1.146.11-node.18",
+      "role": "native Node collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.64.1",
+      "role": "Chromium native precise collector"
+    },
+    {
+      "name": "c8",
+      "version": "12.0.0",
+      "role": "complete zero baseline and V8 merge/report"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "source-map conversion"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "statistics/report"
+    },
+    {
+      "name": "istanbul-reports",
+      "version": "3.2.0",
+      "role": "statistics/report"
+    }
+  ],
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "components": {},
+    "source_hashes": {
+      "projects/ts-web/build.mjs": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a",
+      "projects/ts-web/server.mjs": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c",
+      "projects/ts-web/src/app.ts": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502",
+      "projects/ts-web/src/index.html": "ee2b8fa2e51e9a6c03f93ecf3de6918d073381f303f84dc839d4ba29a1ae24c1"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/inventory.json",
+    "inventory_sha256": "78731c18a4409904bd7a87878f68003b6ed24dceaabf8d962f65e5bfe45aadad",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/registry.json"
+  },
+  "source_dispositions": {
+    "projects/ts-web/build.mjs": {
+      "kind": "measured",
+      "reason": "c8 V8 source-map report, complete --all denominator"
+    },
+    "projects/ts-web/server.mjs": {
+      "kind": "measured",
+      "reason": "c8 V8 source-map report, complete --all denominator"
+    },
+    "projects/ts-web/src/app.ts": {
+      "kind": "measured",
+      "reason": "c8 V8 source-map report, complete --all denominator"
+    },
+    "projects/ts-web/src/index.html": {
+      "kind": "non_executable",
+      "reason": "Static HTML; executable inline script absent."
+    }
+  },
+  "build_hashes": {
+    "projects/ts-web/dist/app.js": "b448414842e47d1f6052aa8ad0ca197e8cdd194c4cbc5e21adc9d2ac8e716565",
+    "projects/ts-web/dist/app.js.map": "bf16aa483a0807fbf31f31b9c2d669421ea32c0fb631291effc111c9536ff179"
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/run-request.json",
+      "sha256": "77d8d8a3cddb2651a8171e466ddcc1f46fa790c163a05549673b80708bad83b3"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/run-response.json",
+      "sha256": "8c26a1c4394f0e8860bdf5375a67ce329d1dfeca73623c24709d7daa3144c692"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/run-invocation.json",
+      "sha256": "8a4bdf71abd968050ad86ebab3154122b999af53cbeef24aac27efd73d804298"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/receipt.json",
+      "sha256": "00da890ea3c8d371d7ff54c39f15b332f147287e76fd548bef16f8c1fcc8b7ac"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/finish-request.json",
+      "sha256": "406040a82dc295f25094839aa53a19b9c8ce21ab8819d2e18ea03759aba47762"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/finish-response.json",
+      "sha256": "fdf5767ac6958f6a7330a84f2ce0cfd347c9ff0dec1d7a05704d7d8cad645b26"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/verify-report-response.json",
+      "sha256": "4ede2ee9f83d5af6f9a4505f576562f77284523e47e462e57610fa6603bcb191"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/summarize-response.json",
+      "sha256": "29db26fc7a1b3858a424d2c35c1cc802f6d807b9b5c391e4011378bc5da15565"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero/c8-report/coverage-normalized.json",
+      "sha256": "d6ca2da3bee0423f529ae028483d506e5077a9934ef01212252be3045aaa6797"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-request.json",
+      "sha256": "6bd99e8536b589061b0c6d045676736a98be844c565076925a1a445aaa784a9a"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-response.json",
+      "sha256": "dbf5334150e5b39c82164d4870def9b6f36111dfc6ab89f332ad0249adba61d9"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/run-invocation.json",
+      "sha256": "4ff4207b11424242d5399194670590fb1f54acfbc472e6a04f870b98d7bdbb5a"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/receipt.json",
+      "sha256": "776c3dabb9f6232bcb68d69a7fe8785618bd6ea455934ee2ee38f68e69f29c62"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/finish-request.json",
+      "sha256": "4b31affb20fec4813b26509290441c26da0121cdf459a7b399dafd68faca57ed"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/finish-response.json",
+      "sha256": "5dd43fb46cf838a9ab00146f40b353f06a69a55ea470007afc7eddc9cb335a89"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/verify-report-response.json",
+      "sha256": "4ede2ee9f83d5af6f9a4505f576562f77284523e47e462e57610fa6603bcb191"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/summarize-response.json",
+      "sha256": "ae840837eae20f7cd52d8d96a677c16737932d0bd625dd6e542c8a27766c4bec"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/c8-report/coverage-normalized.json",
+      "sha256": "40ef42d4b98f195d6edb7d35237a71738c409b1e5563e227ed7a98971346088e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/native/browser.json",
+      "sha256": "447d689a44881fa4f9647cab73fe0bc2b052e51942988de032b486062c7fb7c1"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/native/coverage-10556-1792391652102-0.json",
+      "sha256": "dd000b32851a09382b63092e3d13bd64734da1a300815dd98af8093b769439ac"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/native/coverage-10556-1792391652107-0.json",
+      "sha256": "87149a857699d10ed046f00fbc90c6d7eca19b7814433b601da8838143f6b725"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/comparison.json",
+      "sha256": "59226c4dae4ae452499033f55f31375dc18c9e61929f068b91d77db59ead56fb"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/direct-invocation.json",
+      "sha256": "dae66633986d8060efe36dfc93088cebc3e255f9e9fe80b14ba7232ca105592b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/direct/coverage-final.json",
+      "sha256": "889149b3f2feb3e43a1f20e62ded6d879c0e06d3a975fba836854c4edb0bfcd7"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/direct/coverage-summary.json",
+      "sha256": "e2d4d58da2c962fe837aaa15e033a88774f9f62cf7dd2ea70ffdd6bf04ca2406"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/nonzero/dom/observations.json",
+      "sha256": "5aa454aaec97a9488348b7781ba68635c914fcbcc3602a1fe02454aa4a347a8a"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/building/prepared.json",
+      "sha256": "5acbce95d8c83cc921c44d7a75ab18fa7d50698b692f1c3b798854fc6c2d9577"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/build-frozen/projects/ts-web/dist/app.js",
+      "sha256": "b448414842e47d1f6052aa8ad0ca197e8cdd194c4cbc5e21adc9d2ac8e716565"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/build-frozen/projects/ts-web/dist/app.js.map",
+      "sha256": "bf16aa483a0807fbf31f31b9c2d669421ea32c0fb631291effc111c9536ff179"
+    }
+  ],
+  "build_artifacts": {
+    "projects/ts-web/dist/app.js": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/build-frozen/projects/ts-web/dist/app.js",
+      "sha256": "b448414842e47d1f6052aa8ad0ca197e8cdd194c4cbc5e21adc9d2ac8e716565"
+    },
+    "projects/ts-web/dist/app.js.map": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/build-frozen/projects/ts-web/dist/app.js.map",
+      "sha256": "bf16aa483a0807fbf31f31b9c2d669421ea32c0fb631291effc111c9536ff179"
+    }
+  },
+  "comparison": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/comparison.json",
+    "sha256": "59226c4dae4ae452499033f55f31375dc18c9e61929f068b91d77db59ead56fb"
+  },
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/build.mjs": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/build.mjs",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/server.mjs": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/server.mjs",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/src/app.ts": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/src/app.ts",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/src/index.html": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/src/index.html",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/package.json": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/package.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/package-lock.json": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/package-lock.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/coverage-config.json": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/coverage-config.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/coverage-adapter.mjs": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/coverage-adapter.mjs",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/browser-fixture.mjs": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/browser-fixture.mjs",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/node-flush.cjs": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/node-flush.cjs",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/prepare-coverage.mjs": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/prepare-coverage.mjs",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace/projects/ts-web/tests/probe.mjs": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/frozen/projects/ts-web/tests/probe.mjs"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop",
+    "id": "AT-20261019-benchmark-desktop",
+    "scope_sha256": "04ad17ad60fb715fabfa8ce75bacb393be5816c92d277840c6c024c054a70e76",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/knowledge-reads/88efe17bc98440d29bcd709a5f468002.json"
+  },
+  "progress_schema": "single-agent-scene-v1",
+  "project": {
+    "id": "workspace",
+    "label": "workspace",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "sources": [
+      "projects/electron-desktop/build.mjs",
+      "projects/electron-desktop/src/index.html",
+      "projects/electron-desktop/src/main.ts",
+      "projects/electron-desktop/src/preload.ts",
+      "projects/electron-desktop/src/renderer.ts",
+      "projects/electron-desktop/src/store.ts"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "NOTE-01",
+      "title": "NOTE-01",
+      "text": "NOTE-01：可以新建、选择、编辑、删除便签。每个便签有不变的独立 ID；两个同标题便签独立编辑、删除。"
+    },
+    {
+      "id": "NOTE-02",
+      "title": "NOTE-02",
+      "text": "NOTE-02：标题去除首尾空白后必须为 1 至 80 个 Unicode 码点，正文为 0 至 10000 个 Unicode 码点。非法保存显示可见错误且不覆盖最近一次成功保存；错误文案不作要求。"
+    },
+    {
+      "id": "NOTE-03",
+      "title": "NOTE-03",
+      "text": "NOTE-03：成功保存后完全退出应用再启动，标题与正文一致；删除结果也保留。不同用户数据目录互不影响。"
+    },
+    {
+      "id": "NOTE-04",
+      "title": "NOTE-04",
+      "text": "NOTE-04：正文与标题作为普通文本展示，不解释 HTML 或脚本。渲染界面不能直接访问 Node 的 require、process 或文件系统。"
+    },
+    {
+      "id": "NOTE-05",
+      "title": "NOTE-05",
+      "text": "NOTE-05：渲染端只能通过明确的便签 IPC 接口访问数据。向存储/删除接口提交 `../outside` 等越界 ID，应拒绝且不能在用户数据目录外产生或修改文件；具体报错形式不作要求。"
+    },
+    {
+      "id": "NOTE-06",
+      "title": "NOTE-06",
+      "text": "NOTE-06：未选择便签时，保存/删除不得损坏现有数据；关闭后没有残留的本应用 Electron 进程。其他同时运行的 Electron 应用不在本需求范围内。"
+    }
+  ],
+  "reverse_rules": [],
+  "scene": {
+    "id": "NOTE-01-S05",
+    "title": "同标题便签独立编辑和删除",
+    "priority": "P1",
+    "priority_reason": "按标题混同记录会使同标题便签无法共存，或导致另一条记录被错误覆盖、删除。",
+    "description": "新建并合法保存两个标题完全相同、正文不同的便签，两者均独立存在且 ID 不同；保持同标题分别编辑并保存正文，各自仅呈现自己的修改。删除其中一个后，另一个仍可选择，其 ID、标题与正文保持不变。",
+    "requirement_id": "NOTE-01",
+    "kind": "BLACK_BOX"
+  },
+  "case_catalog": [],
+  "case_input_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-bind/case-input.json",
+  "config_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-bind/config.json",
+  "change": {
+    "inventory": {
+      "schema": "fixed-revision-inventory-v1",
+      "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+      "source_paths": [
+        "projects/electron-desktop/src/index.html",
+        "projects/electron-desktop/src/main.ts",
+        "projects/electron-desktop/src/preload.ts",
+        "projects/electron-desktop/src/renderer.ts",
+        "projects/electron-desktop/src/store.ts",
+        "projects/electron-desktop/build.mjs"
+      ],
+      "changed_files": [],
+      "changed_lines": {},
+      "change_scope": "unavailable: requirements benchmark has no base/head diff"
+    }
+  }
+}

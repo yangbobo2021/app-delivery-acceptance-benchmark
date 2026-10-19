@@ -1,0 +1,16 @@
+{"native_build_command": ["go", "test", "-c", "-overlay", "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/go-overlay-wr87ksfs/overlay.json", "-covermode=atomic", "-coverpkg=stock.local/app", "-o", "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/go-overlay-wr87ksfs/stock.test", "."]}
+{"native_test_command": ["/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/go-overlay-wr87ksfs/stock.test", "-test.v", "-test.run=^TestStock06RestartIdempotency$", "-test.gocoverdir=/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/parent"], "native_coverdir": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/covdata/parent"}
+=== RUN   TestStock06RestartIdempotency
+    acceptance_stock06_restart_test.go:62: evidence directory: /Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/fresh-execution/stock06-4007558192
+    acceptance_stock06_restart_test.go:194: retry 1 status: got 201 want 200; body={"request_id":"restart-first","quantity":2,"available":3}
+    acceptance_stock06_restart_test.go:196: retry 1 differs from complete first response: got map[available:3 quantity:2 request_id:restart-first] want map[available:8 quantity:2 request_id:restart-first]
+    acceptance_stock06_restart_test.go:198: after retry 1 available: got 3 want 5
+    acceptance_stock06_restart_test.go:194: retry 2 status: got 201 want 200; body={"request_id":"restart-second","quantity":3,"available":0}
+    acceptance_stock06_restart_test.go:196: retry 2 differs from complete first response: got map[available:0 quantity:3 request_id:restart-second] want map[available:5 quantity:3 request_id:restart-second]
+    acceptance_stock06_restart_test.go:198: after retry 2 available: got 0 want 5
+    acceptance_stock06_restart_test.go:201: after changed quantity available: got 0 want 5
+    acceptance_stock06_restart_test.go:223: changed quantity before any retry status: got 201 want 409; body={"request_id":"restart-first","quantity":1,"available":4}
+    acceptance_stock06_restart_test.go:224: binding after changed quantity available: got 4 want 5
+--- FAIL: TestStock06RestartIdempotency (0.10s)
+FAIL
+coverage: 0.0% of statements in stock.local/app

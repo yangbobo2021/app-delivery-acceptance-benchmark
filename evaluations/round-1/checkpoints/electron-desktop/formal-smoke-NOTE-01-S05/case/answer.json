@@ -1,0 +1,38 @@
+{
+  "status": "blocked",
+  "test_files": [
+    "projects/electron-desktop/tests/note-01-s05.mjs",
+    "projects/electron-desktop/tests/coverage-adapter.mjs",
+    "projects/electron-desktop/tests/package-lock.json",
+    "projects/electron-desktop/tests/package.json",
+    "projects/electron-desktop/tests/prepare-native.mjs",
+    "projects/electron-desktop/tests/probe-electron.mjs"
+  ],
+  "test_command": [
+    "node",
+    "projects/electron-desktop/tests/note-01-s05.mjs"
+  ],
+  "test_env": {
+    "DEBUG": "pw:browser*",
+    "ELECTRON_ENABLE_LOGGING": "1"
+  },
+  "observations": [
+    "已实现同标题便签共存、ID 独立且不变、分别编辑互不影响、删除后保留另一条的断言及完整状态留存；语法检查通过。",
+    "经指定统一入口执行三次，每次使用新建状态目录，均在 Electron 启动阶段失败，未进入业务断言。",
+    "启动日志显示 Process failed to launch，随后清理进程出现 kill EPERM；增加启动日志后仍未获得可操作窗口。",
+    "最后一次原始记录为 businessExecution=not_started，observations 和 checks 均为空；覆盖率报告为 incomplete。",
+    "仅新增测试文件，未修改产品源码或既有测试工具。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case/debug/request-03.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case/debug/attempt-5e5d413e537a4b7c80aba28148309f43/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case/debug/attempt-5e5d413e537a4b7c80aba28148309f43/execution/ui/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case/debug/attempt-5e5d413e537a4b7c80aba28148309f43/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "启动失败的根因尚未完全确认，不能据此判定产品业务失败。",
+    "所有场景业务判据均待实际运行验证，测试实现也尚未完成界面调试。",
+    "重跑须由统一入口绑定 ACCEPTANCE_CASE_ROOT、UI_EVIDENCE_DIR 和覆盖率环境；产品通过结论仍需独立审查。"
+  ],
+  "reason": "实际 Electron 启动持续失败，当前环境无法完成场景业务验证。"
+}

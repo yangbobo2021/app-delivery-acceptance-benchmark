@@ -1,0 +1,139 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "90745035e5f8b4105dbe734b73283b8e414c62abd7a36cce7b240ff4e68b7dbc",
+  "bindings": {
+    "case_input": "e9825b53dd6fee4bc1f59ec57c2fc9b131182c83c7da2d0879e9c813828f016a",
+    "guide": "694785a5e8632125f6e65374b3c574a1d3fcf3512cfa5b48f31476cab00d47ae",
+    "template_catalog": "bfda2aca4c6b94281920a0fbbd5741eee3bd9ba1f78062164a189ecb1ad8ecfd"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:18:15.628303+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0.04
+      },
+      "finished_at": "2026-10-19T07:18:16.399303+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:18:16.582812+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/case/answer.json",
+        "seconds": 152.880111708,
+        "usage": {
+          "toolUses": 15,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 594755,
+                "uncached": 41667,
+                "cacheRead": 553088,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 6392,
+                "visible": 5251,
+                "reasoning": 1141
+              }
+            }
+          }
+        },
+        "tool_calls": 15,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-19T07:20:50.779528+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:20:50.903712+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/execution/execution.log",
+        "exit_code": 0,
+        "seconds": 0.490721458918415,
+        "test_files": [
+          "projects/python-cli/tests/coverage.ini",
+          "projects/python-cli/tests/coverage_adapter.py",
+          "projects/python-cli/tests/coverage_subprocess/sitecustomize.py",
+          "projects/python-cli/tests/fixtures/inv_02_s01_interleaved.csv",
+          "projects/python-cli/tests/fixtures/inv_02_s02_int32.csv",
+          "projects/python-cli/tests/prepare_coverage.py",
+          "projects/python-cli/tests/test_inv_02_s01.py",
+          "projects/python-cli/tests/test_inv_02_s02.py"
+        ]
+      },
+      "finished_at": "2026-10-19T07:20:53.626986+00:00"
+    },
+    "evidence": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:20:53.778453+00:00",
+      "result": {
+        "manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence.json",
+        "paths": [
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/0/execution.log",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/0/execution.json",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/1/native-data",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/2/native-data.bobos-MacBook-Air-2.local.62650.XBWkGAvx",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/3/native-data.bobos-MacBook-Air-2.local.62651.XQBgoBcx",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/4/native-report.json",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/5/native-invocation.json",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/6/run-response.json",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/execution.json",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/input/amounts.csv",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/stderr.bin",
+          "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/frozen-evidence/7/inv-02-s01/stdout.bin"
+        ],
+        "file_count": 12,
+        "bytes": 183393
+      },
+      "finished_at": "2026-10-19T07:20:54.117539+00:00"
+    },
+    "gate": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:20:54.261438+00:00",
+      "result": {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/handoff-gate.json",
+        "seconds": 0.39
+      },
+      "finished_at": "2026-10-19T07:20:54.727609+00:00"
+    },
+    "review": {
+      "status": "completed",
+      "started_at": "2026-10-19T07:20:54.923067+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/review/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-clean-INV-02-S01/review/metrics.json",
+        "status": "passed",
+        "seconds": 53.252938500000006,
+        "usage": {
+          "toolUses": 6,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 160858,
+                "uncached": 27482,
+                "cacheRead": 133376,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 2078,
+                "visible": 1644,
+                "reasoning": 434
+              }
+            }
+          }
+        },
+        "tool_calls": 6,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-19T07:21:48.781359+00:00"
+    }
+  }
+}

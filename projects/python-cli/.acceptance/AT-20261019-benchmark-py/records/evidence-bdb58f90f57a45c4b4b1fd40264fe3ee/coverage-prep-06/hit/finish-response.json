@@ -1,0 +1,69 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/prepared",
+  "prepared_sha256": "8af6e14cb4d560991ebf19d3f2943921a28d4e0064de5c55148e4cd81ad7209d",
+  "scene_id": "preparation-hit",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_hashes": {
+    "projects/python-cli/invoice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "projects/python-cli/invoice/__main__.py": "252c6574b1687570e0d1a43afc6d17d3fddff15e1effceff86ded16d2b761d43",
+    "projects/python-cli/invoice/totals.py": "f636bf0630ce37b44cd8bb580623ff13008672e3437e0ec0c67863ea4bdd6a3c"
+  },
+  "tools": [
+    {
+      "name": "coverage.py",
+      "version": "7.12.0",
+      "role": "native Python line/branch collection, subprocess merge and statistics"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/receipt.json",
+  "execution_sha256": "db2f2e79b5882f24d6fc05b6e892d3ea4956526d07464185eece28e78cb8442b",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/native-data",
+      "sha256": "c68ed7de3edafc673faa7b968db73d3521d1f4dcdb35421821370cb1e35c4287"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/native-data.bobos-MacBook-Air-2.local.2029.XXbpWLfx",
+      "sha256": "bbef1929acb99677f975a1692c80d45c491b21f7236a67b7a4bbcaba1463c506"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/native-report.json",
+      "sha256": "39e5bfa0d6f4c325c7794a0d22ccd2733597b5031938de161fb89fed40df4543"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/native-invocation.json",
+      "sha256": "0fa8dfa64e2287974d909f8c39ec10cc197c7e6989487bb14f554749bf2d2d3c"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/hit/run-response.json",
+      "sha256": "ae3499d1444a4f8953d194a614e9a13c90dfc81b767baf79f132341324fd41e4"
+    }
+  ],
+  "components": [
+    {
+      "id": "invoice-python",
+      "label": "coverage.py native lines and arcs",
+      "source_paths": [
+        "projects/python-cli/invoice/__init__.py",
+        "projects/python-cli/invoice/__main__.py",
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 34,
+        "total": 44,
+        "pct": 77.27272727272727
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 7,
+        "total": 14,
+        "pct": 50.0
+      }
+    }
+  ]
+}

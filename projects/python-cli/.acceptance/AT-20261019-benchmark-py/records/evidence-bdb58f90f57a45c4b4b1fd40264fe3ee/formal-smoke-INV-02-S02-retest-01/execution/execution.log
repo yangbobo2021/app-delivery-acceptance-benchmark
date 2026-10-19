@@ -1,0 +1,17 @@
+test_exact_totals_across_signed_int32_limit (test_inv_02_s02.Int32AccountTotals.test_exact_totals_across_signed_int32_limit) ... 
+  test_exact_totals_across_signed_int32_limit (test_inv_02_s02.Int32AccountTotals.test_exact_totals_across_signed_int32_limit) (account='AboveLimit', expected=2147483648) ... FAIL
+
+======================================================================
+FAIL: test_exact_totals_across_signed_int32_limit (test_inv_02_s02.Int32AccountTotals.test_exact_totals_across_signed_int32_limit) (account='AboveLimit', expected=2147483648)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace/projects/python-cli/tests/test_inv_02_s02.py", line 79, in test_exact_totals_across_signed_int32_limit
+    self.assertEqual(totals[account], expected)
+AssertionError: -2147483648 != 2147483648
+
+----------------------------------------------------------------------
+Ran 1 test in 0.108s
+
+FAILED (failures=1)
+/opt/miniconda3/lib/python3.12/site-packages/coverage/control.py:950: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.12.0/messages.html#warning-no-data-collected
+  self._warn("No data was collected.", slug="no-data-collected")

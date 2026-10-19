@@ -1,0 +1,15 @@
+{
+  "schema": "fixed-revision-inventory-v1",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "source_paths": [
+    "projects/electron-desktop/src/index.html",
+    "projects/electron-desktop/src/main.ts",
+    "projects/electron-desktop/src/preload.ts",
+    "projects/electron-desktop/src/renderer.ts",
+    "projects/electron-desktop/src/store.ts",
+    "projects/electron-desktop/build.mjs"
+  ],
+  "changed_files": [],
+  "changed_lines": {},
+  "change_scope": "unavailable: requirements benchmark has no base/head diff"
+}

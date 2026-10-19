@@ -1,0 +1,75 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api",
+    "id": "AT-20261019-benchmark-go",
+    "scope_sha256": "7de49e440f3b01b49948909c342ef68b857952b63c10e6a3abd8f192bcb5514a",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/knowledge-reads/8fae4d5bb3eb44b998e54a10ca97aa2d.json"
+  },
+  "progress_schema": "single-agent-scene-v1",
+  "project": {
+    "id": "workspace",
+    "label": "workspace",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+    "sources": [
+      "projects/go-api/main.go"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "STOCK-01",
+      "title": "STOCK-01",
+      "text": "STOCK-01：`GET /stock` 返回 JSON `available`，表示当前可用库存，成功状态为 200。"
+    },
+    {
+      "id": "STOCK-02",
+      "title": "STOCK-02",
+      "text": "STOCK-02：`POST /reserve` 接收 JSON `request_id` 和 `quantity`。request_id 为非空字符串，quantity 为 1 至 10 的整数；合法且库存充足时以 201 返回 `request_id,quantity,available`，库存恰好减少该数量。"
+    },
+    {
+      "id": "STOCK-03",
+      "title": "STOCK-03",
+      "text": "STOCK-03：同 request_id、同 quantity 的成功预留重试，返回 200 及首次预留的响应内容，不再次扣减。相同 request_id 换 quantity 返回 409，不改变库存。"
+    },
+    {
+      "id": "STOCK-04",
+      "title": "STOCK-04",
+      "text": "STOCK-04：库存不足返回 409，不扣减。并发不同 request_id 的请求不能使库存为负；成功扣减总数不得超过初始库存。并发同 request_id 不得重复扣减。"
+    },
+    {
+      "id": "STOCK-05",
+      "title": "STOCK-05",
+      "text": "STOCK-05：缺失必填字段、坏 JSON、非整数/超范围 quantity 返回 400，不改变状态。额外 JSON 字段的接受或拒绝均允许。"
+    },
+    {
+      "id": "STOCK-06",
+      "title": "STOCK-06",
+      "text": "STOCK-06：在一次成功 HTTP 响应返回后正常关闭再启动，库存及成功 request_id 的幂等记录必须保留；不同状态目录互不影响。"
+    }
+  ],
+  "reverse_rules": [],
+  "scene": {
+    "id": "STOCK-02-S01",
+    "title": "普通合法预留按当前库存连续扣减",
+    "priority": "P0",
+    "priority_reason": "普通合法请求无法成功预留或扣减数量错误，会直接阻断库存预留的主要业务目的。",
+    "description": "从初始库存 10 开始，使用两个不同的普通非空字符串 request_id，依次提交 quantity 为 3 和 2 的 JSON 预留请求。两次均返回 201，响应 JSON 的 request_id、quantity 分别与本次输入一致，available 依次为 7、5，实际库存也依次为 7、5。",
+    "requirement_id": "STOCK-02",
+    "kind": "BLACK_BOX"
+  },
+  "case_catalog": [],
+  "case_input_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-bind-STOCK-02-S01-retest-01/case-input.json",
+  "config_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-bind-STOCK-02-S01-retest-01/config.json",
+  "change": {
+    "inventory": {
+      "schema": "fixed-revision-inventory-v1",
+      "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "changed_files": [],
+      "changed_lines": {},
+      "change_scope": "unavailable: requirements benchmark has no base/head diff"
+    }
+  }
+}

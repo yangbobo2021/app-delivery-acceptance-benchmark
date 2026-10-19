@@ -1,0 +1,35 @@
+{"native_build_command": ["go", "test", "-c", "-overlay", "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/go-overlay-7pdbryzp/overlay.json", "-covermode=atomic", "-coverpkg=stock.local/app", "-o", "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/go-overlay-7pdbryzp/stock.test", "."]}
+{"native_test_command": ["/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/go-overlay-7pdbryzp/stock.test", "-test.v", "-test.run=^TestStock02(SequentialReservations|IntegerResponseValues)$", "-test.gocoverdir=/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/parent"], "native_coverdir": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/covdata/parent"}
+=== RUN   TestStock02IntegerResponseValues
+=== RUN   TestStock02IntegerResponseValues/integer
+=== RUN   TestStock02IntegerResponseValues/exponent
+=== RUN   TestStock02IntegerResponseValues/decimal
+=== RUN   TestStock02IntegerResponseValues/scaled_exponent
+=== RUN   TestStock02IntegerResponseValues/string
+=== RUN   TestStock02IntegerResponseValues/missing
+=== RUN   TestStock02IntegerResponseValues/null
+=== RUN   TestStock02IntegerResponseValues/boolean
+=== RUN   TestStock02IntegerResponseValues/array
+=== RUN   TestStock02IntegerResponseValues/object
+=== RUN   TestStock02IntegerResponseValues/wrong_integer
+=== RUN   TestStock02IntegerResponseValues/fraction
+=== RUN   TestStock02IntegerResponseValues/nearby_fraction
+--- PASS: TestStock02IntegerResponseValues (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/integer (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/exponent (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/decimal (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/scaled_exponent (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/string (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/missing (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/null (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/boolean (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/array (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/object (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/wrong_integer (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/fraction (0.00s)
+    --- PASS: TestStock02IntegerResponseValues/nearby_fraction (0.00s)
+=== RUN   TestStock02SequentialReservations
+    acceptance_stock02_sequential_test.go:85: HTTP evidence: /Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/fresh-review-1/stock02-4245959351/http-observations.jsonl
+--- PASS: TestStock02SequentialReservations (0.00s)
+PASS
+coverage: 54.3% of statements in stock.local/app

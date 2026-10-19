@@ -1,0 +1,49 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-19T07:27:47.106862+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/coverage_adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/run-response.json"
+  ],
+  "env_changes": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/fresh-review-1"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/fresh-review-1"
+  ],
+  "head_before": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/go-api/tests/coverage_adapter.py\n?? projects/go-api/tests/coverage_probe_test.go\n?? projects/go-api/tests/http_fixture_test.go\n?? projects/go-api/tests/prepare_coverage.py\n?? projects/go-api/tests/run_case.py\n?? projects/go-api/tests/stock02_sequential_test.go\n?? projects/go-api/tests/stock06_restart_test.go",
+  "test_file_sha256_before": {
+    "projects/go-api/tests/coverage_adapter.py": "c57a55850db39f96ddc132841bec32e7c1c1e8015c70f6ec9ff25539e2a85a1a",
+    "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+    "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+    "projects/go-api/tests/prepare_coverage.py": "20d0c63deb87e711a75717f3f10a24a828f2476af790caa8fb707d2e7bb42355",
+    "projects/go-api/tests/run_case.py": "b0ad413a59c763c4c59eac257011d9fb364dbac6f95f9d2f7c417e4b58c04711",
+    "projects/go-api/tests/stock02_sequential_test.go": "e1d97956650653baf0e6891ff7066395facd3863fa3741fd7caf30fb2b1c74ff",
+    "projects/go-api/tests/stock06_restart_test.go": "96520ff0998797bb3bca4379fa60a178c83327b0673e8343393700087edce603"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-clean-STOCK-02-S01-retest-01/execution-review-1/coverage-request.json",
+  "coverage_session_sha256": "ba27278a41a01677260484702bfe0ff41b9176074990839260eb92521470cdd2",
+  "child_pid": 71663,
+  "end_utc": "2026-10-19T07:27:50.069236+00:00",
+  "duration_seconds": 2.9219100829213858,
+  "exit_code": 0,
+  "head_after": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/go-api/tests/coverage_adapter.py\n?? projects/go-api/tests/coverage_probe_test.go\n?? projects/go-api/tests/http_fixture_test.go\n?? projects/go-api/tests/prepare_coverage.py\n?? projects/go-api/tests/run_case.py\n?? projects/go-api/tests/stock02_sequential_test.go\n?? projects/go-api/tests/stock06_restart_test.go",
+  "test_file_sha256_after": {
+    "projects/go-api/tests/coverage_adapter.py": "c57a55850db39f96ddc132841bec32e7c1c1e8015c70f6ec9ff25539e2a85a1a",
+    "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+    "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+    "projects/go-api/tests/prepare_coverage.py": "20d0c63deb87e711a75717f3f10a24a828f2476af790caa8fb707d2e7bb42355",
+    "projects/go-api/tests/run_case.py": "b0ad413a59c763c4c59eac257011d9fb364dbac6f95f9d2f7c417e4b58c04711",
+    "projects/go-api/tests/stock02_sequential_test.go": "e1d97956650653baf0e6891ff7066395facd3863fa3741fd7caf30fb2b1c74ff",
+    "projects/go-api/tests/stock06_restart_test.go": "96520ff0998797bb3bca4379fa60a178c83327b0673e8343393700087edce603"
+  },
+  "log_sha256": "dfee166a6b1e00d88dd900e73535cfc07dcd34ea35bcf8a82d0b43ea0fad7f92"
+}

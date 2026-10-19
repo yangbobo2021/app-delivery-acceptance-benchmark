@@ -1,0 +1,38 @@
+[
+  {
+    "requirement_id": "TODO-01",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/scenario-TODO-01-01/scenarios.current.json",
+    "sha256": "46294e50f1dc79d156892cd64a95968b8ffcfef16b2b1e5fbc915f947cb0d8f1",
+    "count": 5
+  },
+  {
+    "requirement_id": "TODO-02",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/scenario-TODO-02-01/scenarios.current.json",
+    "sha256": "e49d52160c4cacfffda5041778c37b3296b8330f10137f63658403f0c6ec6b71",
+    "count": 2
+  },
+  {
+    "requirement_id": "TODO-03",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/scenario-TODO-03-01/scenarios.current.json",
+    "sha256": "82f4212dd90bcd026aca31944277e35fcd49b42e072ccd3f5301065f1a910fcd",
+    "count": 4
+  },
+  {
+    "requirement_id": "TODO-04",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/scenario-TODO-04-02/scenarios.current.json",
+    "sha256": "ad3c88c0af2151a317864fb53c5bb5b960a580adc8b5be3e5076c55f1968e2aa",
+    "count": 5
+  },
+  {
+    "requirement_id": "TODO-05",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/scenario-TODO-05-01/scenarios.current.json",
+    "sha256": "29e6d9a9d5bffb11560f7561cc0208f6fff49df4aa35ec042d18e314cb853c1c",
+    "count": 5
+  },
+  {
+    "requirement_id": "TODO-06",
+    "path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/scenario-TODO-06-01/scenarios.current.json",
+    "sha256": "48785a87a65fb2d8afa0ddbfa7125d2cc10eb5f4113509edf8944cd85f8613ca",
+    "count": 2
+  }
+]

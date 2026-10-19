@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "coverage": "保留上次已通过的业务检查：真实 Electron 界面创建、保存两条便签并执行 A/B/A/B 选择，断言可识别内容串用、丢失及覆盖。覆盖率绑定本次冻结执行：renderer/preload 行 11/11、原生块分支 6/7；main/store/build 不可用，整体 incomplete，不代表全项目覆盖。",
+  "oracle": "创建、选择和内容独立性依据 NOTE-01；标题正文来自独立字面量夹具，满足 NOTE-02。保留原有业务断言，未新增业务策略。",
+  "evidence": "测试已在关闭前保存进程句柄，收尾异常会同步设置失败状态及退出码。本次冻结命令退出码 0，13 项检查通过；两条便签共存且选择内容匹配夹具。进程记录为已退出、退出码 0，无 closeError、processExitError 或覆盖率异常。覆盖率使用本次原始计数，经 c8 11.0.0、v8-to-istanbul 9.3.0 和 istanbul-lib-coverage 3.2.2 处理。",
+  "findings": [],
+  "summary": "上次测试收尾缺陷已修复，本次冻结执行支持该场景通过。"
+}

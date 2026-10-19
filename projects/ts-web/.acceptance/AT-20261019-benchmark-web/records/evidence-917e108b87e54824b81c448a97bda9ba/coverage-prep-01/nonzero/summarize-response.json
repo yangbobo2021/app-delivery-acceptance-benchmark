@@ -1,0 +1,75 @@
+{
+  "tools": [
+    {
+      "name": "Google Chrome",
+      "version": "Google Chrome 155.0.8059.80",
+      "role": "browser runtime"
+    },
+    {
+      "name": "Node V8",
+      "version": "14.1.146.11-node.18",
+      "role": "native Node collector"
+    },
+    {
+      "name": "playwright",
+      "version": "1.64.1",
+      "role": "Chromium native precise collector"
+    },
+    {
+      "name": "c8",
+      "version": "12.0.0",
+      "role": "complete zero baseline and V8 merge/report"
+    },
+    {
+      "name": "v8-to-istanbul",
+      "version": "9.3.0",
+      "role": "source-map conversion"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "statistics/report"
+    },
+    {
+      "name": "istanbul-reports",
+      "version": "3.2.0",
+      "role": "statistics/report"
+    }
+  ],
+  "scopes": {
+    "project": {
+      "status": "measured",
+      "components": [
+        {
+          "id": "javascript",
+          "label": "Browser TypeScript and Node build/host",
+          "source_paths": [
+            "projects/ts-web/build.mjs",
+            "projects/ts-web/server.mjs",
+            "projects/ts-web/src/app.ts"
+          ],
+          "line": {
+            "status": "measured",
+            "covered": 25,
+            "total": 38,
+            "pct": 65.78
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 10,
+            "total": 16,
+            "pct": 62.5
+          }
+        }
+      ]
+    },
+    "changed_files": {
+      "status": "unavailable",
+      "reason": "Fixed revision acceptance has no admitted base/head change scope."
+    },
+    "changed_lines": {
+      "status": "unavailable",
+      "reason": "Fixed revision acceptance has no admitted diff line inventory."
+    }
+  }
+}

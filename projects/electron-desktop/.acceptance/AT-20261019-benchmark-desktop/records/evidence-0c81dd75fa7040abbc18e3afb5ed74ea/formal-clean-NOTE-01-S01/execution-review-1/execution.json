@@ -1,0 +1,50 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-19T07:24:25.591409+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/coverage-adapter.mjs",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/execution-review-1/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/execution-review-1/run-response.json"
+  ],
+  "env_changes": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/fresh-review-1",
+    "UI_EVIDENCE_DIR": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/review-repair-1/debug/attempt-01/execution/ui"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/fresh-review-1"
+  ],
+  "head_before": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/electron-desktop/tests/coverage-adapter.mjs\n?? projects/electron-desktop/tests/note-01-s01.mjs\n?? projects/electron-desktop/tests/note-01-s05.mjs\n?? projects/electron-desktop/tests/package-lock.json\n?? projects/electron-desktop/tests/package.json\n?? projects/electron-desktop/tests/prepare-native.mjs\n?? projects/electron-desktop/tests/probe-electron.mjs",
+  "test_file_sha256_before": {
+    "projects/electron-desktop/tests/coverage-adapter.mjs": "9402af7f9079f031873897449f2d13defb692484420c80125a82406886a717ef",
+    "projects/electron-desktop/tests/note-01-s01.mjs": "1e511424c5679a6b206606fe5dc029032eaefd47eec819c0748ec966d1b7aa03",
+    "projects/electron-desktop/tests/note-01-s05.mjs": "70aebb3e7460f15eb6355addbe898342b720b7399c13cee28036804ea684dcc6",
+    "projects/electron-desktop/tests/package-lock.json": "5146160a03f32739340337644f3a7e357d474ff2e8c8c7d0f4e18ba354d98d82",
+    "projects/electron-desktop/tests/package.json": "cf8427fd4c635b8e53f6ae4fefbf8239452b0dd177afcf4eeec36f4abc2d4a7c",
+    "projects/electron-desktop/tests/prepare-native.mjs": "06e7186ff83374c709c6f4e2d61683461f8c4e1a7db28573c3cd5b0c3a897e44",
+    "projects/electron-desktop/tests/probe-electron.mjs": "1e7d4f598db9fbdf165c2f1f39a2934fac10b07b03f5f0aa67821a86fdb8aa83"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-clean-NOTE-01-S01/execution-review-1/coverage-request.json",
+  "coverage_session_sha256": "a8f1a8f4c2d3d42c6cbf1081a43f3a6ace0f1d2ebd9ce0a38841f3df76156a07",
+  "child_pid": 67551,
+  "end_utc": "2026-10-19T07:24:29.842514+00:00",
+  "duration_seconds": 4.195755209075287,
+  "exit_code": 0,
+  "head_after": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/electron-desktop/tests/coverage-adapter.mjs\n?? projects/electron-desktop/tests/note-01-s01.mjs\n?? projects/electron-desktop/tests/note-01-s05.mjs\n?? projects/electron-desktop/tests/package-lock.json\n?? projects/electron-desktop/tests/package.json\n?? projects/electron-desktop/tests/prepare-native.mjs\n?? projects/electron-desktop/tests/probe-electron.mjs",
+  "test_file_sha256_after": {
+    "projects/electron-desktop/tests/coverage-adapter.mjs": "9402af7f9079f031873897449f2d13defb692484420c80125a82406886a717ef",
+    "projects/electron-desktop/tests/note-01-s01.mjs": "1e511424c5679a6b206606fe5dc029032eaefd47eec819c0748ec966d1b7aa03",
+    "projects/electron-desktop/tests/note-01-s05.mjs": "70aebb3e7460f15eb6355addbe898342b720b7399c13cee28036804ea684dcc6",
+    "projects/electron-desktop/tests/package-lock.json": "5146160a03f32739340337644f3a7e357d474ff2e8c8c7d0f4e18ba354d98d82",
+    "projects/electron-desktop/tests/package.json": "cf8427fd4c635b8e53f6ae4fefbf8239452b0dd177afcf4eeec36f4abc2d4a7c",
+    "projects/electron-desktop/tests/prepare-native.mjs": "06e7186ff83374c709c6f4e2d61683461f8c4e1a7db28573c3cd5b0c3a897e44",
+    "projects/electron-desktop/tests/probe-electron.mjs": "1e7d4f598db9fbdf165c2f1f39a2934fac10b07b03f5f0aa67821a86fdb8aa83"
+  },
+  "log_sha256": "219fc1b2d51c732877f55b02abcdd9f2002c174c7729698a7c6c626b97206533"
+}

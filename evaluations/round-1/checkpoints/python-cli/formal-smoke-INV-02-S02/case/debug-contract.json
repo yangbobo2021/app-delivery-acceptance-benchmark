@@ -1,0 +1,44 @@
+{
+  "schema": "acceptance-debug-contract-v1",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli",
+    "id": "AT-20261019-benchmark-py",
+    "scope_sha256": "1b99a57ba687861f543626baf45a7ddfe543d2b40dde2898e94a5b0636b87da6",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/knowledge-reads/cd0ec4a64c9743548f94378b8c69ff54.json"
+  },
+  "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workspace",
+  "workspace_policy": "single-acceptance-v1",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "scene_id": "INV-02-S02",
+  "catalog_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/catalog.json",
+  "catalog_sha256": "8bae407dd72dab74035d1e9802af341121ddfed3d86d7c294071f7f27ce970f2",
+  "input_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-bind/case-input.json",
+  "input_sha256": "4866eedb723d6909b0867c51ede5a0592f82816d71883dcf775ed0b093739216",
+  "debug_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case/debug",
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/prepared",
+    "prepared_sha256": "b37b44a76dfc24e0ac6d09fd30280e06a05d58b872d86127c1be937aada54521",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/coverage-prep-06/inventory.json",
+    "required_test_files": {
+      "projects/python-cli/tests/coverage_adapter.py": "88d7f82f0b21c5cf293c06ac25f1926ce881ae2452995f0c106143dffd50a7b5",
+      "projects/python-cli/tests/coverage.ini": "5d90049c92ffb295e212e5386729ff8be341197268481a33cd1b502166407df7",
+      "projects/python-cli/tests/prepare_coverage.py": "d1f7eab8387e5da24b0143a7ef75df772be6337c39e344808d7155ab9a6d2eb9"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli",
+      "id": "AT-20261019-benchmark-py",
+      "scope_sha256": "1b99a57ba687861f543626baf45a7ddfe543d2b40dde2898e94a5b0636b87da6",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/knowledge-reads/cd0ec4a64c9743548f94378b8c69ff54.json"
+    },
+    "scene_id": "INV-02-S02",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT",
+    "evidence_env_dir_keys": [
+      "ACCEPTANCE_CASE_ROOT"
+    ]
+  }
+}

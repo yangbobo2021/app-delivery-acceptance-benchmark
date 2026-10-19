@@ -1,0 +1,21 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/hit",
+  "scene_id": "preparation-hit",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workspace/projects/go-api/tests/run_case.py",
+    "TestCoverageProbe"
+  ],
+  "env": {},
+  "files": [
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/prepare_coverage.py"
+  ],
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/prepared",
+  "prepared_sha256": "27d9aea73b42a1b0bdbbb422995ae2d3bf2216628c3dc5b37a40459719264d6f",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+}

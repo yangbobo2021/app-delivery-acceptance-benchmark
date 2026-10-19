@@ -1,0 +1,83 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "efd709a4a2e3b30d1bc696b202cbddfe2b252fd8e447f34902b0c936984aa367",
+  "bindings": {
+    "case_input": "0a4a280811db23a57e51c3947fc862e095dd0ef4b99d57fac76d3c2e97f260dd",
+    "guide": "d49fc69aa53da344c67e1bdeeab65d0d15ead9d981316bbd8bb50779de878533",
+    "template_catalog": "d63a28e85f3f6ec725f6c30815505cb2aeabfd31aadd3e30c20d95c61d5153a7"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:38:19.602902+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0.486
+      },
+      "finished_at": "2026-10-19T06:38:20.652689+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:38:20.873901+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case/answer.json",
+        "seconds": 225.51339962499998,
+        "usage": {
+          "toolUses": 17,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 736729,
+                "uncached": 58585,
+                "cacheRead": 678144,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 8758,
+                "visible": 7069,
+                "reasoning": 1689
+              }
+            }
+          }
+        },
+        "tool_calls": 17,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-19T06:42:07.600211+00:00"
+    },
+    "case_repair": {
+      "status": "completed",
+      "started_at": "2026-10-19T06:42:07.680049+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05/case-repair/metrics.json",
+        "seconds": 141.999711291,
+        "usage": {
+          "toolUses": 20,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 513111,
+                "uncached": 49623,
+                "cacheRead": 463488,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 4998,
+                "visible": 4218,
+                "reasoning": 780
+              }
+            }
+          }
+        },
+        "tool_calls": 20
+      },
+      "finished_at": "2026-10-19T06:44:30.546962+00:00"
+    }
+  }
+}

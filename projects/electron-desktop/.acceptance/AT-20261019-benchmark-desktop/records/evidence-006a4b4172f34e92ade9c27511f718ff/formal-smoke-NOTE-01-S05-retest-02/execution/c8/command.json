@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workspace/projects/electron-desktop/tests/node_modules/c8/bin/c8.js",
+    "report",
+    "--all",
+    "--src",
+    "dist",
+    "--temp-directory",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/execution/native",
+    "--reports-dir",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/electron-desktop/.acceptance-local/AT-20261019-benchmark-desktop/workflows/formal-smoke-NOTE-01-S05-retest-02/execution/c8",
+    "--reporter",
+    "json",
+    "--reporter",
+    "json-summary",
+    "--exclude-after-remap",
+    "--exclude",
+    "tests/**",
+    "--exclude",
+    "node_modules/**"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

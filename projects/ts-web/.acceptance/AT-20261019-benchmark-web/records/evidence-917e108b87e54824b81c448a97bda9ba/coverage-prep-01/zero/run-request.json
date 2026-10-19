@@ -1,0 +1,25 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/zero",
+  "scene_id": "preparation-zero",
+  "command": [
+    "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+    "-e",
+    "process.exit(0)"
+  ],
+  "env": {},
+  "files": [
+    "tests/probe.mjs",
+    "projects/ts-web/tests/package.json",
+    "projects/ts-web/tests/package-lock.json",
+    "projects/ts-web/tests/coverage-config.json",
+    "projects/ts-web/tests/coverage-adapter.mjs",
+    "projects/ts-web/tests/browser-fixture.mjs",
+    "projects/ts-web/tests/node-flush.cjs",
+    "projects/ts-web/tests/prepare-coverage.mjs",
+    "projects/ts-web/tests/probe.mjs"
+  ],
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/ts-web/.acceptance-local/AT-20261019-benchmark-web/workflows/coverage-prep-01/building",
+  "prepared_sha256": "5acbce95d8c83cc921c44d7a75ab18fa7d50698b692f1c3b798854fc6c2d9577",
+  "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+}

@@ -1,0 +1,145 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api",
+    "id": "AT-20261019-benchmark-go",
+    "scope_sha256": "7de49e440f3b01b49948909c342ef68b857952b63c10e6a3abd8f192bcb5514a",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/knowledge-reads/8fae4d5bb3eb44b998e54a10ca97aa2d.json"
+  },
+  "requirement": {
+    "id": "STOCK-06",
+    "title": "STOCK-06",
+    "text": "STOCK-06：在一次成功 HTTP 响应返回后正常关闭再启动，库存及成功 request_id 的幂等记录必须保留；不同状态目录互不影响。"
+  },
+  "scene": {
+    "id": "STOCK-06-S02",
+    "title": "正常重启保留成功请求的完整幂等记录",
+    "priority": "P1",
+    "priority_reason": "成功记录丢失或恢复不完整会导致重试重复扣减、丢失首次响应，或允许已有请求改量。",
+    "description": "在同一状态目录依次以两个不同request_id成功预留2和3，首次响应中的available分别为8和5；成功响应返回后正常关闭并使用原目录重启，两笔请求分别以原quantity重试，应返回200及各自首次响应内容，当前库存保持5。再以第一笔request_id改用quantity为1请求，应返回409且库存仍为5，验证恢复后仍保留该请求原有的数量绑定。",
+    "requirement_id": "STOCK-06",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "提供初始库存为 10 的本地 HTTP 库存预留服务，支持查询、合法预留和幂等重试，在并发、无效请求及重启后保持库存和成功预留记录一致，并隔离不同状态目录。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "STOCK-01",
+      "STOCK-02",
+      "STOCK-03",
+      "STOCK-04",
+      "STOCK-05",
+      "STOCK-06"
+    ],
+    "exclusions": [
+      "无需建设身份系统，不依赖网络服务。",
+      "所有原始需求均生成场景；质量评审后，本项目仅正式执行两个选定场景，其余场景不执行。"
+    ],
+    "limitations": [
+      "启动入口由 README 给出，输入未提供具体启动命令、localhost 端口及状态目录的配置方式。",
+      "额外 JSON 字段允许接受或拒绝，未限定具体策略。",
+      "正式执行的两个场景尚未选定。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "STOCK-01",
+      "title": "STOCK-01",
+      "text": "STOCK-01：`GET /stock` 返回 JSON `available`，表示当前可用库存，成功状态为 200。"
+    },
+    {
+      "id": "STOCK-02",
+      "title": "STOCK-02",
+      "text": "STOCK-02：`POST /reserve` 接收 JSON `request_id` 和 `quantity`。request_id 为非空字符串，quantity 为 1 至 10 的整数；合法且库存充足时以 201 返回 `request_id,quantity,available`，库存恰好减少该数量。"
+    },
+    {
+      "id": "STOCK-03",
+      "title": "STOCK-03",
+      "text": "STOCK-03：同 request_id、同 quantity 的成功预留重试，返回 200 及首次预留的响应内容，不再次扣减。相同 request_id 换 quantity 返回 409，不改变库存。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/scenario-STOCK-06-02/scenarios.current.json",
+  "scenario_source_sha256": "d6101faafdeaa5680a171c86582b78b78e5abcc06214266c733d2051e85e6093",
+  "scenario_self_check": "internal",
+  "local_loopback_required": true,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/prepared",
+    "prepared_sha256": "b636ab23c02412dbc0e9fe936f1ab0391f39e9f47692d2792901a7c503f39f61",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/coverage-prep-03/inventory.json",
+    "required_test_files": {
+      "projects/go-api/tests/coverage_adapter.py": "e1ad5c6662f8ae753a2b36899147141315f753837c795b8a611b23f9acca748f",
+      "projects/go-api/tests/run_case.py": "b0ad413a59c763c4c59eac257011d9fb364dbac6f95f9d2f7c417e4b58c04711",
+      "projects/go-api/tests/http_fixture_test.go": "f0feeddff2eaaafc7e241f8f0beb28142d19e8f20af991e390482bf2a650697c",
+      "projects/go-api/tests/coverage_probe_test.go": "1cf1354e5cb7cd22398e084d12ff7f8871a9e8f0a1d631b5771ecf318c8d6abe",
+      "projects/go-api/tests/prepare_coverage.py": "20d0c63deb87e711a75717f3f10a24a828f2476af790caa8fb707d2e7bb42355"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api",
+      "id": "AT-20261019-benchmark-go",
+      "scope_sha256": "7de49e440f3b01b49948909c342ef68b857952b63c10e6a3abd8f192bcb5514a",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/knowledge-reads/8fae4d5bb3eb44b998e54a10ca97aa2d.json"
+    },
+    "scene_id": "STOCK-06-S02",
+    "revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT",
+    "evidence_env_dir_keys": [
+      "ACCEPTANCE_CASE_ROOT"
+    ]
+  },
+  "frozen_revision": "61b529a7b810c3dd2cc2bdbca5cf286806e78571",
+  "test_files": [
+    "projects/go-api/tests/coverage_adapter.py",
+    "projects/go-api/tests/coverage_probe_test.go",
+    "projects/go-api/tests/http_fixture_test.go",
+    "projects/go-api/tests/prepare_coverage.py",
+    "projects/go-api/tests/run_case.py",
+    "projects/go-api/tests/stock06_restart_test.go"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/1/covcounters.92693296bbc058414674b6688e10b66b.38075.1792393311291602000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/2/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/3/covcounters.92693296bbc058414674b6688e10b66b.38078.1792393311216583000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/4/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/5/covcounters.92693296bbc058414674b6688e10b66b.38079.1792393311242268000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/6/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/7/covcounters.92693296bbc058414674b6688e10b66b.38080.1792393311266552000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/8/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/9/covcounters.92693296bbc058414674b6688e10b66b.38081.1792393311290683000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/10/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/11/merged.coverprofile",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/12/native-statements.txt",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/13/run-response.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/after-covdata/covcounters.92693296bbc058414674b6688e10b66b.38079.1792393311242268000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/after-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/after-ready",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/after-service.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/before-covdata/covcounters.92693296bbc058414674b6688e10b66b.38078.1792393311216583000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/before-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/before-ready",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/before-service.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-after-covdata/covcounters.92693296bbc058414674b6688e10b66b.38081.1792393311290683000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-after-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-after-ready",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-after-service.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-before-covdata/covcounters.92693296bbc058414674b6688e10b66b.38080.1792393311266552000",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-before-covdata/covmeta.92693296bbc058414674b6688e10b66b",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-before-ready",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-before-service.log",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/binding-state/stock.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/http-observations.jsonl",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence/14/stock06-4007558192/state/stock.json",
+    "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/frozen-evidence.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/execution/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/coverage-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/case/answer.json",
+  "scope_note": "First selected scene for this project; test the actual normal shutdown and OS process relaunch promised by STOCK-06.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/go-api/.acceptance-local/AT-20261019-benchmark-go/workflows/formal-smoke-STOCK-06-S02-retest-02/handoff-gate.json"
+}

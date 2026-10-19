@@ -1,0 +1,15 @@
+{
+  "kind": "local_case_blocker",
+  "reason": "共享覆盖率策略错误绑定到 go-api，统一入口在执行本场景前拒绝运行，修复超出本次授权范围。",
+  "observations": [
+    "已新增六行合法 CSV，断言两个账号分别精确得到整数 2147483647 和 2147483648，并保留 CLI 完整原始输出。",
+    "通过规定调试入口执行一次，入口退出码为 1，报错 Scene cannot replace project coverage binding: prepared；业务用例尚未启动。",
+    "核对发现共享 Git 覆盖率策略绑定 go-api 的准备目录，与本场景 python-cli 的 coverage-prep-06 冲突；未修改策略或绕过入口。"
+  ],
+  "limitations": [
+    "尚无业务执行结果或本场景覆盖率报告，不能判定通过或产品失败。",
+    "需修复外部覆盖率绑定后，经统一入口重跑并独立审查。"
+  ],
+  "previous_case_result": "/Users/boboyang/work/app-delivery-acceptance-benchmark/projects/python-cli/.acceptance-local/AT-20261019-benchmark-py/workflows/formal-smoke-INV-02-S02/case/answer.json",
+  "instruction": "Repair only the test setup or case gap that prevented target checks; preserve valid observations."
+}
